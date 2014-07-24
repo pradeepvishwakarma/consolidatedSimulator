@@ -1,0 +1,159 @@
+﻿/*Common Styles*/
+.w50{
+
+}
+.mt2{
+    margin-top:2%;
+}
+.mb1{
+    margin-bottom:1%;
+}
+.floatLeft{
+    float:left;
+}
+.floatRight{
+    float:Right;
+}
+.ml10
+{
+    margin-left:10px;
+}
+/*-------------*/
+body
+{
+    font-family:Calibri,Verdana;
+    font-size: 62.5%;
+    scrollbar-face-color: #9abc24;
+    scrollbar-highlight-color: #84b3c1;
+    scrollbar-track-color: #e7feb9;
+    scrollbar-arrow-color: #000;
+}
+.loginForm
+{
+    float:left;
+    font-size: 1.2em;
+    /*margin: 0 auto;*/
+    width: auto;
+    padding: 10px 0;
+}
+/*.loginForm h4{
+    text-align:center;
+}*/
+.form li
+{
+    border: medium none;
+    clear: both;
+    display: table;
+    margin: 10px 0 3px;
+    padding: 0;
+    width: 100%;
+}
+
+.form label
+{
+    bottom: 2px;
+    display: block;
+    float: left;
+    /*line-height: 28px;*/
+    margin: 2px 0px 0 0;
+    padding: 5px 0;
+    position: relative;
+    width: 33%;
+    text-align: left;
+    color: #000;
+}
+
+.text
+{
+    background: #ffffcc;
+    border: 1px solid #e8e8a9;
+    border-radius: 8px 8px 8px 8px;
+    color: #001321;
+    /*float: left;*/
+    font-size: 15px;
+    padding: 10px;
+     margin: 10px 0;
+}
+.stimulationparameter {
+    width:auto;
+}
+
+table{
+    width:100%;
+    font-size:1.2em;
+}
+
+table td
+ {
+   text-align: center;
+ }
+
+.button{
+    padding:10px 4%;
+    border-radius:5px;
+    border:1px solid gray;
+    cursor:pointer;
+}
+.plotType{
+    background:transparent;
+    border: none;
+    color: #337A28;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px;
+    margin:0;
+}
+.plotTypePanel
+{
+    background-color:transparent;
+    padding-bottom:2%;
+    margin-bottom:15px;
+}
+.hide
+{
+    visibility:hidden;
+}
+.show
+{
+    visibility:visible;
+}
+
+/*-----------------------------Customizing Tab Controls Starts-----------------------*/
+#tabs ul li.ui-state-default.ui-corner-top.ui-tabs-active.ui-state-active
+{
+    border: 1px solid #327E04;
+	/*background: #459e00 url("../images/ui-bg_highlight-hard_15_459e00_1x100.png") 50% 50% repeat-x;*/
+    background-image: linear-gradient(bottom, rgb(51,122,40) 25%, rgb(119,191,105) 96%, rgb(147,217,133) 98%);
+    background-image: -o-linear-gradient(bottom, rgb(51,122,40) 25%, rgb(119,191,105) 96%, rgb(147,217,133) 98%);
+    background-image: -moz-linear-gradient(bottom, rgb(51,122,40) 25%, rgb(119,191,105) 96%, rgb(147,217,133) 98%);
+    background-image: -webkit-linear-gradient(bottom, rgb(51,122,40) 25%, rgb(119,191,105) 96%, rgb(147,217,133) 98%);
+    background-image: -ms-linear-gradient(bottom, rgb(51,122,40) 25%, rgb(119,191,105) 96%, rgb(147,217,133) 98%);
+}
+#tabs ul li.ui-state-default.ui-corner-top.ui-tabs-active.ui-state-active a
+{
+    color:#ffffff;
+}
+#tabs ul li.ui-state-default.ui-corner-top
+{
+    border: 1px solid #d4ccb0;
+	background: #fafaf4 url("../images/ui-bg_highlight-hard_100_fafaf4_1x100.png") 50% 50% repeat-x;
+}
+#tabs ul li.ui-state-default.ui-corner-top a{
+    color:rgb(51,122,40);
+}
+
+#tabs ul li.notactive:hover
+{
+    /*border: 1px solid #327E04;*/
+    background: #C2E7CE url(images/ui-bg_highlight-soft_25_67b021_1x100.png) 50% 50% repeat-x;
+    background-image: linear-gradient(bottom, #C2E7CE 25%, #ffffff 100%);
+    background-image: -o-linear-gradient(bottom,  #C2E7CE 25%, #ffffff 100%);
+    background-image: -moz-linear-gradient(bottom,  #C2E7CE 25%, #ffffff 100%);
+    background-image: -webkit-linear-gradient(bottom,  #C2E7CE 25%, #ffffff 100%);
+    background-image: -ms-linear-gradient(bottom,  #C2E7CE 25%, #ffffff 100%);
+
+	font-weight: bold;
+	color: #ffffff;
+    text-decoration:none;
+}
+/*-----------------------------Customizing Tab Controls Ends-----------------------*/

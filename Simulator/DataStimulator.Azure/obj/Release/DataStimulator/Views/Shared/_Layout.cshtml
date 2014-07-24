@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    @Scripts.Render("~/bundles/jquery")
+   @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jqueryui")
+    @*@Scripts.Render("~/bundles/jqueryplugin")*@
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var str = location.href.toLowerCase();
+            //alert(str);
+            $("#tabs ul li a").each(function () {
+                var val = str.indexOf(this.href.toLowerCase());
+                //alert(val);
+                if (val > -1) {
+                    $("li.ui-tabs-active.ui-state-active").removeClass("ui-tabs-active ui-state-active").addClass("notactive");
+                    $(this).parent().addClass("ui-tabs-active ui-state-active").removeClass("notactive");
+                }
+            });
+        });
+    </script>
+
+<div id="tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+    <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
+        <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="tabs-1" aria-labelledby="ui-id-1" aria-selected="true">
+            @*<a href="#tabs-1" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1">ICA</a>*@
+            @Html.ActionLink("ICA", "Index", "DataStimulate", null, new {@class="ui-tabs-anchor", @role="presentation" })
+        </li>
+        <li class="ui-state-default ui-corner-top notactive" role="tab" tabindex="-1" aria-controls="tabs-2" aria-labelledby="ui-id-2" aria-selected="false">
+            @*<a href="#tabs-2" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2">SeedStar</a>*@
+            @Html.ActionLink("SeedStar", "SeedStar", "DataStimulate", null, new {@class="ui-tabs-anchor", @role="presentation" })
+        </li>
+    </ul>
+</div>
+
+    @RenderBody()
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

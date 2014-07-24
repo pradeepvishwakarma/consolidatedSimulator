@@ -1,0 +1,322 @@
+﻿/*Common Styles*/
+.w50{
+
+}
+.w25em
+{
+    width:25em;
+}
+.UX
+{
+    width:125px;
+    }
+
+.mt2{
+    margin-top:2%;
+}
+.mb1{
+    margin-bottom:1%;
+}
+.floatLeft{
+    float:left;
+}
+.floatRight{
+    float:Right;
+}
+.ml10
+{
+    margin-left:10px;
+}
+.pl1
+{
+    padding-left:1%;
+}
+/*-------------*/
+body
+{
+    font-family:Calibri,Verdana;
+    font-size: 62.5%;
+    scrollbar-face-color: #9abc24;
+    scrollbar-highlight-color: #84b3c1;
+    scrollbar-track-color: #e7feb9;
+    scrollbar-arrow-color: #000;
+}
+.loginForm
+{
+    float:left;
+    font-size: 1.2em;
+    /*margin: 0 auto;*/
+    width: auto;
+    padding: 10px 0;
+}
+/*.loginForm h4{
+    text-align:center;
+}*/
+.form li
+{
+    border: medium none;
+    clear: both;
+    display: table;
+    margin: 10px 0 3px;
+    padding: 0;
+    width: 100%;
+}
+
+.form label
+{
+    bottom: 2px;
+    display: block;
+    float: left;
+    /*line-height: 28px;*/
+    margin: 2px 0px 0 0;
+    padding: 5px 0;
+    position: relative;
+    width: 33%;
+    text-align: left;
+    color: #000;
+}
+
+.text
+{
+    background: #ffffcc;
+    border: 1px solid #e8e8a9;
+    border-radius: 8px 8px 8px 8px;
+    color: #001321;
+    /*float: left;*/
+    font-size: 15px;
+    padding: 10px;
+     margin: 10px 0;
+}
+.stimulationparameter {
+    width:auto;
+}
+
+table{
+    width:100%;
+    font-size:1.2em;
+}
+
+table td
+ {
+   text-align: center;
+ }
+
+.button{
+    padding:10px 4%;
+    border-radius:5px;
+    border:1px solid gray;
+    cursor:pointer;
+}
+.plotType{
+    background:transparent;
+    border: none;
+    color: #337A28;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px;
+    margin:0;
+}
+.plotTypePanel
+{
+    background-color:transparent;
+    padding-bottom:2%;
+    margin-bottom:15px;
+}
+.hide
+{
+    visibility:hidden;
+}
+.show
+{
+    visibility:visible;
+}
+table thead tr th.alignLeft,
+table tbody tr td.alignLeft
+{
+    text-align:left;
+}
+table tbody tr td:nth-child(1)
+{
+    width: 31.5%;
+text-align: left;
+white-space: nowrap;
+}
+
+/*table#sections thead tr th:nth-child(1),
+table#sections thead tr th:nth-child(2),
+table#sections thead tr th:nth-child(3),
+table#sections thead tr th:nth-child(4) 
+{
+     width:22.5%
+}
+table#sections thead tr th:nth-child(5)
+ {
+    width:10%;
+}*/
+table#sections tbody tr td:nth-child(1), 
+
+table#sections tbody tr td:nth-child(3),
+table#sections tbody tr td:nth-child(4),
+table#sections tbody tr td:nth-child(5),
+table#sections tbody tr td:nth-child(6),
+table#sections thead tr th:nth-child(1),
+
+table#sections thead tr th:nth-child(3),
+table#sections thead tr th:nth-child(4),
+table#sections thead tr th:nth-child(5)
+
+{
+    width:20%;
+    text-align:center;
+   
+}
+table#sections thead tr th:nth-child(2),
+table#sections tbody tr td:nth-child(2)
+
+{
+    width:10%;
+    text-align:center;
+    
+}
+table#sections thead tr th:nth-child(6)
+table#sections thead tr th:nth-child(6)
+{
+    width:10%;
+    text-align:left;
+    
+}
+table#datapoint tbody tr td:nth-child(1)
+{
+    width:8%;
+}
+
+table tbody tr td:nth-child(2)
+{
+    width: 32%;
+}
+table#simulatorUrl tbody tr td:nth-child(1)
+{
+    width:9.5%;
+}
+table#simulatorUrl tbody tr td:nth-child(2)
+{
+    width:auto;
+}
+table#websocketResponse tbody tr td:nth-child(2),
+table#datapoint tbody tr td:nth-child(2)
+{
+    width:25%;
+}
+table#locations tbody tr td:nth-child(1)
+{
+    width:10%;
+}
+table#locations tbody tr td:nth-child(2)
+{
+    width:1%;
+}
+table#datapoint tbody tr td:nth-child(3)
+{
+    text-align:center;
+}
+/*table#locations thead tr td:nth-child(2)
+{
+    text-align:center;
+}*/
+table tbody tr td:nth-child(3)
+{
+    text-align: left;
+    padding-left: 1%;
+}
+table#dataUX tbody tr td:nth-child(1),
+table#dataUX tbody tr td:nth-child(2),
+table#VarietyInformation tbody tr td:nth-child(1),
+table#VarietyInformation tbody tr td:nth-child(2)
+{
+    width: auto;
+}
+table#dataUX tbody tr td:nth-child(1),
+table#dataUX tbody tr td:nth-child(3),
+table#VarietyInformation tbody tr td:nth-child(1),
+table#VarietyInformation tbody tr td:nth-child(3)
+{
+    text-align: center;
+}
+.skipsMultiples{
+    margin:1em 0 0.4em 0;
+}
+.deactivatedSources
+{
+    /*width:37%;*/
+    width:auto;
+}
+/*-----------------------------Customizing Tab Controls Starts-----------------------*/
+#tabs ul li.ui-state-default.ui-corner-top.ui-tabs-active.ui-state-active
+{
+    border: 1px solid #327E04;
+	/*background: #459e00 url("../images/ui-bg_highlight-hard_15_459e00_1x100.png") 50% 50% repeat-x;*/
+    background-image: linear-gradient(bottom, rgb(51,122,40) 25%, rgb(119,191,105) 96%, rgb(147,217,133) 98%);
+    background-image: -o-linear-gradient(bottom, rgb(51,122,40) 25%, rgb(119,191,105) 96%, rgb(147,217,133) 98%);
+    background-image: -moz-linear-gradient(bottom, rgb(51,122,40) 25%, rgb(119,191,105) 96%, rgb(147,217,133) 98%);
+    background-image: -webkit-linear-gradient(bottom, rgb(51,122,40) 25%, rgb(119,191,105) 96%, rgb(147,217,133) 98%);
+    background-image: -ms-linear-gradient(bottom, rgb(51,122,40) 25%, rgb(119,191,105) 96%, rgb(147,217,133) 98%);
+}
+#tabs ul li.ui-state-default.ui-corner-top.ui-tabs-active.ui-state-active a
+{
+    color:#ffffff;
+}
+#tabs ul li.ui-state-default.ui-corner-top
+{
+    border: 1px solid #d4ccb0;
+	background: #fafaf4 url("../images/ui-bg_highlight-hard_100_fafaf4_1x100.png") 50% 50% repeat-x;
+}
+#tabs ul li.ui-state-default.ui-corner-top a{
+    color:rgb(51,122,40);
+}
+
+#tabs ul li.notactive:hover
+{
+    /*border: 1px solid #327E04;*/
+    background: #C2E7CE url(images/ui-bg_highlight-soft_25_67b021_1x100.png) 50% 50% repeat-x;
+    background-image: linear-gradient(bottom, #C2E7CE 25%, #ffffff 100%);
+    background-image: -o-linear-gradient(bottom,  #C2E7CE 25%, #ffffff 100%);
+    background-image: -moz-linear-gradient(bottom,  #C2E7CE 25%, #ffffff 100%);
+    background-image: -webkit-linear-gradient(bottom,  #C2E7CE 25%, #ffffff 100%);
+    background-image: -ms-linear-gradient(bottom,  #C2E7CE 25%, #ffffff 100%);
+
+	font-weight: bold;
+	color: #ffffff;
+    text-decoration:none;
+}
+/*-----------------------------Customizing Tab Controls Ends-----------------------*/
+/*-----------------------------Customizing Dialog Controls Starts-----------------------*/
+.ui-dialog-titlebar.ui-widget-header {
+    border: 1px solid #327E04;
+	/*background: #459e00 url(images/ui-bg_highlight-hard_15_459e00_1x100.png) 50% 50% repeat-x;*/
+    /*background: #459e00 url("../images/ui-bg_highlight-hard_15_459e00_1x100.png") 50% 50% repeat-x;*/
+    background-image: linear-gradient(bottom, rgb(51,122,40) 25%, rgb(119,191,105) 96%, rgb(147,217,133) 98%);
+    background-image: -o-linear-gradient(bottom, rgb(51,122,40) 25%, rgb(119,191,105) 96%, rgb(147,217,133) 98%);
+    background-image: -moz-linear-gradient(bottom, rgb(51,122,40) 25%, rgb(119,191,105) 96%, rgb(147,217,133) 98%);
+    background-image: -webkit-linear-gradient(bottom, rgb(51,122,40) 25%, rgb(119,191,105) 96%, rgb(147,217,133) 98%);
+    background-image: -ms-linear-gradient(bottom, rgb(51,122,40) 25%, rgb(119,191,105) 96%, rgb(147,217,133) 98%);
+	font-weight: bold;
+	color: #ffffff;
+    font-size:1.2em;
+}
+ .ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-icon-only.ui-dialog-titlebar-close,
+.ui-button.ui-state-default .ui-icon {
+ /*background-image: linear-gradient(bottom, #fff 50%, #fff 100%);
+    background-image: -o-linear-gradient(bottom, #fff 50%, #fff 100%);
+    background-image: -moz-linear-gradient(bottom, #fff 50%, #fff 100% );
+    background-image: -webkit-linear-gradient(bottom,#fff 50%, #fff 100% );
+    background-image: -ms-linear-gradient(bottom, #fff 50%, #fff 100% );
+	font-weight: bold;
+	color: green;*/
+ background-image:url("../images/dark-green-cross.jpg")
+}
+
+/*-----------------------------Customizing Dialog Controls Ends-----------------------*/
+.handCursor 
+{
+    cursor:pointer;
+}

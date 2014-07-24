@@ -1,0 +1,12 @@
+D:\JDDataSim\DataStimulator\trunk\SimulationService\bin\SimulationService.dll
+D:\JDDataSim\DataStimulator\trunk\SimulationService\bin\SimulationService.pdb
+D:\JDDataSim\DataStimulator\trunk\SimulationService\bin\Entities.dll
+D:\JDDataSim\DataStimulator\trunk\SimulationService\bin\protobuf-net.dll
+D:\JDDataSim\DataStimulator\trunk\SimulationService\bin\SimulationBussinessLayer.dll
+D:\JDDataSim\DataStimulator\trunk\SimulationService\bin\SimulationDataLayer.dll
+D:\JDDataSim\DataStimulator\trunk\SimulationService\bin\Entities.pdb
+D:\JDDataSim\DataStimulator\trunk\SimulationService\bin\SimulationBussinessLayer.pdb
+D:\JDDataSim\DataStimulator\trunk\SimulationService\bin\SimulationDataLayer.pdb
+D:\JDDataSim\DataStimulator\trunk\SimulationService\obj\Release\SimulationService.csprojResolveAssemblyReference.cache
+D:\JDDataSim\DataStimulator\trunk\SimulationService\obj\Release\SimulationService.dll
+D:\JDDataSim\DataStimulator\trunk\SimulationService\obj\Release\SimulationService.pdb

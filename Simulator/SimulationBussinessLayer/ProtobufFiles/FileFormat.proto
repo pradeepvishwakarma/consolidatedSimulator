@@ -1,0 +1,53 @@
+/* This file is part of a set of specifications that are shared with multiple systems
+   including Gen4 server, WDS/OBA, My John Deere, EIC/CDF systems.
+   Do not modify these files without approval from the change control team listed
+   at the following link.  Doing so may cause incompatibilities between systems that
+   exchange data using these specifications.  Additionally any changes not commited
+   at the main change control system will be lost as subsequent versions roll out
+   from this group.
+ http://github.deere.com/data/ISG_Shared/wiki
+*/
+
+///////////////////
+//The following is for the file format
+///////////////////
+package com.deere.proto ;
+option java_package = "com.deere.proto.generated";
+
+import "PackedTimeSpaceChunk.proto" ;
+import "SessionContext.proto" ;
+
+//file format can be as simple as: a start marker (say, 0xA1DA8A), followed by pairs of {RecordLength, FileRecord } blocks followed by file footer record. Convention is that session context is followed by chunks that depend on it. 
+//so, you have context followed by its chunks and then another context followed by its chunks, etc. Finally a file footer record.
+
+message FileHeader
+{
+	required uint32 proto_major_version = 1 ;
+	optional uint32 startMarker = 2 ; //use 0xA1DA8A. To be useful, writer has to put this in and reader has to check
+	//cant really think of anything else to put in here. but in case we think of something later, up the version and put it in.
+	optional uint32 proto_minor_version = 3 ;
+	optional string source_software_major_version = 4;
+}
+
+enum EFileRecordType
+{
+	FRT_SESSION_CONTEXT = 1 ;
+	FRT_CHUNK = 2 ;
+	FRT_FILE_HEADER = 3 ;
+	FRT_FILE_FOOTER = 4 ;
+}
+
+message RecordLength
+{
+	optional fixed32 length =1; //length of following record. //useful to be able to move bytes to memory from file and then parse it.
+}
+
+message FileRecord
+{
+	optional EFileRecordType fileRecordType  = 1 ;
+	required uint32 RecordBeginIndicator = 2 ; //use 0xA1. To be useful, writer has to put this in and reader has to check.
+	optional FileHeader header = 3 ;
+	optional ProtoTimeSpaceChunk  chunk = 4 ;
+	optional ProtoSessionContext context = 5 ;
+	optional uint32 FileEndIndicator = 6 ; //use  0xE0F. To be useful, writer has to put this in and reader has to check.
+}

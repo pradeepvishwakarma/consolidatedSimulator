@@ -1,0 +1,36 @@
+/* This file is part of a set of specifications that are shared with multiple systems
+   including Gen4 server, WDS/OBA, My John Deere, EIC/CDF systems.
+   Do not modify these files without approval from the change control team listed
+   at the following link.  Doing so may cause incompatibilities between systems that
+   exchange data using these specifications.  Additionally any changes not commited
+   at the main change control system will be lost as subsequent versions roll out
+   from this group.
+ http://github.deere.com/data/ISG_Shared/wiki
+*/
+
+package com.deere.proto ;
+option java_package = "com.deere.proto.generated";
+
+
+import "PackedTimeSpaceChunk.proto" ;
+import "SessionContext.proto" ;
+import "DataEpoch.proto" ;
+
+enum EProtoWireMessageType //SS
+{
+	PW_PROTO_SESSION_CONTEXT = 1 ; //SS
+	PW_PROTO_DATA_EPOCH = 2 ; //SS
+	//later, extend to many others including stored time space chunks.
+}
+
+message ProtoOnTheWireMessage //SS
+{
+
+	required uint32 version = 1 ; //SS
+	
+	optional EProtoWireMessageType messageType = 2 ; //SS
+	optional ProtoSessionContext sessionContext = 3 ; //SS
+	optional ProtoDataEpoch dataEpoch = 4 ; //SS
+	//later, extend to many others including stored time space chunks.
+}
+

@@ -1,0 +1,20 @@
+/* This file is part of a set of specifications that are shared with multiple systems
+   including Gen4 server, WDS/OBA, My John Deere, EIC/CDF systems.
+   Do not modify these files without approval from the change control team listed
+   at the following link.  Doing so may cause incompatibilities between systems that
+   exchange data using these specifications.  Additionally any changes not commited
+   at the main change control system will be lost as subsequent versions roll out
+   from this group.
+ http://github.deere.com/data/ISG_Shared/wiki
+*/
+
+package com.deere.proto ;
+option java_package = "com.deere.proto.generated";
+
+// See SchemaVersion.proto for documentation and instructions for versioning and use of this
+// message.
+message SchemaVersionDefaults
+{
+	required uint32 proto_major_version = 1 [default=3];
+	required uint32 proto_minor_version = 2 [default=4];
+}

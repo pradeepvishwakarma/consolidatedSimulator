@@ -1,0 +1,2177 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>protobuf-net.1.0.0.282.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.QualityTools.Testing.Fakes.Delegates.ProtobufnetDelegates">
+            <summary>Contains custom delegates used for the stubs and shims of protobuf-net</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.ShimBufferExtension">
+            <summary>Shim type of ProtoBuf.BufferExtension</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimBufferExtension.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimBufferExtension.#ctor(ProtoBuf.BufferExtension)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimBufferExtension.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimBufferExtension.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimBufferExtension.Bind(ProtoBuf.IExtension)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimBufferExtension.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimBufferExtension.Constructor">
+            <summary>Sets the shim of BufferExtension.BufferExtension()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimBufferExtension.ProtoBufIExtensionBeginAppend">
+            <summary>Sets the shim of BufferExtension.ProtoBuf.IExtension.BeginAppend()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimBufferExtension.ProtoBufIExtensionBeginQuery">
+            <summary>Sets the shim of BufferExtension.ProtoBuf.IExtension.BeginQuery()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimBufferExtension.ProtoBufIExtensionEndAppendStreamBoolean">
+            <summary>Sets the shim of BufferExtension.ProtoBuf.IExtension.EndAppend(Stream stream, Boolean commit)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimBufferExtension.ProtoBufIExtensionEndQueryStream">
+            <summary>Sets the shim of BufferExtension.ProtoBuf.IExtension.EndQuery(Stream stream)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimBufferExtension.ProtoBufIExtensionGetLength">
+            <summary>Sets the shim of BufferExtension.ProtoBuf.IExtension.GetLength()</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.ShimBufferExtension.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimBufferExtension.AllInstances.ProtoBufIExtensionBeginAppend">
+            <summary>Sets the shim of BufferExtension.ProtoBuf.IExtension.BeginAppend()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimBufferExtension.AllInstances.ProtoBufIExtensionBeginQuery">
+            <summary>Sets the shim of BufferExtension.ProtoBuf.IExtension.BeginQuery()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimBufferExtension.AllInstances.ProtoBufIExtensionEndAppendStreamBoolean">
+            <summary>Sets the shim of BufferExtension.ProtoBuf.IExtension.EndAppend(Stream stream, Boolean commit)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimBufferExtension.AllInstances.ProtoBufIExtensionEndQueryStream">
+            <summary>Sets the shim of BufferExtension.ProtoBuf.IExtension.EndQuery(Stream stream)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimBufferExtension.AllInstances.ProtoBufIExtensionGetLength">
+            <summary>Sets the shim of BufferExtension.ProtoBuf.IExtension.GetLength()</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.ShimExtensible">
+            <summary>Shim type of ProtoBuf.Extensible</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimExtensible.#ctor(ProtoBuf.Extensible)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimExtensible.AppendValueOf1IExtensibleInt32DataFormatM0``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{ProtoBuf.IExtensible,System.Int32,ProtoBuf.DataFormat,``0})">
+            <summary>Sets the shim of Extensible.AppendValue(IExtensible instance, Int32 tag, DataFormat format, !!0 value)</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimExtensible.AppendValueOf1IExtensibleInt32M0``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{ProtoBuf.IExtensible,System.Int32,``0})">
+            <summary>Sets the shim of Extensible.AppendValue(IExtensible instance, Int32 tag, !!0 value)</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimExtensible.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimExtensible.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimExtensible.Bind(ProtoBuf.IExtensible)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimExtensible.GetValueOf1IExtensibleInt32``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{ProtoBuf.IExtensible,System.Int32,``0})">
+            <summary>Sets the shim of Extensible.GetValue(IExtensible instance, Int32 tag)</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimExtensible.GetValueOf1IExtensibleInt32DataFormat``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{ProtoBuf.IExtensible,System.Int32,ProtoBuf.DataFormat,``0})">
+            <summary>Sets the shim of Extensible.GetValue(IExtensible instance, Int32 tag, DataFormat format)</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimExtensible.GetValuesOf1IExtensibleInt32``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{ProtoBuf.IExtensible,System.Int32,System.Collections.Generic.IEnumerable{``0}})">
+            <summary>Sets the shim of Extensible.GetValues(IExtensible instance, Int32 tag)</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimExtensible.GetValuesOf1IExtensibleInt32DataFormat``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{ProtoBuf.IExtensible,System.Int32,ProtoBuf.DataFormat,System.Collections.Generic.IEnumerable{``0}})">
+            <summary>Sets the shim of Extensible.GetValues(IExtensible instance, Int32 tag, DataFormat format)</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimExtensible.TryGetValueOf1IExtensibleInt32DataFormatBooleanM0Out``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.OutFunc{ProtoBuf.IExtensible,System.Int32,ProtoBuf.DataFormat,System.Boolean,``0,System.Boolean})">
+            <summary>Sets the shim of Extensible.TryGetValue(IExtensible instance, Int32 tag, DataFormat format, Boolean allowDefinedTag, !!0&amp; value)</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimExtensible.TryGetValueOf1IExtensibleInt32DataFormatM0Out``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.OutFunc{ProtoBuf.IExtensible,System.Int32,ProtoBuf.DataFormat,``0,System.Boolean})">
+            <summary>Sets the shim of Extensible.TryGetValue(IExtensible instance, Int32 tag, DataFormat format, !!0&amp; value)</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimExtensible.TryGetValueOf1IExtensibleInt32M0Out``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.OutFunc{ProtoBuf.IExtensible,System.Int32,``0,System.Boolean})">
+            <summary>Sets the shim of Extensible.TryGetValue(IExtensible instance, Int32 tag, !!0&amp; value)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimExtensible.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimExtensible.Constructor">
+            <summary>Sets the shim of Extensible.Extensible()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimExtensible.GetExtensionObjectBoolean">
+            <summary>Sets the shim of Extensible.GetExtensionObject(Boolean createIfMissing)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimExtensible.GetExtensionObjectIExtensionRefBoolean">
+            <summary>Sets the shim of Extensible.GetExtensionObject(IExtension&amp; extensionObject, Boolean createIfMissing)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimExtensible.ProtoBufIExtensibleGetExtensionObjectBoolean">
+            <summary>Sets the shim of Extensible.ProtoBuf.IExtensible.GetExtensionObject(Boolean createIfMissing)</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.ShimExtensible.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimExtensible.AllInstances.GetExtensionObjectBoolean">
+            <summary>Sets the shim of Extensible.GetExtensionObject(Boolean createIfMissing)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimExtensible.AllInstances.ProtoBufIExtensibleGetExtensionObjectBoolean">
+            <summary>Sets the shim of Extensible.ProtoBuf.IExtensible.GetExtensionObject(Boolean createIfMissing)</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.ShimProtoAfterDeserializationAttribute">
+            <summary>Shim type of ProtoBuf.ProtoAfterDeserializationAttribute</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoAfterDeserializationAttribute.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoAfterDeserializationAttribute.#ctor(ProtoBuf.ProtoAfterDeserializationAttribute)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoAfterDeserializationAttribute.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoAfterDeserializationAttribute.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoAfterDeserializationAttribute.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoAfterDeserializationAttribute.Constructor">
+            <summary>Sets the shim of ProtoAfterDeserializationAttribute.ProtoAfterDeserializationAttribute()</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.ShimProtoAfterDeserializationAttribute.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.ShimProtoAfterSerializationAttribute">
+            <summary>Shim type of ProtoBuf.ProtoAfterSerializationAttribute</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoAfterSerializationAttribute.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoAfterSerializationAttribute.#ctor(ProtoBuf.ProtoAfterSerializationAttribute)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoAfterSerializationAttribute.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoAfterSerializationAttribute.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoAfterSerializationAttribute.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoAfterSerializationAttribute.Constructor">
+            <summary>Sets the shim of ProtoAfterSerializationAttribute.ProtoAfterSerializationAttribute()</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.ShimProtoAfterSerializationAttribute.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.ShimProtoBeforeDeserializationAttribute">
+            <summary>Shim type of ProtoBuf.ProtoBeforeDeserializationAttribute</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoBeforeDeserializationAttribute.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoBeforeDeserializationAttribute.#ctor(ProtoBuf.ProtoBeforeDeserializationAttribute)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoBeforeDeserializationAttribute.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoBeforeDeserializationAttribute.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoBeforeDeserializationAttribute.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoBeforeDeserializationAttribute.Constructor">
+            <summary>Sets the shim of ProtoBeforeDeserializationAttribute.ProtoBeforeDeserializationAttribute()</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.ShimProtoBeforeDeserializationAttribute.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.ShimProtoBeforeSerializationAttribute">
+            <summary>Shim type of ProtoBuf.ProtoBeforeSerializationAttribute</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoBeforeSerializationAttribute.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoBeforeSerializationAttribute.#ctor(ProtoBuf.ProtoBeforeSerializationAttribute)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoBeforeSerializationAttribute.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoBeforeSerializationAttribute.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoBeforeSerializationAttribute.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoBeforeSerializationAttribute.Constructor">
+            <summary>Sets the shim of ProtoBeforeSerializationAttribute.ProtoBeforeSerializationAttribute()</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.ShimProtoBeforeSerializationAttribute.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.ShimProtoContractAttribute">
+            <summary>Shim type of ProtoBuf.ProtoContractAttribute</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoContractAttribute.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoContractAttribute.#ctor(ProtoBuf.ProtoContractAttribute)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoContractAttribute.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoContractAttribute.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoContractAttribute.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoContractAttribute.Constructor">
+            <summary>Sets the shim of ProtoContractAttribute.ProtoContractAttribute()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoContractAttribute.DataMemberOffsetGet">
+            <summary>Sets the shim of ProtoContractAttribute.get_DataMemberOffset()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoContractAttribute.DataMemberOffsetSetInt32">
+            <summary>Sets the shim of ProtoContractAttribute.set_DataMemberOffset(Int32 value)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoContractAttribute.ImplicitFieldsGet">
+            <summary>Sets the shim of ProtoContractAttribute.get_ImplicitFields()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoContractAttribute.ImplicitFieldsSetImplicitFields">
+            <summary>Sets the shim of ProtoContractAttribute.set_ImplicitFields(ImplicitFields value)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoContractAttribute.ImplicitFirstTagGet">
+            <summary>Sets the shim of ProtoContractAttribute.get_ImplicitFirstTag()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoContractAttribute.ImplicitFirstTagSetInt32">
+            <summary>Sets the shim of ProtoContractAttribute.set_ImplicitFirstTag(Int32 value)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoContractAttribute.InferTagFromNameGet">
+            <summary>Sets the shim of ProtoContractAttribute.get_InferTagFromName()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoContractAttribute.InferTagFromNameSetBoolean">
+            <summary>Sets the shim of ProtoContractAttribute.set_InferTagFromName(Boolean value)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoContractAttribute.NameGet">
+            <summary>Sets the shim of ProtoContractAttribute.get_Name()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoContractAttribute.NameSetString">
+            <summary>Sets the shim of ProtoContractAttribute.set_Name(String value)</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.ShimProtoContractAttribute.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoContractAttribute.AllInstances.DataMemberOffsetGet">
+            <summary>Sets the shim of ProtoContractAttribute.get_DataMemberOffset()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoContractAttribute.AllInstances.DataMemberOffsetSetInt32">
+            <summary>Sets the shim of ProtoContractAttribute.set_DataMemberOffset(Int32 value)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoContractAttribute.AllInstances.ImplicitFieldsGet">
+            <summary>Sets the shim of ProtoContractAttribute.get_ImplicitFields()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoContractAttribute.AllInstances.ImplicitFieldsSetImplicitFields">
+            <summary>Sets the shim of ProtoContractAttribute.set_ImplicitFields(ImplicitFields value)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoContractAttribute.AllInstances.ImplicitFirstTagGet">
+            <summary>Sets the shim of ProtoContractAttribute.get_ImplicitFirstTag()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoContractAttribute.AllInstances.ImplicitFirstTagSetInt32">
+            <summary>Sets the shim of ProtoContractAttribute.set_ImplicitFirstTag(Int32 value)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoContractAttribute.AllInstances.InferTagFromNameGet">
+            <summary>Sets the shim of ProtoContractAttribute.get_InferTagFromName()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoContractAttribute.AllInstances.InferTagFromNameSetBoolean">
+            <summary>Sets the shim of ProtoContractAttribute.set_InferTagFromName(Boolean value)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoContractAttribute.AllInstances.NameGet">
+            <summary>Sets the shim of ProtoContractAttribute.get_Name()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoContractAttribute.AllInstances.NameSetString">
+            <summary>Sets the shim of ProtoContractAttribute.set_Name(String value)</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.ShimProtoEnumAttribute">
+            <summary>Shim type of ProtoBuf.ProtoEnumAttribute</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoEnumAttribute.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoEnumAttribute.#ctor(ProtoBuf.ProtoEnumAttribute)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoEnumAttribute.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoEnumAttribute.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoEnumAttribute.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoEnumAttribute.Constructor">
+            <summary>Sets the shim of ProtoEnumAttribute.ProtoEnumAttribute()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoEnumAttribute.HasValue">
+            <summary>Sets the shim of ProtoEnumAttribute.HasValue()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoEnumAttribute.NameGet">
+            <summary>Sets the shim of ProtoEnumAttribute.get_Name()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoEnumAttribute.NameSetString">
+            <summary>Sets the shim of ProtoEnumAttribute.set_Name(String value)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoEnumAttribute.ValueGet">
+            <summary>Sets the shim of ProtoEnumAttribute.get_Value()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoEnumAttribute.ValueSetInt32">
+            <summary>Sets the shim of ProtoEnumAttribute.set_Value(Int32 value)</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.ShimProtoEnumAttribute.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoEnumAttribute.AllInstances.HasValue">
+            <summary>Sets the shim of ProtoEnumAttribute.HasValue()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoEnumAttribute.AllInstances.NameGet">
+            <summary>Sets the shim of ProtoEnumAttribute.get_Name()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoEnumAttribute.AllInstances.NameSetString">
+            <summary>Sets the shim of ProtoEnumAttribute.set_Name(String value)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoEnumAttribute.AllInstances.ValueGet">
+            <summary>Sets the shim of ProtoEnumAttribute.get_Value()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoEnumAttribute.AllInstances.ValueSetInt32">
+            <summary>Sets the shim of ProtoEnumAttribute.set_Value(Int32 value)</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.ShimProtoException">
+            <summary>Shim type of ProtoBuf.ProtoException</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoException.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoException.#ctor(ProtoBuf.ProtoException)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoException.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoException.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoException.Bind(System.Runtime.Serialization.ISerializable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoException.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoException.Constructor">
+            <summary>Sets the shim of ProtoException.ProtoException()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoException.ConstructorSerializationInfoStreamingContext">
+            <summary>Sets the shim of ProtoException.ProtoException(SerializationInfo info, StreamingContext context)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoException.ConstructorString">
+            <summary>Sets the shim of ProtoException.ProtoException(String message)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoException.ConstructorStringException">
+            <summary>Sets the shim of ProtoException.ProtoException(String message, Exception innerException)</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.ShimProtoException.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.ShimProtoIgnoreAttribute">
+            <summary>Shim type of ProtoBuf.ProtoIgnoreAttribute</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoIgnoreAttribute.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoIgnoreAttribute.#ctor(ProtoBuf.ProtoIgnoreAttribute)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoIgnoreAttribute.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoIgnoreAttribute.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoIgnoreAttribute.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoIgnoreAttribute.Constructor">
+            <summary>Sets the shim of ProtoIgnoreAttribute.ProtoIgnoreAttribute()</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.ShimProtoIgnoreAttribute.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.ShimProtoIncludeAttribute">
+            <summary>Shim type of ProtoBuf.ProtoIncludeAttribute</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoIncludeAttribute.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoIncludeAttribute.#ctor(ProtoBuf.ProtoIncludeAttribute)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoIncludeAttribute.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoIncludeAttribute.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoIncludeAttribute.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoIncludeAttribute.ConstructorInt32String">
+            <summary>Sets the shim of ProtoIncludeAttribute.ProtoIncludeAttribute(Int32 tag, String knownTypeName)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoIncludeAttribute.ConstructorInt32Type">
+            <summary>Sets the shim of ProtoIncludeAttribute.ProtoIncludeAttribute(Int32 tag, Type knownType)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoIncludeAttribute.DataFormatGet">
+            <summary>Sets the shim of ProtoIncludeAttribute.get_DataFormat()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoIncludeAttribute.DataFormatSetDataFormat">
+            <summary>Sets the shim of ProtoIncludeAttribute.set_DataFormat(DataFormat value)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoIncludeAttribute.KnownTypeGet">
+            <summary>Sets the shim of ProtoIncludeAttribute.get_KnownType()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoIncludeAttribute.KnownTypeNameGet">
+            <summary>Sets the shim of ProtoIncludeAttribute.get_KnownTypeName()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoIncludeAttribute.KnownTypeNameSetString">
+            <summary>Sets the shim of ProtoIncludeAttribute.set_KnownTypeName(String value)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoIncludeAttribute.ResolveKnownTypeAssembly">
+            <summary>Sets the shim of ProtoIncludeAttribute.ResolveKnownType(Assembly assembly)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoIncludeAttribute.TagGet">
+            <summary>Sets the shim of ProtoIncludeAttribute.get_Tag()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoIncludeAttribute.TagSetInt32">
+            <summary>Sets the shim of ProtoIncludeAttribute.set_Tag(Int32 value)</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.ShimProtoIncludeAttribute.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoIncludeAttribute.AllInstances.DataFormatGet">
+            <summary>Sets the shim of ProtoIncludeAttribute.get_DataFormat()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoIncludeAttribute.AllInstances.DataFormatSetDataFormat">
+            <summary>Sets the shim of ProtoIncludeAttribute.set_DataFormat(DataFormat value)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoIncludeAttribute.AllInstances.KnownTypeGet">
+            <summary>Sets the shim of ProtoIncludeAttribute.get_KnownType()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoIncludeAttribute.AllInstances.KnownTypeNameGet">
+            <summary>Sets the shim of ProtoIncludeAttribute.get_KnownTypeName()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoIncludeAttribute.AllInstances.KnownTypeNameSetString">
+            <summary>Sets the shim of ProtoIncludeAttribute.set_KnownTypeName(String value)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoIncludeAttribute.AllInstances.ResolveKnownTypeAssembly">
+            <summary>Sets the shim of ProtoIncludeAttribute.ResolveKnownType(Assembly assembly)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoIncludeAttribute.AllInstances.TagGet">
+            <summary>Sets the shim of ProtoIncludeAttribute.get_Tag()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoIncludeAttribute.AllInstances.TagSetInt32">
+            <summary>Sets the shim of ProtoIncludeAttribute.set_Tag(Int32 value)</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.ShimProtoMemberAttribute">
+            <summary>Shim type of ProtoBuf.ProtoMemberAttribute</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoMemberAttribute.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoMemberAttribute.#ctor(ProtoBuf.ProtoMemberAttribute)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoMemberAttribute.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoMemberAttribute.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoMemberAttribute.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoMemberAttribute.ConstructorInt32">
+            <summary>Sets the shim of ProtoMemberAttribute.ProtoMemberAttribute(Int32 tag)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoMemberAttribute.DataFormatGet">
+            <summary>Sets the shim of ProtoMemberAttribute.get_DataFormat()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoMemberAttribute.DataFormatSetDataFormat">
+            <summary>Sets the shim of ProtoMemberAttribute.set_DataFormat(DataFormat value)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoMemberAttribute.IsRequiredGet">
+            <summary>Sets the shim of ProtoMemberAttribute.get_IsRequired()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoMemberAttribute.IsRequiredSetBoolean">
+            <summary>Sets the shim of ProtoMemberAttribute.set_IsRequired(Boolean value)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoMemberAttribute.NameGet">
+            <summary>Sets the shim of ProtoMemberAttribute.get_Name()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoMemberAttribute.NameSetString">
+            <summary>Sets the shim of ProtoMemberAttribute.set_Name(String value)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoMemberAttribute.OptionsGet">
+            <summary>Sets the shim of ProtoMemberAttribute.get_Options()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoMemberAttribute.OptionsSetMemberSerializationOptions">
+            <summary>Sets the shim of ProtoMemberAttribute.set_Options(MemberSerializationOptions value)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoMemberAttribute.TagGet">
+            <summary>Sets the shim of ProtoMemberAttribute.get_Tag()</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.ShimProtoMemberAttribute.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoMemberAttribute.AllInstances.DataFormatGet">
+            <summary>Sets the shim of ProtoMemberAttribute.get_DataFormat()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoMemberAttribute.AllInstances.DataFormatSetDataFormat">
+            <summary>Sets the shim of ProtoMemberAttribute.set_DataFormat(DataFormat value)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoMemberAttribute.AllInstances.IsRequiredGet">
+            <summary>Sets the shim of ProtoMemberAttribute.get_IsRequired()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoMemberAttribute.AllInstances.IsRequiredSetBoolean">
+            <summary>Sets the shim of ProtoMemberAttribute.set_IsRequired(Boolean value)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoMemberAttribute.AllInstances.NameGet">
+            <summary>Sets the shim of ProtoMemberAttribute.get_Name()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoMemberAttribute.AllInstances.NameSetString">
+            <summary>Sets the shim of ProtoMemberAttribute.set_Name(String value)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoMemberAttribute.AllInstances.OptionsGet">
+            <summary>Sets the shim of ProtoMemberAttribute.get_Options()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoMemberAttribute.AllInstances.OptionsSetMemberSerializationOptions">
+            <summary>Sets the shim of ProtoMemberAttribute.set_Options(MemberSerializationOptions value)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoMemberAttribute.AllInstances.TagGet">
+            <summary>Sets the shim of ProtoMemberAttribute.get_Tag()</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.ShimProtoPartialIgnoreAttribute">
+            <summary>Shim type of ProtoBuf.ProtoPartialIgnoreAttribute</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoPartialIgnoreAttribute.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoPartialIgnoreAttribute.#ctor(ProtoBuf.ProtoPartialIgnoreAttribute)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoPartialIgnoreAttribute.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoPartialIgnoreAttribute.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoPartialIgnoreAttribute.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoPartialIgnoreAttribute.ConstructorString">
+            <summary>Sets the shim of ProtoPartialIgnoreAttribute.ProtoPartialIgnoreAttribute(String memberName)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoPartialIgnoreAttribute.MemberNameGet">
+            <summary>Sets the shim of ProtoPartialIgnoreAttribute.get_MemberName()</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.ShimProtoPartialIgnoreAttribute.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoPartialIgnoreAttribute.AllInstances.MemberNameGet">
+            <summary>Sets the shim of ProtoPartialIgnoreAttribute.get_MemberName()</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.ShimProtoPartialMemberAttribute">
+            <summary>Shim type of ProtoBuf.ProtoPartialMemberAttribute</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoPartialMemberAttribute.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoPartialMemberAttribute.#ctor(ProtoBuf.ProtoPartialMemberAttribute)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoPartialMemberAttribute.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimProtoPartialMemberAttribute.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoPartialMemberAttribute.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoPartialMemberAttribute.ConstructorInt32String">
+            <summary>Sets the shim of ProtoPartialMemberAttribute.ProtoPartialMemberAttribute(Int32 tag, String memberName)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoPartialMemberAttribute.MemberNameGet">
+            <summary>Sets the shim of ProtoPartialMemberAttribute.get_MemberName()</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.ShimProtoPartialMemberAttribute.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimProtoPartialMemberAttribute.AllInstances.MemberNameGet">
+            <summary>Sets the shim of ProtoPartialMemberAttribute.get_MemberName()</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.ShimSerializer">
+            <summary>Shim type of ProtoBuf.Serializer</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimSerializer.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimSerializer.AddImplicitByDeclaringTypeOf1TypeListOfMemberInfoM0Array``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{System.Type,System.Collections.Generic.List{System.Reflection.MemberInfo},``0[]})">
+            <summary>Sets the shim of Serializer.AddImplicitByDeclaringType(Type declaringType, List`1&lt;MemberInfo&gt; list, !!0[] members)</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimSerializer.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimSerializer.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimSerializer.ChangeTypeOf2M0``2(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{``0,``1})">
+            <summary>Sets the shim of Serializer.ChangeType(!!0 instance)</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimSerializer.CreateFormatterOf1``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.Runtime.Serialization.IFormatter})">
+            <summary>Sets the shim of Serializer.CreateFormatter()</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimSerializer.DeepCloneOf1M0``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{``0,``0})">
+            <summary>Sets the shim of Serializer.DeepClone(!!0 instance)</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimSerializer.DeserializeItemsOf1StreamPrefixStyleInt32``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.IO.Stream,ProtoBuf.PrefixStyle,System.Int32,System.Collections.Generic.IEnumerable{``0}})">
+            <summary>Sets the shim of Serializer.DeserializeItems(Stream source, PrefixStyle style, Int32 tag)</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimSerializer.DeserializeItemsWithLengthPrefixCheckedOf1StreamPrefixStyleInt32``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.IO.Stream,ProtoBuf.PrefixStyle,System.Int32,System.Collections.Generic.IEnumerable{``0}})">
+            <summary>Sets the shim of Serializer.DeserializeItemsWithLengthPrefixChecked(Stream source, PrefixStyle style, Int32 tag)</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimSerializer.DeserializeOf1Stream``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.IO.Stream,``0})">
+            <summary>Sets the shim of Serializer.Deserialize(Stream source)</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimSerializer.DeserializeWithLengthPrefixOf1Stream``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.IO.Stream,``0})">
+            <summary>Sets the shim of Serializer.DeserializeWithLengthPrefix(Stream source)</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimSerializer.DeserializeWithLengthPrefixOf1StreamPrefixStyle``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.IO.Stream,ProtoBuf.PrefixStyle,``0})">
+            <summary>Sets the shim of Serializer.DeserializeWithLengthPrefix(Stream source, PrefixStyle style)</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimSerializer.DeserializeWithLengthPrefixOf1StreamPrefixStyleInt32``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.IO.Stream,ProtoBuf.PrefixStyle,System.Int32,``0})">
+            <summary>Sets the shim of Serializer.DeserializeWithLengthPrefix(Stream source, PrefixStyle style, Int32 tag)</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimSerializer.GetDefinedTypeNameOf1``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.String})">
+            <summary>Sets the shim of Serializer.GetDefinedTypeName()</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimSerializer.GetProtoOf1``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.String})">
+            <summary>Sets the shim of Serializer.GetProto()</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimSerializer.MergeOf1StreamM0``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.IO.Stream,``0,``0})">
+            <summary>Sets the shim of Serializer.Merge(Stream source, !!0 instance)</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimSerializer.MergeOf1XmlReaderM0``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{System.Xml.XmlReader,``0})">
+            <summary>Sets the shim of Serializer.Merge(XmlReader reader, !!0 instance)</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimSerializer.MergeWithLengthPrefixOf1StreamM0``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.IO.Stream,``0,``0})">
+            <summary>Sets the shim of Serializer.MergeWithLengthPrefix(Stream source, !!0 instance)</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimSerializer.MergeWithLengthPrefixOf1StreamM0PrefixStyle``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.IO.Stream,``0,ProtoBuf.PrefixStyle,``0})">
+            <summary>Sets the shim of Serializer.MergeWithLengthPrefix(Stream source, !!0 instance, PrefixStyle style)</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimSerializer.PrepareSerializerOf1``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action)">
+            <summary>Sets the shim of Serializer.PrepareSerializer()</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimSerializer.SerializeOf1StreamM0``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{System.IO.Stream,``0})">
+            <summary>Sets the shim of Serializer.Serialize(Stream destination, !!0 instance)</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimSerializer.SerializeOf1XmlWriterM0``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{System.Xml.XmlWriter,``0})">
+            <summary>Sets the shim of Serializer.Serialize(XmlWriter writer, !!0 instance)</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimSerializer.SerializeWithLengthPrefixOf1StreamM0``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{System.IO.Stream,``0})">
+            <summary>Sets the shim of Serializer.SerializeWithLengthPrefix(Stream destination, !!0 instance)</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimSerializer.SerializeWithLengthPrefixOf1StreamM0PrefixStyle``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{System.IO.Stream,``0,ProtoBuf.PrefixStyle})">
+            <summary>Sets the shim of Serializer.SerializeWithLengthPrefix(Stream destination, !!0 instance, PrefixStyle style)</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimSerializer.SerializeWithLengthPrefixOf1StreamM0PrefixStyleInt32``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{System.IO.Stream,``0,ProtoBuf.PrefixStyle,System.Int32})">
+            <summary>Sets the shim of Serializer.SerializeWithLengthPrefix(Stream destination, !!0 instance, PrefixStyle style, Int32 tag)</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimSerializer.TryDeserializeWithLengthPrefixOf1StreamPrefixStyleInt32M0Out``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.OutFunc{System.IO.Stream,ProtoBuf.PrefixStyle,System.Int32,``0,System.Boolean})">
+            <summary>Sets the shim of Serializer.TryDeserializeWithLengthPrefix(Stream source, PrefixStyle style, Int32 tag, !!0&amp; item)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimSerializer.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimSerializer.GetPrefixLengthInt32">
+            <summary>Sets the shim of Serializer.GetPrefixLength(Int32 tag)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimSerializer.GetProtoMembersType">
+            <summary>Sets the shim of Serializer.GetProtoMembers(Type type)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimSerializer.HasAddMethodTypeType">
+            <summary>Sets the shim of Serializer.HasAddMethod(Type list, Type item)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimSerializer.IsEntityTypeType">
+            <summary>Sets the shim of Serializer.IsEntityType(Type type)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimSerializer.ParseDataContractAttributeAttributeStringOut">
+            <summary>Sets the shim of Serializer.ParseDataContractAttribute(Attribute attribute, String&amp; name)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimSerializer.ParseDataMemberAttributeDataMemberAttributeStringOutInt32OutBooleanOut">
+            <summary>Sets the shim of Serializer.ParseDataMemberAttribute(DataMemberAttribute attribute, String&amp; name, Int32&amp; order, Boolean&amp; isRequired)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimSerializer.ReadPrefixLengthStreamPrefixStyle">
+            <summary>Sets the shim of Serializer.ReadPrefixLength(Stream source, PrefixStyle style)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimSerializer.StaticConstructor">
+            <summary>Sets the shim of Serializer.Serializer()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimSerializer.ThrowInnerException">
+            <summary>Sets the shim of Serializer.ThrowInner(Exception exception)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimSerializer.ThrowNoEncoderDataFormatType">
+            <summary>Sets the shim of Serializer.ThrowNoEncoder(DataFormat format, Type valueType)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimSerializer.TryGetTagMemberInfoInt32OutStringOutBooleanDataFormatOutMemberSerializationOptionsOut">
+            <summary>Sets the shim of Serializer.TryGetTag(MemberInfo member, Int32&amp; tag, String&amp; name, Boolean callerIsTagInference, DataFormat&amp; format, MemberSerializationOptions&amp; options)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimSerializer.TryGetTagMemberInfoInt32OutStringOutDataFormatOutMemberSerializationOptionsOut">
+            <summary>Sets the shim of Serializer.TryGetTag(MemberInfo member, Int32&amp; tag, String&amp; name, DataFormat&amp; format, MemberSerializationOptions&amp; options)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimSerializer.TryReadLengthPrefixByteArrayInt32Int32PrefixStyleInt32Out">
+            <summary>Sets the shim of Serializer.TryReadLengthPrefix(Byte[] buffer, Int32 index, Int32 count, PrefixStyle style, Int32&amp; length)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimSerializer.TryReadLengthPrefixStreamPrefixStyleInt32Out">
+            <summary>Sets the shim of Serializer.TryReadLengthPrefix(Stream source, PrefixStyle style, Int32&amp; length)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimSerializer.TryReadPrefixLengthStreamPrefixStyleInt32UInt32OutGetterOfInt32Boolean">
+            <summary>Sets the shim of Serializer.TryReadPrefixLength(Stream source, PrefixStyle style, Int32 tag, UInt32&amp; length, Getter`2&lt;Int32,Boolean&gt; processField)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimSerializer.VerifyBytesWrittenInt32Int32">
+            <summary>Sets the shim of Serializer.VerifyBytesWritten(Int32 expected, Int32 actual)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimSerializer._TryGetTagb__9MemberInfoMemberInfo">
+            <summary>Sets the shim of Serializer.&lt;TryGetTag&gt;b__9(MemberInfo x, MemberInfo y)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimSerializer._TryGetTagb__aKeyValuePairOfStringInt32KeyValuePairOfStringInt32">
+            <summary>Sets the shim of Serializer.&lt;TryGetTag&gt;b__a(KeyValuePair`2&lt;String,Int32&gt; x, KeyValuePair`2&lt;String,Int32&gt; y)</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.ShimSerializer.ShimGlobalOptions">
+            <summary>Shim type of ProtoBuf.Serializer+GlobalOptions</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimSerializer.ShimGlobalOptions.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimSerializer.ShimGlobalOptions.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimSerializer.ShimGlobalOptions.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimSerializer.ShimGlobalOptions.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimSerializer.ShimGlobalOptions.InferTagFromNameGet">
+            <summary>Sets the shim of GlobalOptions.get_InferTagFromName()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimSerializer.ShimGlobalOptions.InferTagFromNameSetBoolean">
+            <summary>Sets the shim of GlobalOptions.set_InferTagFromName(Boolean value)</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.ShimSerializer.ShimNonGeneric">
+            <summary>Shim type of ProtoBuf.Serializer+NonGeneric</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimSerializer.ShimNonGeneric.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimSerializer.ShimNonGeneric.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.ShimSerializer.ShimNonGeneric.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimSerializer.ShimNonGeneric.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimSerializer.ShimNonGeneric.CanSerializeType">
+            <summary>Sets the shim of NonGeneric.CanSerialize(Type type)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimSerializer.ShimNonGeneric.DeepCloneObject">
+            <summary>Sets the shim of NonGeneric.DeepClone(Object instance)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimSerializer.ShimNonGeneric.DeserializeTypeStream">
+            <summary>Sets the shim of NonGeneric.Deserialize(Type type, Stream source)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimSerializer.ShimNonGeneric.SerializeStreamObject">
+            <summary>Sets the shim of NonGeneric.Serialize(Stream destination, Object instance)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimSerializer.ShimNonGeneric.SerializeWithLengthPrefixStreamObjectPrefixStyleInt32">
+            <summary>Sets the shim of NonGeneric.SerializeWithLengthPrefix(Stream destination, Object instance, PrefixStyle style, Int32 tag)</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.ShimSerializer.ShimNonGeneric.TryDeserializeWithLengthPrefixStreamPrefixStyleGetterOfInt32TypeObjectOut">
+            <summary>Sets the shim of NonGeneric.TryDeserializeWithLengthPrefix(Stream source, PrefixStyle style, Getter`2&lt;Int32,Type&gt; typeReader, Object&amp; item)</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.StubExtensible">
+            <summary>Stub type of ProtoBuf.Extensible</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubExtensible.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubExtensible.InitializeStub">
+            <summary>Initializes a new instance of type StubExtensible</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.StubExtensible.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.StubExtensible.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.StubExtensible.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.StubIExtensible">
+            <summary>Stub type of ProtoBuf.IExtensible</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubIExtensible.#ctor">
+            <summary>Initializes a new instance of type StubIExtensible</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubIExtensible.GetExtensionObjectBoolean">
+            <summary>Sets the stub of IExtensible.GetExtensionObject(Boolean createIfMissing)</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubIExtensible.p::ProtoBuf#IExtensible#GetExtensionObject(System.Boolean)">
+            <summary>Sets the stub of IExtensible.GetExtensionObject(Boolean createIfMissing)</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.StubIExtension">
+            <summary>Stub type of ProtoBuf.IExtension</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubIExtension.#ctor">
+            <summary>Initializes a new instance of type StubIExtension</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubIExtension.BeginAppend">
+            <summary>Sets the stub of IExtension.BeginAppend()</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubIExtension.BeginQuery">
+            <summary>Sets the stub of IExtension.BeginQuery()</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubIExtension.EndAppendStreamBoolean">
+            <summary>Sets the stub of IExtension.EndAppend(Stream stream, Boolean commit)</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubIExtension.EndQueryStream">
+            <summary>Sets the stub of IExtension.EndQuery(Stream stream)</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubIExtension.GetLength">
+            <summary>Sets the stub of IExtension.GetLength()</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubIExtension.p::ProtoBuf#IExtension#BeginAppend">
+            <summary>Sets the stub of IExtension.BeginAppend()</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubIExtension.p::ProtoBuf#IExtension#BeginQuery">
+            <summary>Sets the stub of IExtension.BeginQuery()</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubIExtension.p::ProtoBuf#IExtension#EndAppend(System.IO.Stream,System.Boolean)">
+            <summary>Sets the stub of IExtension.EndAppend(Stream stream, Boolean commit)</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubIExtension.p::ProtoBuf#IExtension#EndQuery(System.IO.Stream)">
+            <summary>Sets the stub of IExtension.EndQuery(Stream stream)</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubIExtension.p::ProtoBuf#IExtension#GetLength">
+            <summary>Sets the stub of IExtension.GetLength()</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.StubProtoException">
+            <summary>Stub type of ProtoBuf.ProtoException</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubProtoException.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubProtoException.#ctor(System.String)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubProtoException.#ctor(System.String,System.Exception)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubProtoException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubProtoException.AttachBackingFieldToHelpLink">
+            <summary>Attaches delegates to emulate StubProtoException.HelpLink as a property with a backing field.</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubProtoException.AttachBackingFieldToSource">
+            <summary>Attaches delegates to emulate StubProtoException.Source as a property with a backing field.</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubProtoException.DataGet">
+            <summary>Sets the stub of Exception.get_Data()</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubProtoException.GetBaseException">
+            <summary>Sets the stub of Exception.GetBaseException()</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubProtoException.GetBaseException01">
+            <summary>Sets the stub of Exception.GetBaseException()</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubProtoException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>Sets the stub of Exception.GetObjectData(SerializationInfo info, StreamingContext context)</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubProtoException.GetObjectDataSerializationInfoStreamingContext">
+            <summary>Sets the stub of Exception.GetObjectData(SerializationInfo info, StreamingContext context)</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubProtoException.HelpLinkGet">
+            <summary>Sets the stub of Exception.get_HelpLink()</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubProtoException.HelpLinkSetString">
+            <summary>Sets the stub of Exception.set_HelpLink(String value)</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubProtoException.InitializeStub">
+            <summary>Initializes a new instance of type StubProtoException</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubProtoException.MessageGet">
+            <summary>Sets the stub of Exception.get_Message()</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubProtoException.SourceGet">
+            <summary>Sets the stub of Exception.get_Source()</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubProtoException.SourceSetString">
+            <summary>Sets the stub of Exception.set_Source(String value)</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubProtoException.StackTraceGet">
+            <summary>Sets the stub of Exception.get_StackTrace()</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubProtoException.ToString">
+            <summary>Sets the stub of Exception.ToString()</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubProtoException.ToString01">
+            <summary>Sets the stub of Exception.ToString()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.StubProtoException.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.StubProtoException.Data">
+            <summary>Sets the stub of Exception.get_Data()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.StubProtoException.HelpLink">
+            <summary>Sets the stub of Exception.get_HelpLink()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.StubProtoException.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.StubProtoException.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.StubProtoException.Message">
+            <summary>Sets the stub of Exception.get_Message()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.StubProtoException.Source">
+            <summary>Sets the stub of Exception.get_Source()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.StubProtoException.StackTrace">
+            <summary>Sets the stub of Exception.get_StackTrace()</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.StubProtoIgnoreAttribute">
+            <summary>Stub type of ProtoBuf.ProtoIgnoreAttribute</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubProtoIgnoreAttribute.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubProtoIgnoreAttribute.Equals(System.Object)">
+            <summary>Sets the stub of Attribute.Equals(Object obj)</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubProtoIgnoreAttribute.EqualsObject">
+            <summary>Sets the stub of Attribute.Equals(Object obj)</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubProtoIgnoreAttribute.GetHashCode">
+            <summary>Sets the stub of Attribute.GetHashCode()</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubProtoIgnoreAttribute.GetHashCode01">
+            <summary>Sets the stub of Attribute.GetHashCode()</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubProtoIgnoreAttribute.InitializeStub">
+            <summary>Initializes a new instance of type StubProtoIgnoreAttribute</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubProtoIgnoreAttribute.IsDefaultAttribute">
+            <summary>Sets the stub of Attribute.IsDefaultAttribute()</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubProtoIgnoreAttribute.IsDefaultAttribute01">
+            <summary>Sets the stub of Attribute.IsDefaultAttribute()</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubProtoIgnoreAttribute.Match(System.Object)">
+            <summary>Sets the stub of Attribute.Match(Object obj)</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubProtoIgnoreAttribute.MatchObject">
+            <summary>Sets the stub of Attribute.Match(Object obj)</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubProtoIgnoreAttribute.TypeIdGet">
+            <summary>Sets the stub of Attribute.get_TypeId()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.StubProtoIgnoreAttribute.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.StubProtoIgnoreAttribute.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.StubProtoIgnoreAttribute.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.StubProtoIgnoreAttribute.TypeId">
+            <summary>Sets the stub of Attribute.get_TypeId()</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.StubProtoMemberAttribute">
+            <summary>Stub type of ProtoBuf.ProtoMemberAttribute</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubProtoMemberAttribute.#ctor(System.Int32)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubProtoMemberAttribute.Equals(System.Object)">
+            <summary>Sets the stub of Attribute.Equals(Object obj)</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubProtoMemberAttribute.EqualsObject">
+            <summary>Sets the stub of Attribute.Equals(Object obj)</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubProtoMemberAttribute.GetHashCode">
+            <summary>Sets the stub of Attribute.GetHashCode()</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubProtoMemberAttribute.GetHashCode01">
+            <summary>Sets the stub of Attribute.GetHashCode()</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubProtoMemberAttribute.InitializeStub">
+            <summary>Initializes a new instance of type StubProtoMemberAttribute</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubProtoMemberAttribute.IsDefaultAttribute">
+            <summary>Sets the stub of Attribute.IsDefaultAttribute()</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubProtoMemberAttribute.IsDefaultAttribute01">
+            <summary>Sets the stub of Attribute.IsDefaultAttribute()</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubProtoMemberAttribute.Match(System.Object)">
+            <summary>Sets the stub of Attribute.Match(Object obj)</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubProtoMemberAttribute.MatchObject">
+            <summary>Sets the stub of Attribute.Match(Object obj)</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubProtoMemberAttribute.TypeIdGet">
+            <summary>Sets the stub of Attribute.get_TypeId()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.StubProtoMemberAttribute.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.StubProtoMemberAttribute.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.StubProtoMemberAttribute.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.StubProtoMemberAttribute.TypeId">
+            <summary>Sets the stub of Attribute.get_TypeId()</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.StubProtoPartialIgnoreAttribute">
+            <summary>Stub type of ProtoBuf.ProtoPartialIgnoreAttribute</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubProtoPartialIgnoreAttribute.#ctor(System.String)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubProtoPartialIgnoreAttribute.Equals(System.Object)">
+            <summary>Sets the stub of Attribute.Equals(Object obj)</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubProtoPartialIgnoreAttribute.EqualsObject">
+            <summary>Sets the stub of Attribute.Equals(Object obj)</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubProtoPartialIgnoreAttribute.GetHashCode">
+            <summary>Sets the stub of Attribute.GetHashCode()</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubProtoPartialIgnoreAttribute.GetHashCode01">
+            <summary>Sets the stub of Attribute.GetHashCode()</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubProtoPartialIgnoreAttribute.InitializeStub">
+            <summary>Initializes a new instance of type StubProtoPartialIgnoreAttribute</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubProtoPartialIgnoreAttribute.IsDefaultAttribute">
+            <summary>Sets the stub of Attribute.IsDefaultAttribute()</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubProtoPartialIgnoreAttribute.IsDefaultAttribute01">
+            <summary>Sets the stub of Attribute.IsDefaultAttribute()</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubProtoPartialIgnoreAttribute.Match(System.Object)">
+            <summary>Sets the stub of Attribute.Match(Object obj)</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubProtoPartialIgnoreAttribute.MatchObject">
+            <summary>Sets the stub of Attribute.Match(Object obj)</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubProtoPartialIgnoreAttribute.TypeIdGet">
+            <summary>Sets the stub of Attribute.get_TypeId()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.StubProtoPartialIgnoreAttribute.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.StubProtoPartialIgnoreAttribute.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.StubProtoPartialIgnoreAttribute.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.StubProtoPartialIgnoreAttribute.TypeId">
+            <summary>Sets the stub of Attribute.get_TypeId()</summary>
+        </member>
+        <member name="T:ProtoBuf.Fakes.StubProtoPartialMemberAttribute">
+            <summary>Stub type of ProtoBuf.ProtoPartialMemberAttribute</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubProtoPartialMemberAttribute.#ctor(System.Int32,System.String)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubProtoPartialMemberAttribute.Equals(System.Object)">
+            <summary>Sets the stub of Attribute.Equals(Object obj)</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubProtoPartialMemberAttribute.EqualsObject">
+            <summary>Sets the stub of Attribute.Equals(Object obj)</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubProtoPartialMemberAttribute.GetHashCode">
+            <summary>Sets the stub of Attribute.GetHashCode()</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubProtoPartialMemberAttribute.GetHashCode01">
+            <summary>Sets the stub of Attribute.GetHashCode()</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubProtoPartialMemberAttribute.InitializeStub">
+            <summary>Initializes a new instance of type StubProtoPartialMemberAttribute</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubProtoPartialMemberAttribute.IsDefaultAttribute">
+            <summary>Sets the stub of Attribute.IsDefaultAttribute()</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubProtoPartialMemberAttribute.IsDefaultAttribute01">
+            <summary>Sets the stub of Attribute.IsDefaultAttribute()</summary>
+        </member>
+        <member name="M:ProtoBuf.Fakes.StubProtoPartialMemberAttribute.Match(System.Object)">
+            <summary>Sets the stub of Attribute.Match(Object obj)</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubProtoPartialMemberAttribute.MatchObject">
+            <summary>Sets the stub of Attribute.Match(Object obj)</summary>
+        </member>
+        <member name="F:ProtoBuf.Fakes.StubProtoPartialMemberAttribute.TypeIdGet">
+            <summary>Sets the stub of Attribute.get_TypeId()</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.StubProtoPartialMemberAttribute.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.StubProtoPartialMemberAttribute.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.StubProtoPartialMemberAttribute.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:ProtoBuf.Fakes.StubProtoPartialMemberAttribute.TypeId">
+            <summary>Sets the stub of Attribute.get_TypeId()</summary>
+        </member>
+        <member name="T:ProtoBuf.ServiceModel.Client.Fakes.ShimHttpBasicTransport">
+            <summary>Shim type of ProtoBuf.ServiceModel.Client.HttpBasicTransport</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Client.Fakes.ShimHttpBasicTransport.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Client.Fakes.ShimHttpBasicTransport.#ctor(ProtoBuf.ServiceModel.Client.HttpBasicTransport)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Client.Fakes.ShimHttpBasicTransport.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Client.Fakes.ShimHttpBasicTransport.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Client.Fakes.ShimHttpBasicTransport.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Client.Fakes.ShimHttpBasicTransport.Bind(ProtoBuf.ServiceModel.Client.ITransport)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimHttpBasicTransport.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimHttpBasicTransport.CheckDisposed">
+            <summary>Sets the shim of HttpBasicTransport.CheckDisposed()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimHttpBasicTransport.ConstructorString">
+            <summary>Sets the shim of HttpBasicTransport.HttpBasicTransport(String uri)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimHttpBasicTransport.Dispose">
+            <summary>Sets the shim of HttpBasicTransport.Dispose()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimHttpBasicTransport.DisposeBoolean">
+            <summary>Sets the shim of HttpBasicTransport.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimHttpBasicTransport.HasFlagParameterInfoParameterAttributes">
+            <summary>Sets the shim of HttpBasicTransport.HasFlag(ParameterInfo property, ParameterAttributes flag)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimHttpBasicTransport.ProtoBufServiceModelClientITransportSendRequestAsyncServiceRequest">
+            <summary>Sets the shim of HttpBasicTransport.ProtoBuf.ServiceModel.Client.ITransport.SendRequestAsync(ServiceRequest request)</summary>
+        </member>
+        <member name="T:ProtoBuf.ServiceModel.Client.Fakes.ShimHttpBasicTransport.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimHttpBasicTransport.AllInstances.CheckDisposed">
+            <summary>Sets the shim of HttpBasicTransport.CheckDisposed()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimHttpBasicTransport.AllInstances.Dispose">
+            <summary>Sets the shim of HttpBasicTransport.Dispose()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimHttpBasicTransport.AllInstances.DisposeBoolean">
+            <summary>Sets the shim of HttpBasicTransport.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimHttpBasicTransport.AllInstances.ProtoBufServiceModelClientITransportSendRequestAsyncServiceRequest">
+            <summary>Sets the shim of HttpBasicTransport.ProtoBuf.ServiceModel.Client.ITransport.SendRequestAsync(ServiceRequest request)</summary>
+        </member>
+        <member name="T:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1">
+            <summary>Shim type of ProtoBuf.ServiceModel.Client.ProtoClient`1</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.#ctor(ProtoBuf.ServiceModel.Client.ProtoClient{`0})">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.CheckDisposed">
+            <summary>Sets the shim of ProtoClient`1.CheckDisposed()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.ConstructorITransport">
+            <summary>Sets the shim of ProtoClient`1.ProtoClient`1(ITransport transport)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.Dispose">
+            <summary>Sets the shim of ProtoClient`1.Dispose()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.InvokeAsyncMethodInfoActionOfAsyncResultObjectArray">
+            <summary>Sets the shim of ProtoClient`1.InvokeAsync(MethodInfo method, Action`1&lt;AsyncResult&gt; callback, Object[] args)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.InvokeAsyncStringActionOfAsyncResultObjectArray">
+            <summary>Sets the shim of ProtoClient`1.InvokeAsync(String methodName, Action`1&lt;AsyncResult&gt; callback, Object[] args)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.InvokeMethodInfoObjectArray">
+            <summary>Sets the shim of ProtoClient`1.Invoke(MethodInfo method, Object[] args)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.InvokeStringObjectArray">
+            <summary>Sets the shim of ProtoClient`1.Invoke(String methodName, Object[] args)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.IsDisposedGet">
+            <summary>Sets the shim of ProtoClient`1.get_IsDisposed()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.OnExceptionException">
+            <summary>Sets the shim of ProtoClient`1.OnException(Exception exception)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.ResolveActionMethodInfo">
+            <summary>Sets the shim of ProtoClient`1.ResolveAction(MethodInfo method)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.ResolveMethodString">
+            <summary>Sets the shim of ProtoClient`1.ResolveMethod(String methodName)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.ResolveServiceType">
+            <summary>Sets the shim of ProtoClient`1.ResolveService(Type serviceType)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.SendRequestAsyncMethodInfoActionOfAsyncResultObjectArray">
+            <summary>Sets the shim of ProtoClient`1.SendRequestAsync(MethodInfo method, Action`1&lt;AsyncResult&gt; callback, Object[] args)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.ServiceExceptionAddEventHandlerOfExceptionEventArgs">
+            <summary>Sets the shim of ProtoClient`1.add_ServiceException(EventHandler`1&lt;ExceptionEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.ServiceExceptionRemoveEventHandlerOfExceptionEventArgs">
+            <summary>Sets the shim of ProtoClient`1.remove_ServiceException(EventHandler`1&lt;ExceptionEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.TimeoutGet">
+            <summary>Sets the shim of ProtoClient`1.get_Timeout()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.TimeoutSetInt32">
+            <summary>Sets the shim of ProtoClient`1.set_Timeout(Int32 value)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.TransportGet">
+            <summary>Sets the shim of ProtoClient`1.get_Transport()</summary>
+        </member>
+        <member name="T:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.AllInstances.CheckDisposed">
+            <summary>Sets the shim of ProtoClient`1.CheckDisposed()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.AllInstances.Dispose">
+            <summary>Sets the shim of ProtoClient`1.Dispose()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.AllInstances.InvokeAsyncMethodInfoActionOfAsyncResultObjectArray">
+            <summary>Sets the shim of ProtoClient`1.InvokeAsync(MethodInfo method, Action`1&lt;AsyncResult&gt; callback, Object[] args)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.AllInstances.InvokeAsyncStringActionOfAsyncResultObjectArray">
+            <summary>Sets the shim of ProtoClient`1.InvokeAsync(String methodName, Action`1&lt;AsyncResult&gt; callback, Object[] args)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.AllInstances.InvokeMethodInfoObjectArray">
+            <summary>Sets the shim of ProtoClient`1.Invoke(MethodInfo method, Object[] args)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.AllInstances.InvokeStringObjectArray">
+            <summary>Sets the shim of ProtoClient`1.Invoke(String methodName, Object[] args)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.AllInstances.IsDisposedGet">
+            <summary>Sets the shim of ProtoClient`1.get_IsDisposed()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.AllInstances.OnExceptionException">
+            <summary>Sets the shim of ProtoClient`1.OnException(Exception exception)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.AllInstances.ResolveActionMethodInfo">
+            <summary>Sets the shim of ProtoClient`1.ResolveAction(MethodInfo method)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.AllInstances.ResolveMethodString">
+            <summary>Sets the shim of ProtoClient`1.ResolveMethod(String methodName)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.AllInstances.ResolveServiceType">
+            <summary>Sets the shim of ProtoClient`1.ResolveService(Type serviceType)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.AllInstances.SendRequestAsyncMethodInfoActionOfAsyncResultObjectArray">
+            <summary>Sets the shim of ProtoClient`1.SendRequestAsync(MethodInfo method, Action`1&lt;AsyncResult&gt; callback, Object[] args)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.AllInstances.ServiceExceptionAddEventHandlerOfExceptionEventArgs">
+            <summary>Sets the shim of ProtoClient`1.add_ServiceException(EventHandler`1&lt;ExceptionEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.AllInstances.ServiceExceptionRemoveEventHandlerOfExceptionEventArgs">
+            <summary>Sets the shim of ProtoClient`1.remove_ServiceException(EventHandler`1&lt;ExceptionEventArgs&gt; value)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.AllInstances.TimeoutGet">
+            <summary>Sets the shim of ProtoClient`1.get_Timeout()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.AllInstances.TimeoutSetInt32">
+            <summary>Sets the shim of ProtoClient`1.set_Timeout(Int32 value)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimProtoClient`1.AllInstances.TransportGet">
+            <summary>Sets the shim of ProtoClient`1.get_Transport()</summary>
+        </member>
+        <member name="T:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest">
+            <summary>Shim type of ProtoBuf.ServiceModel.Client.ServiceRequest</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest.#ctor(ProtoBuf.ServiceModel.Client.ServiceRequest)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest.ActionGet">
+            <summary>Sets the shim of ServiceRequest.get_Action()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest.ArgsGet">
+            <summary>Sets the shim of ServiceRequest.get_Args()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest.ConstructorStringStringMethodInfoObjectArrayObjectActionOfAsyncResult">
+            <summary>Sets the shim of ServiceRequest.ServiceRequest(String service, String action, MethodInfo method, Object[] args, Object userState, Action`1&lt;AsyncResult&gt; callback)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest.ExceptionGet">
+            <summary>Sets the shim of ServiceRequest.get_Exception()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest.ExceptionSetException">
+            <summary>Sets the shim of ServiceRequest.set_Exception(Exception value)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest.MethodGet">
+            <summary>Sets the shim of ServiceRequest.get_Method()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest.OnExceptionException">
+            <summary>Sets the shim of ServiceRequest.OnException(Exception exception)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest.OnResponseObject">
+            <summary>Sets the shim of ServiceRequest.OnResponse(Object responseObject)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest.RaiseCallbackObjectException">
+            <summary>Sets the shim of ServiceRequest.RaiseCallback(Object responseObject, Exception exception)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest.ResponseObjectGet">
+            <summary>Sets the shim of ServiceRequest.get_ResponseObject()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest.ResponseObjectSetObject">
+            <summary>Sets the shim of ServiceRequest.set_ResponseObject(Object value)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest.ServiceGet">
+            <summary>Sets the shim of ServiceRequest.get_Service()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest.UserStateGet">
+            <summary>Sets the shim of ServiceRequest.get_UserState()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest._RaiseCallbackb__0">
+            <summary>Sets the shim of ServiceRequest.&lt;RaiseCallback&gt;b__0()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest._RaiseCallbackb__1">
+            <summary>Sets the shim of ServiceRequest.&lt;RaiseCallback&gt;b__1()</summary>
+        </member>
+        <member name="T:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest.AllInstances.ActionGet">
+            <summary>Sets the shim of ServiceRequest.get_Action()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest.AllInstances.ArgsGet">
+            <summary>Sets the shim of ServiceRequest.get_Args()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest.AllInstances.ExceptionGet">
+            <summary>Sets the shim of ServiceRequest.get_Exception()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest.AllInstances.ExceptionSetException">
+            <summary>Sets the shim of ServiceRequest.set_Exception(Exception value)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest.AllInstances.MethodGet">
+            <summary>Sets the shim of ServiceRequest.get_Method()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest.AllInstances.OnExceptionException">
+            <summary>Sets the shim of ServiceRequest.OnException(Exception exception)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest.AllInstances.OnResponseObject">
+            <summary>Sets the shim of ServiceRequest.OnResponse(Object responseObject)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest.AllInstances.RaiseCallbackObjectException">
+            <summary>Sets the shim of ServiceRequest.RaiseCallback(Object responseObject, Exception exception)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest.AllInstances.ResponseObjectGet">
+            <summary>Sets the shim of ServiceRequest.get_ResponseObject()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest.AllInstances.ResponseObjectSetObject">
+            <summary>Sets the shim of ServiceRequest.set_ResponseObject(Object value)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest.AllInstances.ServiceGet">
+            <summary>Sets the shim of ServiceRequest.get_Service()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest.AllInstances.UserStateGet">
+            <summary>Sets the shim of ServiceRequest.get_UserState()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest.AllInstances._RaiseCallbackb__0">
+            <summary>Sets the shim of ServiceRequest.&lt;RaiseCallback&gt;b__0()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.ShimServiceRequest.AllInstances._RaiseCallbackb__1">
+            <summary>Sets the shim of ServiceRequest.&lt;RaiseCallback&gt;b__1()</summary>
+        </member>
+        <member name="T:ProtoBuf.ServiceModel.Client.Fakes.StubHttpBasicTransport">
+            <summary>Stub type of ProtoBuf.ServiceModel.Client.HttpBasicTransport</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Client.Fakes.StubHttpBasicTransport.#ctor(System.String)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Client.Fakes.StubHttpBasicTransport.Dispose(System.Boolean)">
+            <summary>Sets the stub of HttpBasicTransport.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="F:ProtoBuf.ServiceModel.Client.Fakes.StubHttpBasicTransport.DisposeBoolean">
+            <summary>Sets the stub of HttpBasicTransport.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Client.Fakes.StubHttpBasicTransport.InitializeStub">
+            <summary>Initializes a new instance of type StubHttpBasicTransport</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.StubHttpBasicTransport.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.StubHttpBasicTransport.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.StubHttpBasicTransport.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:ProtoBuf.ServiceModel.Client.Fakes.StubITransport">
+            <summary>Stub type of ProtoBuf.ServiceModel.Client.ITransport</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Client.Fakes.StubITransport.#ctor">
+            <summary>Initializes a new instance of type StubITransport</summary>
+        </member>
+        <member name="F:ProtoBuf.ServiceModel.Client.Fakes.StubITransport.Dispose">
+            <summary>Sets the stub of IDisposable.Dispose()</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Client.Fakes.StubITransport.p::ProtoBuf#ServiceModel#Client#ITransport#SendRequestAsync(ProtoBuf.ServiceModel.Client.ServiceRequest)">
+            <summary>Sets the stub of ITransport.SendRequestAsync(ServiceRequest request)</summary>
+        </member>
+        <member name="F:ProtoBuf.ServiceModel.Client.Fakes.StubITransport.SendRequestAsyncServiceRequest">
+            <summary>Sets the stub of ITransport.SendRequestAsync(ServiceRequest request)</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Client.Fakes.StubITransport.global::System#IDisposable#Dispose">
+            <summary>Sets the stub of IDisposable.Dispose()</summary>
+        </member>
+        <member name="T:ProtoBuf.ServiceModel.Client.Fakes.StubProtoClient`1">
+            <summary>Stub type of ProtoBuf.ServiceModel.Client.ProtoClient`1</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Client.Fakes.StubProtoClient`1.#ctor(ProtoBuf.ServiceModel.Client.ITransport)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Client.Fakes.StubProtoClient`1.InitializeStub">
+            <summary>Initializes a new instance of type StubProtoClient</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Client.Fakes.StubProtoClient`1.OnException(System.Exception)">
+            <summary>Sets the stub of ProtoClient`1.OnException(Exception exception)</summary>
+        </member>
+        <member name="F:ProtoBuf.ServiceModel.Client.Fakes.StubProtoClient`1.OnExceptionException">
+            <summary>Sets the stub of ProtoClient`1.OnException(Exception exception)</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Client.Fakes.StubProtoClient`1.ResolveAction(System.Reflection.MethodInfo)">
+            <summary>Sets the stub of ProtoClient`1.ResolveAction(MethodInfo method)</summary>
+        </member>
+        <member name="F:ProtoBuf.ServiceModel.Client.Fakes.StubProtoClient`1.ResolveActionMethodInfo">
+            <summary>Sets the stub of ProtoClient`1.ResolveAction(MethodInfo method)</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Client.Fakes.StubProtoClient`1.ResolveService(System.Type)">
+            <summary>Sets the stub of ProtoClient`1.ResolveService(Type serviceType)</summary>
+        </member>
+        <member name="F:ProtoBuf.ServiceModel.Client.Fakes.StubProtoClient`1.ResolveServiceType">
+            <summary>Sets the stub of ProtoClient`1.ResolveService(Type serviceType)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.StubProtoClient`1.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.StubProtoClient`1.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.StubProtoClient`1.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:ProtoBuf.ServiceModel.Client.Fakes.StubServiceRequest">
+            <summary>Stub type of ProtoBuf.ServiceModel.Client.ServiceRequest</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Client.Fakes.StubServiceRequest.#ctor(System.String,System.String,System.Reflection.MethodInfo,System.Object[],System.Object,System.Action{ProtoBuf.AsyncResult})">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Client.Fakes.StubServiceRequest.InitializeStub">
+            <summary>Initializes a new instance of type StubServiceRequest</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.StubServiceRequest.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.StubServiceRequest.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Client.Fakes.StubServiceRequest.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:ProtoBuf.ServiceModel.Fakes.ShimExceptionEventArgs">
+            <summary>Shim type of ProtoBuf.ServiceModel.ExceptionEventArgs</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.ShimExceptionEventArgs.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.ShimExceptionEventArgs.#ctor(ProtoBuf.ServiceModel.ExceptionEventArgs)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.ShimExceptionEventArgs.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.ShimExceptionEventArgs.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimExceptionEventArgs.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimExceptionEventArgs.ConstructorException">
+            <summary>Sets the shim of ExceptionEventArgs.ExceptionEventArgs(Exception exception)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimExceptionEventArgs.ExceptionGet">
+            <summary>Sets the shim of ExceptionEventArgs.get_Exception()</summary>
+        </member>
+        <member name="T:ProtoBuf.ServiceModel.Fakes.ShimExceptionEventArgs.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimExceptionEventArgs.AllInstances.ExceptionGet">
+            <summary>Sets the shim of ExceptionEventArgs.get_Exception()</summary>
+        </member>
+        <member name="T:ProtoBuf.ServiceModel.Fakes.ShimProtoBehaviorAttribute">
+            <summary>Shim type of ProtoBuf.ServiceModel.ProtoBehaviorAttribute</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.ShimProtoBehaviorAttribute.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.ShimProtoBehaviorAttribute.#ctor(ProtoBuf.ServiceModel.ProtoBehaviorAttribute)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.ShimProtoBehaviorAttribute.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.ShimProtoBehaviorAttribute.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.ShimProtoBehaviorAttribute.Bind(System.ServiceModel.Description.IOperationBehavior)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimProtoBehaviorAttribute.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimProtoBehaviorAttribute.Constructor">
+            <summary>Sets the shim of ProtoBehaviorAttribute.ProtoBehaviorAttribute()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimProtoBehaviorAttribute.SystemServiceModelDescriptionIOperationBehaviorAddBindingParametersOperationDescriptionBindingParameterCollection">
+            <summary>Sets the shim of ProtoBehaviorAttribute.System.ServiceModel.Description.IOperationBehavior.AddBindingParameters(OperationDescription operationDescription, BindingParameterCollection bindingParameters)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimProtoBehaviorAttribute.SystemServiceModelDescriptionIOperationBehaviorApplyClientBehaviorOperationDescriptionClientOperation">
+            <summary>Sets the shim of ProtoBehaviorAttribute.System.ServiceModel.Description.IOperationBehavior.ApplyClientBehavior(OperationDescription operationDescription, ClientOperation clientOperation)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimProtoBehaviorAttribute.SystemServiceModelDescriptionIOperationBehaviorApplyDispatchBehaviorOperationDescriptionDispatchOperation">
+            <summary>Sets the shim of ProtoBehaviorAttribute.System.ServiceModel.Description.IOperationBehavior.ApplyDispatchBehavior(OperationDescription operationDescription, DispatchOperation dispatchOperation)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimProtoBehaviorAttribute.SystemServiceModelDescriptionIOperationBehaviorValidateOperationDescription">
+            <summary>Sets the shim of ProtoBehaviorAttribute.System.ServiceModel.Description.IOperationBehavior.Validate(OperationDescription operationDescription)</summary>
+        </member>
+        <member name="T:ProtoBuf.ServiceModel.Fakes.ShimProtoBehaviorAttribute.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimProtoBehaviorAttribute.AllInstances.SystemServiceModelDescriptionIOperationBehaviorAddBindingParametersOperationDescriptionBindingParameterCollection">
+            <summary>Sets the shim of ProtoBehaviorAttribute.System.ServiceModel.Description.IOperationBehavior.AddBindingParameters(OperationDescription operationDescription, BindingParameterCollection bindingParameters)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimProtoBehaviorAttribute.AllInstances.SystemServiceModelDescriptionIOperationBehaviorApplyClientBehaviorOperationDescriptionClientOperation">
+            <summary>Sets the shim of ProtoBehaviorAttribute.System.ServiceModel.Description.IOperationBehavior.ApplyClientBehavior(OperationDescription operationDescription, ClientOperation clientOperation)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimProtoBehaviorAttribute.AllInstances.SystemServiceModelDescriptionIOperationBehaviorApplyDispatchBehaviorOperationDescriptionDispatchOperation">
+            <summary>Sets the shim of ProtoBehaviorAttribute.System.ServiceModel.Description.IOperationBehavior.ApplyDispatchBehavior(OperationDescription operationDescription, DispatchOperation dispatchOperation)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimProtoBehaviorAttribute.AllInstances.SystemServiceModelDescriptionIOperationBehaviorValidateOperationDescription">
+            <summary>Sets the shim of ProtoBehaviorAttribute.System.ServiceModel.Description.IOperationBehavior.Validate(OperationDescription operationDescription)</summary>
+        </member>
+        <member name="T:ProtoBuf.ServiceModel.Fakes.ShimProtoBehaviorExtension">
+            <summary>Shim type of ProtoBuf.ServiceModel.ProtoBehaviorExtension</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.ShimProtoBehaviorExtension.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.ShimProtoBehaviorExtension.#ctor(ProtoBuf.ServiceModel.ProtoBehaviorExtension)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.ShimProtoBehaviorExtension.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.ShimProtoBehaviorExtension.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimProtoBehaviorExtension.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimProtoBehaviorExtension.BehaviorTypeGet">
+            <summary>Sets the shim of ProtoBehaviorExtension.get_BehaviorType()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimProtoBehaviorExtension.Constructor">
+            <summary>Sets the shim of ProtoBehaviorExtension.ProtoBehaviorExtension()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimProtoBehaviorExtension.CreateBehavior">
+            <summary>Sets the shim of ProtoBehaviorExtension.CreateBehavior()</summary>
+        </member>
+        <member name="T:ProtoBuf.ServiceModel.Fakes.ShimProtoBehaviorExtension.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimProtoBehaviorExtension.AllInstances.BehaviorTypeGet">
+            <summary>Sets the shim of ProtoBehaviorExtension.get_BehaviorType()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimProtoBehaviorExtension.AllInstances.CreateBehavior">
+            <summary>Sets the shim of ProtoBehaviorExtension.CreateBehavior()</summary>
+        </member>
+        <member name="T:ProtoBuf.ServiceModel.Fakes.ShimProtoEndpointBehavior">
+            <summary>Shim type of ProtoBuf.ServiceModel.ProtoEndpointBehavior</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.ShimProtoEndpointBehavior.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.ShimProtoEndpointBehavior.#ctor(ProtoBuf.ServiceModel.ProtoEndpointBehavior)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.ShimProtoEndpointBehavior.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.ShimProtoEndpointBehavior.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.ShimProtoEndpointBehavior.Bind(System.ServiceModel.Description.IEndpointBehavior)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimProtoEndpointBehavior.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimProtoEndpointBehavior.Constructor">
+            <summary>Sets the shim of ProtoEndpointBehavior.ProtoEndpointBehavior()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimProtoEndpointBehavior.ReplaceDataContractSerializerOperationBehaviorOperationDescription">
+            <summary>Sets the shim of ProtoEndpointBehavior.ReplaceDataContractSerializerOperationBehavior(OperationDescription description)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimProtoEndpointBehavior.ReplaceDataContractSerializerOperationBehaviorServiceEndpoint">
+            <summary>Sets the shim of ProtoEndpointBehavior.ReplaceDataContractSerializerOperationBehavior(ServiceEndpoint serviceEndpoint)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimProtoEndpointBehavior.SystemServiceModelDescriptionIEndpointBehaviorAddBindingParametersServiceEndpointBindingParameterCollection">
+            <summary>Sets the shim of ProtoEndpointBehavior.System.ServiceModel.Description.IEndpointBehavior.AddBindingParameters(ServiceEndpoint endpoint, BindingParameterCollection bindingParameters)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimProtoEndpointBehavior.SystemServiceModelDescriptionIEndpointBehaviorApplyClientBehaviorServiceEndpointClientRuntime">
+            <summary>Sets the shim of ProtoEndpointBehavior.System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior(ServiceEndpoint endpoint, ClientRuntime clientRuntime)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimProtoEndpointBehavior.SystemServiceModelDescriptionIEndpointBehaviorApplyDispatchBehaviorServiceEndpointEndpointDispatcher">
+            <summary>Sets the shim of ProtoEndpointBehavior.System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior(ServiceEndpoint endpoint, EndpointDispatcher endpointDispatcher)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimProtoEndpointBehavior.SystemServiceModelDescriptionIEndpointBehaviorValidateServiceEndpoint">
+            <summary>Sets the shim of ProtoEndpointBehavior.System.ServiceModel.Description.IEndpointBehavior.Validate(ServiceEndpoint endpoint)</summary>
+        </member>
+        <member name="T:ProtoBuf.ServiceModel.Fakes.ShimProtoEndpointBehavior.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimProtoEndpointBehavior.AllInstances.SystemServiceModelDescriptionIEndpointBehaviorAddBindingParametersServiceEndpointBindingParameterCollection">
+            <summary>Sets the shim of ProtoEndpointBehavior.System.ServiceModel.Description.IEndpointBehavior.AddBindingParameters(ServiceEndpoint endpoint, BindingParameterCollection bindingParameters)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimProtoEndpointBehavior.AllInstances.SystemServiceModelDescriptionIEndpointBehaviorApplyClientBehaviorServiceEndpointClientRuntime">
+            <summary>Sets the shim of ProtoEndpointBehavior.System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior(ServiceEndpoint endpoint, ClientRuntime clientRuntime)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimProtoEndpointBehavior.AllInstances.SystemServiceModelDescriptionIEndpointBehaviorApplyDispatchBehaviorServiceEndpointEndpointDispatcher">
+            <summary>Sets the shim of ProtoEndpointBehavior.System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior(ServiceEndpoint endpoint, EndpointDispatcher endpointDispatcher)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimProtoEndpointBehavior.AllInstances.SystemServiceModelDescriptionIEndpointBehaviorValidateServiceEndpoint">
+            <summary>Sets the shim of ProtoEndpointBehavior.System.ServiceModel.Description.IEndpointBehavior.Validate(ServiceEndpoint endpoint)</summary>
+        </member>
+        <member name="T:ProtoBuf.ServiceModel.Fakes.ShimRpcUtils">
+            <summary>Shim type of ProtoBuf.ServiceModel.RpcUtils</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.ShimRpcUtils.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.ShimRpcUtils.#ctor(ProtoBuf.ServiceModel.RpcUtils)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.ShimRpcUtils.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.ShimRpcUtils.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimRpcUtils.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimRpcUtils.Constructor">
+            <summary>Sets the shim of RpcUtils.RpcUtils()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimRpcUtils.GetActionNameMethodInfo">
+            <summary>Sets the shim of RpcUtils.GetActionName(MethodInfo method)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimRpcUtils.GetServiceNameType">
+            <summary>Sets the shim of RpcUtils.GetServiceName(Type type)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimRpcUtils.IsRequestArgumentParameterInfo">
+            <summary>Sets the shim of RpcUtils.IsRequestArgument(ParameterInfo parameter)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimRpcUtils.IsResponseArgumentParameterInfo">
+            <summary>Sets the shim of RpcUtils.IsResponseArgument(ParameterInfo parameter)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimRpcUtils.PackArgsStreamMethodInfoObjectObjectArrayGetterOfParameterInfoBoolean">
+            <summary>Sets the shim of RpcUtils.PackArgs(Stream stream, MethodInfo method, Object result, Object[] args, Getter`2&lt;ParameterInfo,Boolean&gt; predicate)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.ShimRpcUtils.UnpackArgsStreamMethodInfoObjectArrayGetterOfParameterInfoBoolean">
+            <summary>Sets the shim of RpcUtils.UnpackArgs(Stream stream, MethodInfo method, Object[] args, Getter`2&lt;ParameterInfo,Boolean&gt; predicate)</summary>
+        </member>
+        <member name="T:ProtoBuf.ServiceModel.Fakes.ShimRpcUtils.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension">
+            <summary>Stub type of ProtoBuf.ServiceModel.ProtoBehaviorExtension</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="F:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.BehaviorTypeGet">
+            <summary>Sets the stub of ProtoBehaviorExtension.get_BehaviorType()</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.CopyFrom(System.ServiceModel.Configuration.ServiceModelExtensionElement)">
+            <summary>Sets the stub of ServiceModelExtensionElement.CopyFrom(ServiceModelExtensionElement from)</summary>
+        </member>
+        <member name="F:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.CopyFromServiceModelExtensionElement">
+            <summary>Sets the stub of ServiceModelExtensionElement.CopyFrom(ServiceModelExtensionElement from)</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.CreateBehavior">
+            <summary>Sets the stub of ProtoBehaviorExtension.CreateBehavior()</summary>
+        </member>
+        <member name="F:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.CreateBehavior01">
+            <summary>Sets the stub of ProtoBehaviorExtension.CreateBehavior()</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.DeserializeElement(System.Xml.XmlReader,System.Boolean)">
+            <summary>Sets the stub of ConfigurationElement.DeserializeElement(XmlReader reader, Boolean serializeCollectionKey)</summary>
+        </member>
+        <member name="F:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.DeserializeElementXmlReaderBoolean">
+            <summary>Sets the stub of ConfigurationElement.DeserializeElement(XmlReader reader, Boolean serializeCollectionKey)</summary>
+        </member>
+        <member name="F:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.ElementPropertyGet">
+            <summary>Sets the stub of ConfigurationElement.get_ElementProperty()</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.Equals(System.Object)">
+            <summary>Sets the stub of ConfigurationElement.Equals(Object compareTo)</summary>
+        </member>
+        <member name="F:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.EqualsObject">
+            <summary>Sets the stub of ConfigurationElement.Equals(Object compareTo)</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.GetHashCode">
+            <summary>Sets the stub of ConfigurationElement.GetHashCode()</summary>
+        </member>
+        <member name="F:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.GetHashCode01">
+            <summary>Sets the stub of ConfigurationElement.GetHashCode()</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.GetTransformedAssemblyString(System.String)">
+            <summary>Sets the stub of ConfigurationElement.GetTransformedAssemblyString(String assemblyName)</summary>
+        </member>
+        <member name="F:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.GetTransformedAssemblyStringString">
+            <summary>Sets the stub of ConfigurationElement.GetTransformedAssemblyString(String assemblyName)</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.GetTransformedTypeString(System.String)">
+            <summary>Sets the stub of ConfigurationElement.GetTransformedTypeString(String typeName)</summary>
+        </member>
+        <member name="F:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.GetTransformedTypeStringString">
+            <summary>Sets the stub of ConfigurationElement.GetTransformedTypeString(String typeName)</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.Init">
+            <summary>Sets the stub of ConfigurationElement.Init()</summary>
+        </member>
+        <member name="F:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.Init01">
+            <summary>Sets the stub of ConfigurationElement.Init()</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.InitializeDefault">
+            <summary>Sets the stub of ConfigurationElement.InitializeDefault()</summary>
+        </member>
+        <member name="F:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.InitializeDefault01">
+            <summary>Sets the stub of ConfigurationElement.InitializeDefault()</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.InitializeStub">
+            <summary>Initializes a new instance of type StubProtoBehaviorExtension</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.IsModified">
+            <summary>Sets the stub of ServiceModelExtensionElement.IsModified()</summary>
+        </member>
+        <member name="F:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.IsModified01">
+            <summary>Sets the stub of ServiceModelExtensionElement.IsModified()</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.IsReadOnly">
+            <summary>Sets the stub of ConfigurationElement.IsReadOnly()</summary>
+        </member>
+        <member name="F:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.IsReadOnly01">
+            <summary>Sets the stub of ConfigurationElement.IsReadOnly()</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.ListErrors(System.Collections.IList)">
+            <summary>Sets the stub of ConfigurationElement.ListErrors(IList errorList)</summary>
+        </member>
+        <member name="F:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.ListErrorsIList">
+            <summary>Sets the stub of ConfigurationElement.ListErrors(IList errorList)</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.OnDeserializeUnrecognizedAttribute(System.String,System.String)">
+            <summary>Sets the stub of ConfigurationElement.OnDeserializeUnrecognizedAttribute(String name, String value)</summary>
+        </member>
+        <member name="F:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.OnDeserializeUnrecognizedAttributeStringString">
+            <summary>Sets the stub of ConfigurationElement.OnDeserializeUnrecognizedAttribute(String name, String value)</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.OnDeserializeUnrecognizedElement(System.String,System.Xml.XmlReader)">
+            <summary>Sets the stub of ConfigurationElement.OnDeserializeUnrecognizedElement(String elementName, XmlReader reader)</summary>
+        </member>
+        <member name="F:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.OnDeserializeUnrecognizedElementStringXmlReader">
+            <summary>Sets the stub of ConfigurationElement.OnDeserializeUnrecognizedElement(String elementName, XmlReader reader)</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.OnRequiredPropertyNotFound(System.String)">
+            <summary>Sets the stub of ConfigurationElement.OnRequiredPropertyNotFound(String name)</summary>
+        </member>
+        <member name="F:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.OnRequiredPropertyNotFoundString">
+            <summary>Sets the stub of ConfigurationElement.OnRequiredPropertyNotFound(String name)</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.PostDeserialize">
+            <summary>Sets the stub of ConfigurationElement.PostDeserialize()</summary>
+        </member>
+        <member name="F:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.PostDeserialize01">
+            <summary>Sets the stub of ConfigurationElement.PostDeserialize()</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.PreSerialize(System.Xml.XmlWriter)">
+            <summary>Sets the stub of ConfigurationElement.PreSerialize(XmlWriter writer)</summary>
+        </member>
+        <member name="F:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.PreSerializeXmlWriter">
+            <summary>Sets the stub of ConfigurationElement.PreSerialize(XmlWriter writer)</summary>
+        </member>
+        <member name="F:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.PropertiesGet">
+            <summary>Sets the stub of ConfigurationElement.get_Properties()</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.Reset(System.Configuration.ConfigurationElement)">
+            <summary>Sets the stub of ServiceModelExtensionElement.Reset(ConfigurationElement parentElement)</summary>
+        </member>
+        <member name="F:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.ResetConfigurationElement">
+            <summary>Sets the stub of ServiceModelExtensionElement.Reset(ConfigurationElement parentElement)</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.ResetModified">
+            <summary>Sets the stub of ConfigurationElement.ResetModified()</summary>
+        </member>
+        <member name="F:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.ResetModified01">
+            <summary>Sets the stub of ConfigurationElement.ResetModified()</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.SerializeElement(System.Xml.XmlWriter,System.Boolean)">
+            <summary>Sets the stub of ServiceModelExtensionElement.SerializeElement(XmlWriter writer, Boolean serializeCollectionKey)</summary>
+        </member>
+        <member name="F:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.SerializeElementXmlWriterBoolean">
+            <summary>Sets the stub of ServiceModelExtensionElement.SerializeElement(XmlWriter writer, Boolean serializeCollectionKey)</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.SerializeToXmlElement(System.Xml.XmlWriter,System.String)">
+            <summary>Sets the stub of ConfigurationElement.SerializeToXmlElement(XmlWriter writer, String elementName)</summary>
+        </member>
+        <member name="F:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.SerializeToXmlElementXmlWriterString">
+            <summary>Sets the stub of ConfigurationElement.SerializeToXmlElement(XmlWriter writer, String elementName)</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.SetReadOnly">
+            <summary>Sets the stub of ConfigurationElement.SetReadOnly()</summary>
+        </member>
+        <member name="F:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.SetReadOnly01">
+            <summary>Sets the stub of ConfigurationElement.SetReadOnly()</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.Unmerge(System.Configuration.ConfigurationElement,System.Configuration.ConfigurationElement,System.Configuration.ConfigurationSaveMode)">
+            <summary>Sets the stub of ConfigurationElement.Unmerge(ConfigurationElement sourceElement, ConfigurationElement parentElement, ConfigurationSaveMode saveMode)</summary>
+        </member>
+        <member name="F:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.UnmergeConfigurationElementConfigurationElementConfigurationSaveMode">
+            <summary>Sets the stub of ConfigurationElement.Unmerge(ConfigurationElement sourceElement, ConfigurationElement parentElement, ConfigurationSaveMode saveMode)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.BehaviorType">
+            <summary>Sets the stub of ProtoBehaviorExtension.get_BehaviorType()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.ElementProperty">
+            <summary>Sets the stub of ConfigurationElement.get_ElementProperty()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.StubProtoBehaviorExtension.Properties">
+            <summary>Sets the stub of ConfigurationElement.get_Properties()</summary>
+        </member>
+        <member name="T:ProtoBuf.ServiceModel.Fakes.StubProtoEndpointBehavior">
+            <summary>Stub type of ProtoBuf.ServiceModel.ProtoEndpointBehavior</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.StubProtoEndpointBehavior.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.StubProtoEndpointBehavior.InitializeStub">
+            <summary>Initializes a new instance of type StubProtoEndpointBehavior</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.StubProtoEndpointBehavior.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.StubProtoEndpointBehavior.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.StubProtoEndpointBehavior.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:ProtoBuf.ServiceModel.Fakes.StubRpcUtils">
+            <summary>Stub type of ProtoBuf.ServiceModel.RpcUtils</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.StubRpcUtils.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Fakes.StubRpcUtils.InitializeStub">
+            <summary>Initializes a new instance of type StubRpcUtils</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.StubRpcUtils.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.StubRpcUtils.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Fakes.StubRpcUtils.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:ProtoBuf.ServiceModel.Server.Fakes.ShimHttpServer">
+            <summary>Shim type of ProtoBuf.ServiceModel.Server.HttpServer</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Server.Fakes.ShimHttpServer.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Server.Fakes.ShimHttpServer.#ctor(ProtoBuf.ServiceModel.Server.HttpServer)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Server.Fakes.ShimHttpServer.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Server.Fakes.ShimHttpServer.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Server.Fakes.ShimHttpServer.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Server.Fakes.ShimHttpServer.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Server.Fakes.ShimHttpServer.CheckDisposed">
+            <summary>Sets the shim of HttpServer.CheckDisposed()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Server.Fakes.ShimHttpServer.Close">
+            <summary>Sets the shim of HttpServer.Close()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Server.Fakes.ShimHttpServer.ConstructorString">
+            <summary>Sets the shim of HttpServer.HttpServer(String uriPrefix)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Server.Fakes.ShimHttpServer.ConstructorStringTypeType">
+            <summary>Sets the shim of HttpServer.HttpServer(String uriPrefix, Type serviceContractType, Type serviceImplementationType)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Server.Fakes.ShimHttpServer.GotContextHttpListenerContext">
+            <summary>Sets the shim of HttpServer.GotContext(HttpListenerContext context)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Server.Fakes.ShimHttpServer.ListenForContext">
+            <summary>Sets the shim of HttpServer.ListenForContext()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Server.Fakes.ShimHttpServer.OnBeforeWriteResponseObject">
+            <summary>Sets the shim of HttpServer.OnBeforeWriteResponse(Object state)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Server.Fakes.ShimHttpServer.ProcessContextHttpListenerContext">
+            <summary>Sets the shim of HttpServer.ProcessContext(HttpListenerContext context)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Server.Fakes.ShimHttpServer.Start">
+            <summary>Sets the shim of HttpServer.Start()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Server.Fakes.ShimHttpServer.SystemIDisposableDispose">
+            <summary>Sets the shim of HttpServer.System.IDisposable.Dispose()</summary>
+        </member>
+        <member name="T:ProtoBuf.ServiceModel.Server.Fakes.ShimHttpServer.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Server.Fakes.ShimHttpServer.AllInstances.CheckDisposed">
+            <summary>Sets the shim of HttpServer.CheckDisposed()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Server.Fakes.ShimHttpServer.AllInstances.Close">
+            <summary>Sets the shim of HttpServer.Close()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Server.Fakes.ShimHttpServer.AllInstances.GotContextHttpListenerContext">
+            <summary>Sets the shim of HttpServer.GotContext(HttpListenerContext context)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Server.Fakes.ShimHttpServer.AllInstances.ListenForContext">
+            <summary>Sets the shim of HttpServer.ListenForContext()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Server.Fakes.ShimHttpServer.AllInstances.OnBeforeWriteResponseObject">
+            <summary>Sets the shim of HttpServer.OnBeforeWriteResponse(Object state)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Server.Fakes.ShimHttpServer.AllInstances.ProcessContextHttpListenerContext">
+            <summary>Sets the shim of HttpServer.ProcessContext(HttpListenerContext context)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Server.Fakes.ShimHttpServer.AllInstances.Start">
+            <summary>Sets the shim of HttpServer.Start()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Server.Fakes.ShimHttpServer.AllInstances.SystemIDisposableDispose">
+            <summary>Sets the shim of HttpServer.System.IDisposable.Dispose()</summary>
+        </member>
+        <member name="T:ProtoBuf.ServiceModel.Server.Fakes.ShimServerBase">
+            <summary>Shim type of ProtoBuf.ServiceModel.Server.ServerBase</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Server.Fakes.ShimServerBase.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Server.Fakes.ShimServerBase.#ctor(ProtoBuf.ServiceModel.Server.ServerBase)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Server.Fakes.ShimServerBase.AddOf1M0``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{``0})">
+            <summary>Sets the shim of ServerBase.Add(!!0 singleton)</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Server.Fakes.ShimServerBase.AddOf2``2(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action)">
+            <summary>Sets the shim of ServerBase.Add()</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Server.Fakes.ShimServerBase.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Server.Fakes.ShimServerBase.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Server.Fakes.ShimServerBase.DisposeOf1M0Ref``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.RefAction{``0})">
+            <summary>Sets the shim of ServerBase.Dispose(!!0&amp; obj)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Server.Fakes.ShimServerBase.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Server.Fakes.ShimServerBase.Constructor">
+            <summary>Sets the shim of ServerBase.ServerBase()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Server.Fakes.ShimServerBase.ExecuteStringStringNameValueCollectionStreamStreamObject">
+            <summary>Sets the shim of ServerBase.Execute(String service, String action, NameValueCollection headers, Stream request, Stream response, Object state)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Server.Fakes.ShimServerBase.GetTypeObject">
+            <summary>Sets the shim of ServerBase.GetType(Object serviceSingleton)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Server.Fakes.ShimServerBase.OnBeforeWriteResponseObject">
+            <summary>Sets the shim of ServerBase.OnBeforeWriteResponse(Object state)</summary>
+        </member>
+        <member name="T:ProtoBuf.ServiceModel.Server.Fakes.ShimServerBase.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Server.Fakes.ShimServerBase.AllInstances.AddOf1M0``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{ProtoBuf.ServiceModel.Server.ServerBase,``0})">
+            <summary>Sets the shim of ServerBase.Add(!!0 singleton)</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Server.Fakes.ShimServerBase.AllInstances.AddOf2``2(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{ProtoBuf.ServiceModel.Server.ServerBase})">
+            <summary>Sets the shim of ServerBase.Add()</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Server.Fakes.ShimServerBase.AllInstances.ExecuteStringStringNameValueCollectionStreamStreamObject">
+            <summary>Sets the shim of ServerBase.Execute(String service, String action, NameValueCollection headers, Stream request, Stream response, Object state)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Server.Fakes.ShimServerBase.AllInstances.OnBeforeWriteResponseObject">
+            <summary>Sets the shim of ServerBase.OnBeforeWriteResponse(Object state)</summary>
+        </member>
+        <member name="T:ProtoBuf.ServiceModel.Server.Fakes.StubHttpServer">
+            <summary>Stub type of ProtoBuf.ServiceModel.Server.HttpServer</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Server.Fakes.StubHttpServer.#ctor(System.String)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Server.Fakes.StubHttpServer.#ctor(System.String,System.Type,System.Type)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Server.Fakes.StubHttpServer.InitializeStub">
+            <summary>Initializes a new instance of type StubHttpServer</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Server.Fakes.StubHttpServer.OnBeforeWriteResponse(System.Object)">
+            <summary>Sets the stub of HttpServer.OnBeforeWriteResponse(Object state)</summary>
+        </member>
+        <member name="F:ProtoBuf.ServiceModel.Server.Fakes.StubHttpServer.OnBeforeWriteResponseObject">
+            <summary>Sets the stub of HttpServer.OnBeforeWriteResponse(Object state)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Server.Fakes.StubHttpServer.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Server.Fakes.StubHttpServer.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Server.Fakes.StubHttpServer.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:ProtoBuf.ServiceModel.Server.Fakes.StubServerBase">
+            <summary>Stub type of ProtoBuf.ServiceModel.Server.ServerBase</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Server.Fakes.StubServerBase.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Server.Fakes.StubServerBase.InitializeStub">
+            <summary>Initializes a new instance of type StubServerBase</summary>
+        </member>
+        <member name="M:ProtoBuf.ServiceModel.Server.Fakes.StubServerBase.OnBeforeWriteResponse(System.Object)">
+            <summary>Sets the stub of ServerBase.OnBeforeWriteResponse(Object state)</summary>
+        </member>
+        <member name="F:ProtoBuf.ServiceModel.Server.Fakes.StubServerBase.OnBeforeWriteResponseObject">
+            <summary>Sets the stub of ServerBase.OnBeforeWriteResponse(Object state)</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Server.Fakes.StubServerBase.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Server.Fakes.StubServerBase.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:ProtoBuf.ServiceModel.Server.Fakes.StubServerBase.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+    </members>
+</doc>

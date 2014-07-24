@@ -1,0 +1,88 @@
+/* This file is part of a set of specifications that are shared with multiple systems
+   including Gen4 server, WDS/OBA, My John Deere, EIC/CDF systems.
+   Do not modify these files without approval from the change control team listed
+   at the following link.  Doing so may cause incompatibilities between systems that
+   exchange data using these specifications.  Additionally any changes not commited
+   at the main change control system will be lost as subsequent versions roll out
+   from this group.
+ http://github.deere.com/data/ISG_Shared/wiki
+*/
+
+package com.deere.proto ;
+option java_package = "com.deere.proto.generated";
+
+import "EquipmentModel.proto";
+import "ReferenceData.proto";
+import "Operation.proto";
+
+enum ESourceType  
+{
+	ST_2630 = 1 ; 
+	ST_GSix = 2 ;
+	ST_BlackBox = 3 ;  
+	ST_MJD = 4 ;
+	ST_ApexLegacy = 5 ;
+//	ST_ThirdParty = 6 ;
+}
+
+message ProtoVarietyAssignment  //deprecated. For blackbox use only.
+{
+	optional string erid = 1 ; 
+	optional string name = 2 ; 
+	optional string brandGuid = 3 ; 
+	optional uint32 EICCropID = 4 ; 
+	optional uint32 functionID = 5 ; 
+	repeated uint32 rowelementID = 6 ; 
+											
+	optional uint32 colorSpace = 7 ; 
+	optional uint32 color = 8 ; 
+}
+
+message ProtoSimplePlantingContext  //deprecated. For blackbox use only.
+{
+	repeated NamedEntity brand = 2 ; 
+	repeated Crop crop = 3 ; 
+	repeated ProtoVarietyAssignment varietyAssignment = 4 ; 
+	
+}
+
+message StatisticalContext
+{
+	optional uint32 statisticID = 1;
+    optional uint32 repDomainID = 2 ;
+    optional uint32 Ddi = 3 ; 
+    optional string uom = 4 ;
+}
+
+message ProtoSessionContext  
+{
+	required uint32 proto_major_version =  1; 
+	required string sessionGuid  = 2 ; 
+	optional int64 startTime = 3; 
+	optional ESourceType sourceType = 4; 
+	optional string sourceSerialNumber = 5;  //Serial number of the device generating the data. blackbox/gsix.
+	optional string sourceNodeGuid = 6;  //GUID of the instance of blackbox/gsix, etc.
+	optional uint32 endTimeDelta = 7;  //Will not be available until the end of a session.
+	optional uint32 chunkCount = 8;    //Will not be available until the end of a session.
+	optional uint32 dataEpochCount = 9;    //Will not be available until the end of a session.
+
+	optional ProtoEquipmentModel equipmentModel = 10 ; 
+	optional Client client = 11 ; 
+	optional Farm farm =  12; 
+	optional Field field =  13; 
+	optional NamedEntity equipmentOperator = 14 ; 
+	optional ProtoSimplePlantingContext simplePlantingContext = 15 ;  //Deprecated. Only there for backwards compatibility with Blackbox
+
+	optional bool ackedToMyJD = 16; //Discussing this with Seedstar.
+	optional uint32 cropYear = 17; // Do not use
+
+	optional OperationsContext operationsContext = 20 ;
+	optional ReferenceDataContext referenceDataContext = 21 ;
+	repeated StatisticalContext statisticalContext = 22;
+
+	optional uint32 proto_minor_version = 23 ;
+
+	optional string source_software_major_version = 24;
+}
+
+

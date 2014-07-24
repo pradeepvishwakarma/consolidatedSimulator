@@ -1,0 +1,42 @@
+/* This file is part of a set of specifications that are shared with multiple systems
+   including Gen4 server, WDS/OBA, My John Deere, EIC/CDF systems.
+   Do not modify these files without approval from the change control team listed
+   at the following link.  Doing so may cause incompatibilities between systems that
+   exchange data using these specifications.  Additionally any changes not commited
+   at the main change control system will be lost as subsequent versions roll out
+   from this group.
+ http://github.deere.com/data/ISG_Shared/wiki
+*/
+
+package com.deere.proto ;
+option java_package = "com.deere.proto.generated";
+
+message ProtoDataEpochSearch{
+    required string sessionGuid = 1;
+
+    // request a range of data epochs
+    optional uint32 startDataEpochSeq = 2;  //1st in the epoch list
+    optional uint32 stopDataEpochSeq = 3;   //last epoch to return in list
+
+
+}
+message ProtoEpochSetChunkSearch{
+    required string sessionGuid = 1;
+    repeated uint32 chunkSeqNum = 2;
+}
+
+message ProtoInitDataFlow{
+
+    required uint32 version = 1;
+    optional bool currentSession = 2; //establish a live stream
+    optional bool allSessions = 3;   //get all sessions available
+    optional bool session = 4; //get specific sessions
+    optional bool dataEpochTransmitted = 5; //get specific dataEpochs
+    optional bool epochSetChunk = 6;   //get specific chunks
+    repeated string sessionGuid = 7;  // list of sessions
+    optional ProtoDataEpochSearch epochs = 8;  //list of epochs
+    optional ProtoEpochSetChunkSearch chunks = 9;  //list of chunks
+    optional uint32 dataRate = 10; // Rate at which the WDS should send historical data
+
+
+}

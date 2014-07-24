@@ -1,0 +1,878 @@
+﻿@model List<DataStimulator.Models.DataStimulatorModel>
+
+@{
+    ViewBag.Title = "ICA";    
+}
+
+<script>
+    $(function () {
+        //$("#tabs").tabs();
+        $("#accordion").accordion({
+            heightStyle: "content",
+            collapsible: true,
+            active: false
+        });
+        //$("#accordion2").accordion({
+        //    heightStyle: "content",
+        //    collapsible: true,
+        //    active: false
+        //});
+    });
+
+    $(document).ready(function () {
+        
+    });
+</script>
+
+<div id="tabs-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="true" aria-hidden="false" style="display: block;">
+ @using (Html.BeginForm("Index", "DataStimulate", FormMethod.Post, new { @id = "ICAForm" }))
+    {
+      @Html.Raw(Server.HtmlDecode(Html.ValidationSummary().ToString()))
+       // @Html.ValidationSummary(true)
+<div class="ui-accordion-content ui-widget-content ui-accordion-content-active plotTypePanel" style="display: block;">
+          <h3 class="plotType">Plot Type</h3>
+            <table cellspacing="0" cellpadding="0" border="0" class="stimulationparameter">
+                <thead>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            @for (var i = 0; i < @Model.Count; i++)
+                            {
+                              if (@Model[i].FieldID == 29 && @Model[i].Type == 2)
+                             {
+                                           
+                                @Html.RadioButtonFor(m => m[i].FieldValue, 1, @Model[i].FieldValue == 1 ? new { Checked = "checked" } : null)
+                                @Html.LabelFor(m => m[i].FieldValue, "Normal")
+
+
+                                @Html.RadioButtonFor(m => m[i].FieldValue, 2, @Model[i].FieldValue == 2 ? new { Checked = "checked" } : null)
+                                @Html.LabelFor(m => m[i].FieldValue, "NShape")
+
+                                @Html.RadioButtonFor(m => m[i].FieldValue, 3, @Model[i].FieldValue == 3 ? new { Checked = "checked" } : null)
+                                @Html.LabelFor(m => m[i].FieldValue, "Fit To Farm")
+   
+                        
+                                @Html.HiddenFor(m => m[i].FieldID)
+                                    @Html.HiddenFor(m => m[i].Fieldname)
+                                @Html.HiddenFor(m => m[i].Type)
+                          }
+                        }
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    <div id="accordion">
+   
+        <h3>Root</h3>
+        <div>
+            <table cellspacing="0" cellpadding="0" border="0" class="stimulationparameter">
+                <thead>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @for (var i = 0; i < @Model.Count; i++){
+                     if(@Model[i].Type == 2){
+                     if (@Model[i].FieldID == 1)
+                      {
+                        <tr>
+                           @* <td><h4>Demo Time</h4></td>*@
+                             @*<td>
+                               @if (@Model[i].FieldValue != null){
+                                    
+                                 @Html.TextBoxFor(m => m[i].FieldValue, new { @class = "text w50" })<br />
+                                 @Html.ValidationMessageFor(m => m[i].FieldValue)
+                                }
+                                else
+                                {
+                                 @Html.TextBoxFor(m => m[i].FieldValue, new { @class = "text w50", Value = "" })<br />
+                                 @Html.ValidationMessageFor(m => m[i].FieldValue)
+                                }*@
+                              @Html.HiddenFor(m => m[i].FieldID)
+                              @Html.HiddenFor(m => m[i].Fieldname)
+                              @Html.HiddenFor(m => m[i].Type)
+                              @*@Html.HiddenFor(m => m[i].Type, new { Value = "2" })
+                            </td>*@
+                        </tr>
+                      }
+
+                     if (@Model[i].FieldID == 2)
+                     {
+                        <tr>
+                            <td><h4>Machine Width:</h4></td>
+                            <td>
+                                @if (@Model[i].FieldValue != null)
+                                {
+                                @Html.TextBoxFor(m => m[i].FieldValue, new { @class = "text w50" })<br />
+                                @Html.ValidationMessageFor(m => m[i].FieldValue)
+                                }
+                                else
+                                {
+                                    @Html.TextBoxFor(m => m[i].FieldValue, new { @class = "text w50", Value = "" })<br />
+                                    @Html.ValidationMessageFor(m => m[i].FieldValue)
+                                }
+                                @Html.HiddenFor(m => m[i].FieldID)
+                                    @Html.HiddenFor(m => m[i].Fieldname)
+                                @Html.HiddenFor(m => m[i].Type)
+                            </td>
+                        </tr>
+                     }
+
+                     if (@Model[i].FieldID == 3)
+                     {
+                        <tr>
+                            <td><h4>Min Time Between Responses:</h4></td>
+                            <td>
+                                @if (@Model[i].FieldValue != null)
+                                {
+                                    @Html.TextBoxFor(m => m[i].FieldValue, new { @class = "text w50" })<br />
+                                    @Html.ValidationMessageFor(m => m[i].FieldValue)
+                                }
+                                else
+                                {
+                                    @Html.TextBoxFor(m => m[i].FieldValue, new { @class = "text w50", Value = "" })<br />
+                                    @Html.ValidationMessageFor(m => m[i].FieldValue)
+                                }
+                                @Html.HiddenFor(m => m[i].FieldID)
+                                    @Html.HiddenFor(m => m[i].Fieldname)
+                                @Html.HiddenFor(m => m[i].Type)
+                            </td>
+                        </tr>
+                     }
+
+                     if (@Model[i].FieldID == 4)
+                     {
+                        <tr>
+                            <td><h4>Time Between Messages:</h4></td>
+                            <td>
+                                @if (@Model[i].FieldValue != null)
+                                {
+                                  @Html.TextBoxFor(m => m[i].FieldValue, new { @class = "text w50" })<br />
+                                  @Html.ValidationMessageFor(m => m[i].FieldValue)
+                                }
+                                else
+                                {
+                                    @Html.TextBoxFor(m => m[i].FieldValue, new { @class = "text w50", Value = "" })<br />
+                                    @Html.ValidationMessageFor(m => m[i].FieldValue)
+                                }
+                             @Html.HiddenFor(m => m[i].FieldID)
+                                    @Html.HiddenFor(m => m[i].Fieldname)
+                             @Html.HiddenFor(m => m[i].Type)
+                            </td>
+                        </tr>
+                     }
+
+                     if (@Model[i].FieldID == 5)
+                     {
+                        <tr>
+                            <td><h4>Num Messages In Response : </h4></td>
+                            <td>
+                                @if (@Model[i].FieldValue != null)
+                                {
+                                    @Html.TextBoxFor(m => m[i].FieldValue, new { @class = "text w50" })<br />
+                                    @Html.ValidationMessageFor(m => m[i].FieldValue)
+                                }
+                                else
+                                {
+                                    @Html.TextBoxFor(m => m[i].FieldValue, new { @class = "text w50", Value = "" })<br />
+                                    @Html.ValidationMessageFor(m => m[i].FieldValue)
+                                }
+                             @Html.HiddenFor(m => m[i].FieldID)
+                                    @Html.HiddenFor(m => m[i].Fieldname)
+                             @Html.HiddenFor(m => m[i].Type)
+                            </td>
+                        </tr>
+                     }
+                     }
+                    }
+                </tbody>
+            </table>
+        </div>
+        <h3>Locations</h3>
+        <div>
+            <table cellspacing="0" cellpadding="0" border="0">
+                <thead>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th>Minimum</th>
+                        <th>Maximum</th>
+                        <th>Step</th>
+                        <th>Cycle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (var i = 0; i < @Model.Count; i++)
+                    {
+                        if (@Model[i].Type == 2)
+                        {
+                            if (@Model[i].FieldID == 6)
+                            { 
+                        <tr>
+                           <td><h4>X</h4></td>
+                            @if (@Model[i].DataGenerator != null)
+                            {
+                                <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.MinimumValue, new { @class = "text w50" })<br />
+                                     @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.MinimumValue)
+                                </td>
+                                <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.MaximumValue, new { @class = "text w50" })<br />
+                                    @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.MaximumValue)
+                                </td>
+                                <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.Step, new { @class = "text w50" })<br />
+                                    @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.Step)
+                                </td>
+                                <td>@Html.CheckBoxFor(m => m[i].DataGenerator.DataPattern.Cycle, new { @class = "text w50", @checked = @Model[i].DataGenerator.DataPattern.Cycle })<br />
+                                    @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.Cycle)
+                                </td>
+                            }
+                            else
+                            {
+                                <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.MinimumValue, new { @class = "text w50", Value = "" })<br />
+                                    @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.MinimumValue)
+                                </td>
+                                <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.MaximumValue, new { @class = "text w50", Value = "" })<br />
+                                     @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.MaximumValue)
+                                </td>
+                                <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.Step, new { @class = "text w50", Value = "" })<br />
+                                     @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.Step)
+                                </td>
+                                <td>@Html.CheckBoxFor(m => m[i].DataGenerator.DataPattern.Cycle, new { @class = "text w50" })<br />
+                                    @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.Cycle)
+                                </td>
+                            }
+                                @Html.HiddenFor(m => m[i].FieldID)
+                            @Html.HiddenFor(m => m[i].Fieldname)
+                                @Html.HiddenFor(m => m[i].Type)
+                        </tr>
+                            }
+
+                            if (@Model[i].FieldID == 7)
+                            { 
+                        <tr>
+                            <td><h4>Y</h4></td>
+                            @if (@Model[i].DataGenerator != null)
+                            {
+                                <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.MinimumValue, new { @class = "text w50" })<br />
+                                     @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.MinimumValue)
+                                </td>
+                                <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.MaximumValue, new { @class = "text w50" })<br />
+                                    @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.MaximumValue)
+                                </td>
+                                <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.Step, new { @class = "text w50" })<br />
+                                    @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.Step)
+                                </td>
+                                <td>@Html.CheckBoxFor(m => m[i].DataGenerator.DataPattern.Cycle, new { @class = "text w50", @checked = @Model[i].DataGenerator.DataPattern.Cycle })<br />
+                                    @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.Cycle)
+                                </td>
+                            }
+                            else
+                            {
+                                <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.MinimumValue, new { @class = "text w50", Value = "" })<br />
+                                    @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.MinimumValue)
+                                </td>
+                                <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.MaximumValue, new { @class = "text w50", Value = "" })<br />
+                                     @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.MaximumValue)
+                                </td>
+                                <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.Step, new { @class = "text w50", Value = "" })<br />
+                                     @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.Step)
+                                </td>
+                                <td>@Html.CheckBoxFor(m => m[i].DataGenerator.DataPattern.Cycle, new { @class = "text w50" })<br />
+                                    @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.Cycle)
+                                </td>
+                            }
+                                @Html.HiddenFor(m => m[i].FieldID)
+                                @Html.HiddenFor(m => m[i].Fieldname)
+                                @Html.HiddenFor(m => m[i].Type)
+                        </tr>
+                            }
+                        }
+                    }
+                </tbody>
+            </table>
+
+        </div>
+        <h3>Heading</h3>
+        <div>
+            <table cellspacing="0" cellpadding="0" border="0">
+                <thead>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th>Minimum</th>
+                        <th>Maximum</th>
+                        <th>Step</th>
+                        <th>Cycle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (var i = 0; i < @Model.Count; i++)
+                    {
+                        if (@Model[i].Type == 2)
+                        {
+                            if (@Model[i].FieldID == 8)
+                            { 
+                        <tr>
+                           <td><h4>Heading</h4></td>
+                           @if (@Model[i].DataGenerator != null)
+                           {
+                                <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.MinimumValue, new { @class = "text w50" })<br />
+                                     @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.MinimumValue)
+                                </td>
+                                <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.MaximumValue, new { @class = "text w50" })<br />
+                                    @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.MaximumValue)
+                                </td>
+                                <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.Step, new { @class = "text w50" })<br />
+                                    @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.Step)
+                                </td>
+                                <td>@Html.CheckBoxFor(m => m[i].DataGenerator.DataPattern.Cycle, new { @class = "text w50", @checked = @Model[i].DataGenerator.DataPattern.Cycle })<br />
+                                    @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.Cycle)
+                                </td>
+                           }
+                           else
+                           {
+                                <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.MinimumValue, new { @class = "text w50", Value = "" })<br />
+                                    @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.MinimumValue)
+                                </td>
+                                <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.MaximumValue, new { @class = "text w50", Value = "" })<br />
+                                     @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.MaximumValue)
+                                </td>
+                                <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.Step, new { @class = "text w50", Value = "" })<br />
+                                     @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.Step)
+                                </td>
+                                <td>@Html.CheckBoxFor(m => m[i].DataGenerator.DataPattern.Cycle, new { @class = "text w50" })<br />
+                                    @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.Cycle)
+                                </td>
+                           }
+                                @Html.HiddenFor(m => m[i].FieldID)
+                                @Html.HiddenFor(m => m[i].Fieldname)
+                                @Html.HiddenFor(m => m[i].Type)
+                        </tr>
+                            }
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+        <h3>Ag Result</h3>
+        <div>
+            <table cellspacing="0" cellpadding="0" border="0">
+                <thead>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th>DisplayIndexID</th>
+                        <th>Minimum</th>
+                        <th>Maximum</th>
+                        <th>Step</th>
+                        <th>Cycle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (var i = 0; i < @Model.Count; i++)
+                    {
+                        if (@Model[i].Type == 2)
+                        {
+                            if (@Model[i].FieldID == 9)
+                            { 
+                        <tr>
+                            <td><h4>Yield</h4></td>
+
+                              @if (@Model[i].DataGenerator != null)
+                              {
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.DisplayIndexID, new { @class = "text w50" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.DisplayIndexID)
+                            </td>
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.MinimumValue, new { @class = "text w50" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.MinimumValue)
+                            </td>
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.MaximumValue, new { @class = "text w50" })<br />
+                                 @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.MaximumValue)
+                            </td>
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.Step, new { @class = "text w50" })<br />
+                                 @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.Step)
+                            </td>
+                            <td>@Html.CheckBoxFor(m => m[i].DataGenerator.DataPattern.Cycle, new { @class = "text w50", @checked = @Model[i].DataGenerator.DataPattern.Cycle })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.Cycle)
+                            </td>
+                              }
+                              else
+                              {
+                              <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.DisplayIndexID, new { @class = "text w50", Value = "" })<br />
+                                  @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.DisplayIndexID)
+                              </td>   
+                              <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.MinimumValue, new { @class = "text w50", Value = "" })<br />
+                                    @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.MinimumValue)
+                                </td>
+                                <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.MaximumValue, new { @class = "text w50", Value = "" })<br />
+                                     @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.MaximumValue)
+                                </td>
+                                <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.Step, new { @class = "text w50", Value = "" })<br />
+                                     @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.Step)
+                                </td>
+                                <td>@Html.CheckBoxFor(m => m[i].DataGenerator.DataPattern.Cycle, new { @class = "text w50" })<br />
+                                    @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.Cycle)
+                                </td>
+                              }
+                              @Html.HiddenFor(m => m[i].FieldID)
+                                @Html.HiddenFor(m => m[i].Fieldname)
+                              @Html.HiddenFor(m => m[i].Type)
+                        </tr>
+                            }
+
+                            if (@Model[i].FieldID == 10)
+                            { 
+                        <tr>
+                            <td>
+                                <h4>Grain Loss</h4>
+                            </td>
+                             @if (@Model[i].DataGenerator != null)
+                             {
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.DisplayIndexID, new { @class = "text w50" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.DisplayIndexID)
+                            </td>
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.MinimumValue, new { @class = "text w50" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.MinimumValue)
+                            </td>
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.MaximumValue, new { @class = "text w50" })<br />
+                                 @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.MaximumValue)
+                            </td>
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.Step, new { @class = "text w50" })<br />
+                                 @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.Step)
+                            </td>
+                            <td>@Html.CheckBoxFor(m => m[i].DataGenerator.DataPattern.Cycle, new { @class = "text w50", @checked = @Model[i].DataGenerator.DataPattern.Cycle })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.Cycle)
+                            </td>
+                             }
+                             else
+                             {
+                              <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.DisplayIndexID, new { @class = "text w50", Value = "" })<br />
+                                  @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.DisplayIndexID)
+                              </td>   
+                              <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.MinimumValue, new { @class = "text w50", Value = "" })<br />
+                                    @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.MinimumValue)
+                                </td>
+                                <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.MaximumValue, new { @class = "text w50", Value = "" })<br />
+                                     @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.MaximumValue)
+                                </td>
+                                <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.Step, new { @class = "text w50", Value = "" })<br />
+                                     @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.Step)
+                                </td>
+                                <td>@Html.CheckBoxFor(m => m[i].DataGenerator.DataPattern.Cycle, new { @class = "text w50" })<br />
+                                    @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.Cycle)
+                                </td>
+                             }
+                            @Html.HiddenFor(m => m[i].FieldID)
+                                @Html.HiddenFor(m => m[i].Fieldname)
+                            @Html.HiddenFor(m => m[i].Type)
+
+                        </tr>
+                            }
+
+                            if (@Model[i].FieldID == 11)
+                            { 
+                        <tr>
+                            <td><h4>Moisture</h4></td>
+                            @if (@Model[i].DataGenerator != null)
+                            {
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.DisplayIndexID, new { @class = "text w50" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.DisplayIndexID)
+                            </td>
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.MinimumValue, new { @class = "text w50" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.MinimumValue)
+                            </td>
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.MaximumValue, new { @class = "text w50" })<br />
+                                 @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.MaximumValue)
+                            </td>
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.Step, new { @class = "text w50" })<br />
+                                 @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.Step)
+                            </td>
+                            <td>@Html.CheckBoxFor(m => m[i].DataGenerator.DataPattern.Cycle, new { @class = "text w50", @checked = @Model[i].DataGenerator.DataPattern.Cycle })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.Cycle)
+                            </td>
+                            }
+                            else
+                            {
+                              <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.DisplayIndexID, new { @class = "text w50", Value = "" })<br />
+                                  @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.DisplayIndexID)
+                              </td>   
+                              <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.MinimumValue, new { @class = "text w50", Value = "" })<br />
+                                    @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.MinimumValue)
+                                </td>
+                                <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.MaximumValue, new { @class = "text w50", Value = "" })<br />
+                                     @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.MaximumValue)
+                                </td>
+                                <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.Step, new { @class = "text w50", Value = "" })<br />
+                                     @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.Step)
+                                </td>
+                                <td>@Html.CheckBoxFor(m => m[i].DataGenerator.DataPattern.Cycle, new { @class = "text w50" })<br />
+                                    @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.Cycle)
+                                </td>
+                            }
+                            @Html.HiddenFor(m => m[i].FieldID)
+                                @Html.HiddenFor(m => m[i].Fieldname)
+                            @Html.HiddenFor(m => m[i].Type)
+                        </tr>
+                            }
+
+                            if (@Model[i].FieldID == 12)
+                            { 
+                        <tr>
+                            <td><h4>Feed_Rate</h4></td>
+                             @if (@Model[i].DataGenerator != null)
+                             {
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.DisplayIndexID, new { @class = "text w50" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.DisplayIndexID)
+                            </td>
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.MinimumValue, new { @class = "text w50" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.MinimumValue)
+                            </td>
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.MaximumValue, new { @class = "text w50" })<br />
+                                 @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.MaximumValue)
+                            </td>
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.Step, new { @class = "text w50" })<br />
+                                 @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.Step)
+                            </td>
+                            <td>@Html.CheckBoxFor(m => m[i].DataGenerator.DataPattern.Cycle, new { @class = "text w50", @checked = @Model[i].DataGenerator.DataPattern.Cycle })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.Cycle)
+                            </td>
+                             }
+                             else
+                             {
+                              <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.DisplayIndexID, new { @class = "text w50", Value = "" })<br />
+                                  @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.DisplayIndexID)
+                              </td>   
+                              <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.MinimumValue, new { @class = "text w50", Value = "" })<br />
+                                    @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.MinimumValue)
+                                </td>
+                                <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.MaximumValue, new { @class = "text w50", Value = "" })<br />
+                                     @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.MaximumValue)
+                                </td>
+                                <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPattern.Step, new { @class = "text w50", Value = "" })<br />
+                                     @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.Step)
+                                </td>
+                                <td>@Html.CheckBoxFor(m => m[i].DataGenerator.DataPattern.Cycle, new { @class = "text w50" })<br />
+                                    @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPattern.Cycle)
+                                </td>
+                             }
+                              @Html.HiddenFor(m => m[i].FieldID)
+                                @Html.HiddenFor(m => m[i].Fieldname)
+                              @Html.HiddenFor(m => m[i].Type, new { Value = "2" })
+                        </tr>
+                            }
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+        <h3>Data Point</h3>
+        <div>
+            <table cellspacing="0" cellpadding="0" border="0">
+                <thead>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th>Current</th>
+                        <th>Target</th>
+                        <th>Adjusting</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (var i = 0; i < @Model.Count; i++)
+                    {
+                        if (@Model[i].Type == 2)
+                        {
+                            if (@Model[i].FieldID == 13)
+                            { 
+                        <tr>
+                            <td><h4>Fan</h4></td>
+                            @if (@Model[i].DataGenerator != null)
+                            {
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPoint.Current, new { @class = "text w50" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Current)
+                            </td>
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPoint.Target, new { @class = "text w50" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Target)
+                            </td>
+                            <td>@Html.CheckBoxFor(m => m[i].DataGenerator.DataPoint.Adjusting, new { @class = "text w50", @checked = @Model[i].DataGenerator.DataPoint.Adjusting })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Adjusting)
+                            </td>
+                            }
+                            else
+                            {
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPoint.Current, new { @class = "text w50", Value = "" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Current)
+                            </td>
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPoint.Target, new { @class = "text w50", Value = "" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Target)
+                            </td>
+                            <td>@Html.CheckBoxFor(m => m[i].DataGenerator.DataPoint.Adjusting, new { @class = "text w50" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Adjusting)
+                            </td>
+                            }
+                            @Html.HiddenFor(m => m[i].FieldID)
+                                @Html.HiddenFor(m => m[i].Fieldname)
+                            @Html.HiddenFor(m => m[i].Type, new { Value = "2" })
+                        </tr>
+                            }
+
+                            if (@Model[i].FieldID == 14)
+                            { 
+                        <tr>
+                            <td><h4>Concave</h4></td>
+                            @if (@Model[i].DataGenerator != null)
+                            {
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPoint.Current, new { @class = "text w50" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Current)
+                            </td>
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPoint.Target, new { @class = "text w50" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Target)
+                            </td>
+                            <td>@Html.CheckBoxFor(m => m[i].DataGenerator.DataPoint.Adjusting, new { @class = "text w50", @checked = @Model[i].DataGenerator.DataPoint.Adjusting })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Adjusting)
+                            </td>
+                            }
+                            else
+                            {
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPoint.Current, new { @class = "text w50", Value = "" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Current)
+                            </td>
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPoint.Target, new { @class = "text w50", Value = "" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Target)
+                            </td>
+                            <td>@Html.CheckBoxFor(m => m[i].DataGenerator.DataPoint.Adjusting, new { @class = "text w50" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Adjusting)
+                            </td>
+                            }
+                            @Html.HiddenFor(m => m[i].FieldID)
+                                @Html.HiddenFor(m => m[i].Fieldname)
+                            @Html.HiddenFor(m => m[i].Type)
+                        </tr>
+                            }
+
+                            if (@Model[i].FieldID == 15)
+                            { 
+                        <tr>
+                            <td><h4>Sieve</h4></td>
+                             @if (@Model[i].DataGenerator != null)
+                             {
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPoint.Current, new { @class = "text w50" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Current)
+                            </td>
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPoint.Target, new { @class = "text w50" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Target)
+                            </td>
+                            <td>@Html.CheckBoxFor(m => m[i].DataGenerator.DataPoint.Adjusting, new { @class = "text w50", @checked = @Model[i].DataGenerator.DataPoint.Adjusting })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Adjusting)
+                            </td>
+                             }
+                             else
+                             {
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPoint.Current, new { @class = "text w50", Value = "" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Current)
+                            </td>
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPoint.Target, new { @class = "text w50", Value = "" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Target)
+                            </td>
+                            <td>@Html.CheckBoxFor(m => m[i].DataGenerator.DataPoint.Adjusting, new { @class = "text w50" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Adjusting)
+                            </td>
+                             }
+                            @Html.HiddenFor(m => m[i].FieldID)
+                                @Html.HiddenFor(m => m[i].Fieldname)
+                            @Html.HiddenFor(m => m[i].Type)
+                        </tr>
+                            }
+
+                            if (@Model[i].FieldID == 16)
+                            { 
+                        <tr>
+                            <td><h4>Chaffer</h4></td>
+
+                             @if (@Model[i].DataGenerator != null)
+                             {
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPoint.Current, new { @class = "text w50" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Current)
+                            </td>
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPoint.Target, new { @class = "text w50" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Target)
+                            </td>
+                            <td>@Html.CheckBoxFor(m => m[i].DataGenerator.DataPoint.Adjusting, new { @class = "text w50", @checked = @Model[i].DataGenerator.DataPoint.Adjusting })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Adjusting)
+                            </td>
+                             }
+                             else
+                             {
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPoint.Current, new { @class = "text w50", Value = "" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Current)
+                            </td>
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPoint.Target, new { @class = "text w50", Value = "" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Target)
+                            </td>
+                            <td>@Html.CheckBoxFor(m => m[i].DataGenerator.DataPoint.Adjusting, new { @class = "text w50" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Adjusting)
+                            </td>
+                             }
+                            @Html.HiddenFor(m => m[i].FieldID)
+                                @Html.HiddenFor(m => m[i].Fieldname)
+                            @Html.HiddenFor(m => m[i].Type)
+                        </tr>
+                            }
+
+                            if (@Model[i].FieldID == 17)
+                            { 
+                        <tr>
+                            <td><h4>Rotor</h4></td>
+
+                            @if (@Model[i].DataGenerator != null)
+                            {
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPoint.Current, new { @class = "text w50" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Current)
+                            </td>
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPoint.Target, new { @class = "text w50" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Target)
+                            </td>
+                            <td>@Html.CheckBoxFor(m => m[i].DataGenerator.DataPoint.Adjusting, new { @class = "text w50", @checked = @Model[i].DataGenerator.DataPoint.Adjusting })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Adjusting)
+                            </td>
+                            }
+                            else
+                            {
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPoint.Current, new { @class = "text w50", Value = "" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Current)
+                            </td>
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPoint.Target, new { @class = "text w50", Value = "" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Target)
+                            </td>
+                            <td>@Html.CheckBoxFor(m => m[i].DataGenerator.DataPoint.Adjusting, new { @class = "text w50" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Adjusting)
+                            </td>
+                            }
+                              @Html.HiddenFor(m => m[i].FieldID)
+                                @Html.HiddenFor(m => m[i].Fieldname)
+                              @Html.HiddenFor(m => m[i].Type)
+                        </tr>
+                            }
+
+                            if (@Model[i].FieldID == 18)
+                            { 
+                        <tr>
+                            <td><h4>Ground</h4></td>
+                             @if (@Model[i].DataGenerator != null)
+                             {
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPoint.Current, new { @class = "text w50" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Current)
+                            </td>
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPoint.Target, new { @class = "text w50" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Target)
+                            </td>
+                            <td>@Html.CheckBoxFor(m => m[i].DataGenerator.DataPoint.Adjusting, new { @class = "text w50", @checked = @Model[i].DataGenerator.DataPoint.Adjusting })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Adjusting)
+                            </td>
+                             }
+                             else
+                             {
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPoint.Current, new { @class = "text w50", Value = "" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Current)
+                            </td>
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPoint.Target, new { @class = "text w50", Value = "" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Target)
+                            </td>
+                            <td>@Html.CheckBoxFor(m => m[i].DataGenerator.DataPoint.Adjusting, new { @class = "text w50" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Adjusting)
+                            </td>
+                             }
+                            @Html.HiddenFor(m => m[i].FieldID)
+                                @Html.HiddenFor(m => m[i].Fieldname)
+                            @Html.HiddenFor(m => m[i].Type)
+                        </tr>
+                            }
+
+                            if (@Model[i].FieldID == 19)
+                            { 
+                        <tr>
+                            <td><h4>Separator</h4></td>
+                             @if (@Model[i].DataGenerator != null)
+                             {
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPoint.Current, new { @class = "text w50" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Current)
+                            </td>
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPoint.Target, new { @class = "text w50" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Target)
+                            </td>
+                            <td>@Html.CheckBoxFor(m => m[i].DataGenerator.DataPoint.Adjusting, new { @class = "text w50", @checked = @Model[i].DataGenerator.DataPoint.Adjusting })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Adjusting)
+                            </td>
+                             }
+                             else
+                             {
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPoint.Current, new { @class = "text w50", Value = "" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Current)
+                            </td>
+                            <td>@Html.TextBoxFor(m => m[i].DataGenerator.DataPoint.Target, new { @class = "text w50", Value = "" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Target)
+                            </td>
+                            <td>@Html.CheckBoxFor(m => m[i].DataGenerator.DataPoint.Adjusting, new { @class = "text w50" })<br />
+                                @Html.ValidationMessageFor(m => m[i].DataGenerator.DataPoint.Adjusting)
+                            </td>
+                             }
+                            @Html.HiddenFor(m => m[i].FieldID)
+                                @Html.HiddenFor(m => m[i].Fieldname)
+                            @Html.HiddenFor(m => m[i].Type)
+                        </tr>
+                            }
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+<input class="button mt2 mb1" type="button" value="Save" onclick="CheckSimulationParameter()"/><img src="~/images/dialog-loader.gif"  id="loadingImageICA" class="hide ml10"/>
+@*<input onclick="location.href='@Url.Action("Index", "DataStimulate", new { typeID = 2 })'" value = "Save" type="Submit" class="button mt2 mb1" />*@
+    }
+<script type="text/javascript">
+    function CheckSimulationParameter(e) {
+        var isSimulationParameterNull = false;
+        $('.stimulationparameter tbody').find("input[type=text]").each(function () {
+            if ($(this).val() === '') {
+                isSimulationParameterNull = true;
+
+                //e.preventDefault();
+            }
+        });
+
+        if (isSimulationParameterNull == false) {
+            ShowICALoadingImage();
+        }
+        else {
+            alert("Please enter values for all elements of Root");
+            $("#accordion").accordion({
+
+                active: 0
+            });
+        }
+    }
+    function ShowICALoadingImage() {
+        if ($('#ICAForm').valid()) {
+            $('#ICAForm').submit();
+            $('#loadingImageICA').removeClass('hide');
+            $('#loadingImageICA').addClass('show');
+        }
+        //else {
+        //    alert("invalid");
+        //}
+        // $('#loadingImageICA').removeClass('hide');
+        // $('#loadingImageICA').addClass('show');
+    }
+
+
+
+</script>
+</div>
+

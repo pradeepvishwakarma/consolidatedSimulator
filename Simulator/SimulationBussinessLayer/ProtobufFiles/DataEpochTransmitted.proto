@@ -1,0 +1,24 @@
+/* This file is part of a set of specifications that are shared with multiple systems
+   including Gen4 server, WDS/OBA, My John Deere, EIC/CDF systems.
+   Do not modify these files without approval from the change control team listed
+   at the following link.  Doing so may cause incompatibilities between systems that
+   exchange data using these specifications.  Additionally any changes not commited
+   at the main change control system will be lost as subsequent versions roll out
+   from this group.
+ http://github.deere.com/data/ISG_Shared/wiki
+*/
+
+package com.deere.proto ;
+option java_package = "com.deere.proto.generated";
+
+
+import "DataEpoch.proto";
+
+//SS = Published To SeedStar
+message ProtoDataEpochTransmitted //SS
+{
+	required uint32 version = 1; //SS
+	required string sessionGuid = 2 ; //SS
+	required uint32 chunkSeqNum = 3 ; //SS
+	required ProtoDataEpoch protoDataEpoch = 4 ; //SS
+}

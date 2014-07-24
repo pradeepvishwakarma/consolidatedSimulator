@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="HarvestTest2DB" Class="SimulationDataContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=PRADEEP-PC;Initial Catalog=HarvestTest2DB;User ID=cennest" SettingsObjectName="SimulationDataLayer.Properties.Settings" SettingsPropertyName="HarvestTest2DBConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Brand" Member="Brands">
+    <Type Name="Brand">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BrandErid" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BrandName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TypeMaster_Brand" Member="TypeMaster" ThisKey="TypeID" OtherKey="TypeID" Type="TypeMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WorkingData" Member="WorkingDatas">
+    <Type Name="WorkingData">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TypeName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Offset" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ScaleFactor" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UOM" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Crop" Member="Crops">
+    <Type Name="Crop">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EICCropID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CropName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TypeMaster_Crop" Member="TypeMaster" ThisKey="TypeID" OtherKey="TypeID" Type="TypeMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Curve" Member="Curves">
+    <Type Name="Curve">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OnMaximum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OnMinimum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TypeMaster_Curve" Member="TypeMaster" ThisKey="Type" OtherKey="TypeID" Type="TypeMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DataCollection" Member="DataCollections">
+    <Type Name="DataCollection">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SessionGuid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ChunkSeqNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DataEpochId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DataEpoch" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="SessionMaster_DataCollection" Member="SessionMaster" ThisKey="SessionGuid" OtherKey="Id" Type="SessionMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DataGenerator" Member="DataGenerators">
+    <Type Name="DataGenerator">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FieldID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DataPoint" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DataPattern" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="DataPattern_DataGenerator" Member="DataPattern1" ThisKey="DataPattern" OtherKey="ID" Type="DataPattern" IsForeignKey="true" />
+      <Association Name="DataPoint_DataGenerator" Member="DataPoint1" ThisKey="DataPoint" OtherKey="ID" Type="DataPoint" IsForeignKey="true" />
+      <Association Name="FieldMaster_DataGenerator" Member="FieldMaster" ThisKey="FieldID" OtherKey="FieldID" Type="FieldMaster" IsForeignKey="true" />
+      <Association Name="TypeMaster_DataGenerator" Member="TypeMaster" ThisKey="Type" OtherKey="TypeID" Type="TypeMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DataPattern" Member="DataPatterns">
+    <Type Name="DataPattern">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DisplayIndexID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Minimum" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Maximum" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Step" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Cycle" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Randomize" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="EventValue" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DefaultValue" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EventPropability" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="DataPattern_DataGenerator" Member="DataGenerators" ThisKey="ID" OtherKey="DataPattern" Type="DataGenerator" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DataPoint" Member="DataPoints">
+    <Type Name="DataPoint">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[Current]" Member="Current" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Target" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Adjusting" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="DataPoint_DataGenerator" Member="DataGenerators" ThisKey="ID" OtherKey="DataPoint" Type="DataGenerator" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DataUX" Member="DataUXes">
+    <Type Name="DataUX">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RepDomainId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Color" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ColorSpace" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Frequency" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NoOfEpochs" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DeviceState" Member="DeviceStates">
+    <Type Name="DeviceState">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DeviceID" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Start" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sessionID" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="SourceValue" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="TypeMaster_DeviceState" Member="TypeMaster" ThisKey="TypeID" OtherKey="TypeID" Type="TypeMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DirectionMaster" Member="DirectionMasters">
+    <Type Name="DirectionMaster">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Direction" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FieldMaster" Member="FieldMasters">
+    <Type Name="FieldMaster">
+      <Column Name="FieldID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FieldName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="FieldMaster_DataGenerator" Member="DataGenerators" ThisKey="FieldID" OtherKey="FieldID" Type="DataGenerator" />
+      <Association Name="FieldMaster_RandomData" Member="RandomDatas" ThisKey="FieldID" OtherKey="FieldID" Type="RandomData" />
+      <Association Name="FieldMaster_SimulationParameter" Member="SimulationParameters" ThisKey="FieldID" OtherKey="FieldID" Type="SimulationParameter" />
+      <Association Name="TypeMaster_FieldMaster" Member="TypeMaster" ThisKey="TypeID" OtherKey="TypeID" Type="TypeMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrganizationMaster" Member="OrganizationMasters">
+    <Type Name="OrganizationMaster">
+      <Column Name="OrganizationID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OrganizationName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Association Name="OrganizationMaster_UserDetail" Member="UserDetails" ThisKey="OrganizationID" OtherKey="OrganizationID" Type="UserDetail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RandomData" Member="RandomDatas">
+    <Type Name="RandomData">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FieldID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="TypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="FieldMaster_RandomData" Member="FieldMaster" ThisKey="FieldID" OtherKey="FieldID" Type="FieldMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SectionControl" Member="SectionControls">
+    <Type Name="SectionControl">
+      <Column Name="SectionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Width" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="IsEnabled" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="LateralOffset" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SessionMaster" Member="SessionMasters">
+    <Type Name="SessionMaster">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SessionGuid" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="SessionContext" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="EndSession" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SocketSessionGuid" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="SessionMaster_DataCollection" Member="DataCollections" ThisKey="Id" OtherKey="SessionGuid" Type="DataCollection" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SimulationParameter" Member="SimulationParameters">
+    <Type Name="SimulationParameter">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FieldID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FieldValue" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="FieldMaster_SimulationParameter" Member="FieldMaster" ThisKey="FieldID" OtherKey="FieldID" Type="FieldMaster" IsForeignKey="true" />
+      <Association Name="TypeMaster_SimulationParameter" Member="TypeMaster" ThisKey="TypeID" OtherKey="TypeID" Type="TypeMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TypeMaster" Member="TypeMasters">
+    <Type Name="TypeMaster">
+      <Column Name="TypeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TypeName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="TypeMaster_Brand" Member="Brands" ThisKey="TypeID" OtherKey="TypeID" Type="Brand" />
+      <Association Name="TypeMaster_Crop" Member="Crops" ThisKey="TypeID" OtherKey="TypeID" Type="Crop" />
+      <Association Name="TypeMaster_Curve" Member="Curves" ThisKey="TypeID" OtherKey="Type" Type="Curve" />
+      <Association Name="TypeMaster_DataGenerator" Member="DataGenerators" ThisKey="TypeID" OtherKey="Type" Type="DataGenerator" />
+      <Association Name="TypeMaster_DeviceState" Member="DeviceStates" ThisKey="TypeID" OtherKey="TypeID" Type="DeviceState" />
+      <Association Name="TypeMaster_FieldMaster" Member="FieldMasters" ThisKey="TypeID" OtherKey="TypeID" Type="FieldMaster" />
+      <Association Name="TypeMaster_SimulationParameter" Member="SimulationParameters" ThisKey="TypeID" OtherKey="TypeID" Type="SimulationParameter" />
+      <Association Name="TypeMaster_Variety" Member="Varieties" ThisKey="TypeID" OtherKey="TypeID" Type="Variety" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserDetails" Member="UserDetails">
+    <Type Name="UserDetail">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="OrganizationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="OrganizationMaster_UserDetail" Member="OrganizationMaster" ThisKey="OrganizationID" OtherKey="OrganizationID" Type="OrganizationMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Variety" Member="Varieties">
+    <Type Name="Variety">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Erid" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BrandID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EICCropID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ColorSpace" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Color" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="TypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TypeMaster_Variety" Member="TypeMaster" ThisKey="TypeID" OtherKey="TypeID" Type="TypeMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

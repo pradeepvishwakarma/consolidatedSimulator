@@ -1,0 +1,10 @@
+D:\JDDataSim\DataStimulator\trunk\SimulationService.Azure1\bin\Release\ServiceConfiguration.cscfg
+D:\JDDataSim\DataStimulator\trunk\SimulationService.Azure1\bin\Release\ServiceDefinition.csdef
+D:\JDDataSim\DataStimulator\trunk\SimulationService.Azure1\bin\Release\ValidationIssues.xml
+D:\JDDataSim\DataStimulator\trunk\SimulationService.Azure1\obj\Release\SimulationService\bin\Entities.dll
+D:\JDDataSim\DataStimulator\trunk\SimulationService.Azure1\obj\Release\SimulationService\bin\protobuf-net.dll
+D:\JDDataSim\DataStimulator\trunk\SimulationService.Azure1\obj\Release\SimulationService\bin\SimulationBussinessLayer.dll
+D:\JDDataSim\DataStimulator\trunk\SimulationService.Azure1\obj\Release\SimulationService\bin\SimulationDataLayer.dll
+D:\JDDataSim\DataStimulator\trunk\SimulationService.Azure1\obj\Release\SimulationService\bin\SimulationService.dll
+D:\JDDataSim\DataStimulator\trunk\SimulationService.Azure1\obj\Release\SimulationService\SimulationService.svc
+D:\JDDataSim\DataStimulator\trunk\SimulationService.Azure1\obj\Release\SimulationService\Web.config

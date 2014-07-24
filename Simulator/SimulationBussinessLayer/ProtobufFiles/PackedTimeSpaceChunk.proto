@@ -1,0 +1,139 @@
+/* This file is part of a set of specifications that are shared with multiple systems
+   including Gen4 server, WDS/OBA, My John Deere, EIC/CDF systems.
+   Do not modify these files without approval from the change control team listed
+   at the following link.  Doing so may cause incompatibilities between systems that
+   exchange data using these specifications.  Additionally any changes not commited
+   at the main change control system will be lost as subsequent versions roll out
+   from this group.
+ http://github.deere.com/data/ISG_Shared/wiki
+*/
+
+package com.deere.proto ;
+option java_package = "com.deere.proto.generated";
+
+import "EquipmentModelCommon.proto";
+
+message LatLonPairStream 
+{
+	optional double start_latitude_left_arcdeg_scale1E9 = 1; 
+	optional double start_longitude_left_arcdeg_scale1E9 = 2;
+	optional double start_latitude_right_arcdeg_scale1E9 = 3;
+	optional double start_longitude_right_arcdeg_scale1E9 = 4;
+	optional double start_implement_heading_arcdeg_scale10 = 7 ;
+	optional double start_delta_distance_mm = 8 ;
+	optional double start_speed_m_per_sec_scale1E3 = 9 ;
+	optional bool start_in_reverse = 10;
+	optional EDataEpochReason start_epoch_reason = 11;
+	optional int64 last_sample_time = 12;
+
+	repeated  sint32 time_delta_ms = 15 [packed=true];
+	repeated EDataEpochReason epoch_reason = 16 [packed=true];
+	repeated  sint64 latitude_left_delta_arcdeg_scale1E9 = 17 [packed=true];
+	repeated  sint64 longitude_left_delta_arcdeg_scale1E9 = 18 [packed=true]; 
+	repeated  sint64 latitude_right_delta_arcdeg_scale1E9 = 19 [packed=true];
+	repeated  sint64 longitude_right_delta_arcdeg_scale1E9 = 20 [packed=true];
+	repeated sint32 implement_heading_delta_scale10 = 23 [packed=true];
+	repeated sint32 speed_delta_m_per_sec_scale1E3 = 25 [packed=true];
+	repeated sint32 delta_distance_delta_mm = 26 [packed=true] ;
+	repeated bool in_reverse = 29 [packed=true] ;
+}
+
+message LatLonStream 
+{
+	optional double start_latitude_arcdeg_scale1E9 = 1; 
+	optional double start_longitude_arcdeg_scale1E9 = 2;
+	optional double start_heading_arcdeg_scale10 = 3;
+	optional double start_elevation_mm = 4;
+	optional double start_speed_m_per_sec_scale1E3 = 5 ;
+	optional double start_vertical_accuracy_mm = 6;
+	optional EDataEpochReason start_epoch_reason = 7;
+	optional double start_delta_distance_mm = 8;
+	optional EDifferentialType start_differential_type = 9;
+	optional sint32 start_accuracy = 23;
+	optional double start_yaw_rate_arcdeg_per_sec_scale10 = 24;
+	optional bool start_in_reverse = 25;
+	optional int64 last_sample_time = 26;
+
+	repeated sint32 time_delta_ms = 10 [packed=true]; 
+	repeated EDataEpochReason epoch_reason = 11 [packed=true];
+	repeated sint64 latitude_delta_arcdeg_scale1E9 = 12 [packed=true];
+	repeated sint64 longitude_delta_arcdeg_scale1E9 = 13 [packed=true];
+	repeated sint32 heading_delta_arcdeg_scale10 = 14 [packed=true];
+	repeated sint32 delta_distance_delta_mm = 15 [packed=true];
+	repeated sint32 elevation_delta_mm = 16 [packed=true];
+	repeated sint32 vertical_accuracy_delta_mm = 17 [packed=true];
+	repeated EDifferentialType differential_type = 18 [packed=true];  
+	repeated sint32 accuracy = 19 [packed=true];
+	repeated sint32 yaw_rate_delta_arcdeg_per_sec_scale10 = 20 [packed=true];
+	repeated sint32 speed_delta_m_per_sec_scale1E3 = 21 [packed=true];
+	repeated bool in_reverse = 22 [packed=true] ;
+}
+
+
+message ProtoWorkStateStatus 
+{
+	repeated EWorkState state = 1 [packed=true] ;
+}
+
+message StatusStream 
+{
+	optional ProtoWorkStateStatus start_workstate = 3;
+	optional int64 last_sample_time = 12;
+
+	repeated sint32 time_delta_ms = 1 [packed=true]; 
+	repeated ProtoWorkStateStatus workstate = 2 ;
+}
+
+message ValueStream  
+{
+	optional double start_value = 1 ; 
+	optional int64 last_sample_time = 12;
+
+	repeated sint32 time_delta_ms = 2 [packed=true] ; 
+	repeated sint64 value_delta = 3 [packed=true]; 
+}
+
+message ProtoStreamsBlob  
+{
+    repeated E_STREAM_TYPE streamType = 1;
+    repeated uint32 streamID = 2 [packed=true];
+    repeated bytes dataByteArray  = 3; //The byte array contains many streams, one after the other. The offset of the start of a stream is above.
+}
+
+enum StreamCompressionType
+{
+	SC_None = 0 ;
+	SC_Z_RLE = 1 ;
+	//SC_ZLib = 2 ;
+	//SC_Zip = 3 ;
+	//SC_gz = 4 ;
+}
+
+message TimeSpaceChunkStatistics
+{
+   repeated uint32 statisticID = 1 ;
+   repeated double value = 2 ;
+}
+
+message ProtoTimeSpaceChunk  
+{
+/////////////////
+//Storage note:
+//When stored in a db, each field here will go into a db field. MBR could be a spatial field, perhaps a line.
+// 
+////////////////
+	optional int32 Version = 1 ; 
+	optional string SessionGUID = 2 ; 
+        required uint32 chunkSeqNum = 3 ;
+	optional int64 delta_time_from_session_start = 4; 
+	optional int32 endTimeDeltams = 5;  
+
+	optional ProtoGPSPosition MBRPosLeftBottom = 6; 
+	optional ProtoGPSPosition MBRPosRightTop = 7; 
+
+	optional StreamCompressionType blobCompressionType = 8 ; //The individual streams are compressed using this algorithm. For now, just do SC_None.
+
+	optional bytes streamsBlob = 9;  //contains a ProtoStreamsBlob message, as a blob. Can be in a DB as a blob. Having it this way makes it easy to read out and export.
+
+	optional TimeSpaceChunkStatistics timeSpaceChunkStatistics = 10;
+}

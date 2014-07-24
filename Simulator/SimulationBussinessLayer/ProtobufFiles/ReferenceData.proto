@@ -1,0 +1,74 @@
+/* This file is part of a set of specifications that are shared with multiple systems
+   including Gen4 server, WDS/OBA, My John Deere, EIC/CDF systems.
+   Do not modify these files without approval from the change control team listed
+   at the following link.  Doing so may cause incompatibilities between systems that
+   exchange data using these specifications.  Additionally any changes not commited
+   at the main change control system will be lost as subsequent versions roll out
+   from this group.
+ http://github.deere.com/data/ISG_Shared/wiki
+*/
+
+package com.deere.proto ;
+option java_package = "com.deere.proto.generated";
+
+import "EquipmentModelCommon.proto";
+
+message NamedEntity 
+{
+	optional string erid = 1 ;  
+	optional string name = 2 ; 
+	optional int64 lastModified = 3 ;
+	optional string sourceNodeERID = 4 ;
+}
+
+message Crop
+{
+	optional uint32 cropID = 1 ;
+	optional string name = 2 ;
+	optional int64 lastModified = 3 ;
+	optional string sourceNodeERID = 4 ;
+	optional ProtoValueType cropWeight = 5;
+	optional ProtoValueType standardPayableMoisture = 6;
+}
+
+message CropSeason
+{
+    optional string cropSeasonName = 1;
+    optional uint32 cropID = 2;
+	optional int64 startTime = 3;
+	optional int64 endTime = 4;
+}
+
+message CropInput
+{
+	optional NamedEntity entity = 1; 
+	optional string brand = 2;
+}
+	
+message Variety
+{
+	optional CropInput cropInput = 1;
+	optional uint32 cropID = 2;
+}
+
+message Client
+{
+	optional NamedEntity entity = 1; 
+}
+
+message Farm
+{
+	optional NamedEntity entity = 1; 
+}
+
+message Field
+{
+	optional NamedEntity entity = 1;
+}
+
+message ReferenceDataContext
+{
+	repeated Crop crop = 1 ;
+	repeated Variety variety = 2;
+}
+

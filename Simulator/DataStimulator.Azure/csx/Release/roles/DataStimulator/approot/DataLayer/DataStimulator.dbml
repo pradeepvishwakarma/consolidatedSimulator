@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SimulationDB" Class="DataStimulatorDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=omudcknnkm.database.windows.net;Initial Catalog=SimulationDB;User ID=simulation" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="SimulationDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Curve" Member="Curves">
+    <Type Name="Curve">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OnMaximum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OnMinimum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TypeMaster_Curve" Member="TypeMaster" ThisKey="Type" OtherKey="TypeID" Type="TypeMaster" IsForeignKey="true" />
+      <Association Name="DirectionMaster_Curve" Member="DirectionMaster" ThisKey="OnMaximum" OtherKey="ID" Type="DirectionMaster" IsForeignKey="true" />
+      <Association Name="DirectionMaster_Curve1" Member="DirectionMaster1" ThisKey="OnMinimum" OtherKey="ID" Type="DirectionMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TypeMaster" Member="TypeMasters">
+    <Type Name="TypeMaster">
+      <Column Name="TypeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TypeName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="TypeMaster_Curve" Member="Curves" ThisKey="TypeID" OtherKey="Type" Type="Curve" />
+      <Association Name="TypeMaster_DataGenerator" Member="DataGenerators" ThisKey="TypeID" OtherKey="Type" Type="DataGenerator" />
+      <Association Name="TypeMaster_DeviceState" Member="DeviceStates" ThisKey="TypeID" OtherKey="TypeID" Type="DeviceState" />
+      <Association Name="TypeMaster_FieldMaster" Member="FieldMasters" ThisKey="TypeID" OtherKey="TypeID" Type="FieldMaster" />
+      <Association Name="TypeMaster_SimulationParameter" Member="SimulationParameters" ThisKey="TypeID" OtherKey="TypeID" Type="SimulationParameter" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DataGenerator" Member="DataGenerators">
+    <Type Name="DataGenerator">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FieldID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DataPoint" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DataPattern" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="TypeMaster_DataGenerator" Member="TypeMaster" ThisKey="Type" OtherKey="TypeID" Type="TypeMaster" IsForeignKey="true" />
+      <Association Name="DataPattern_DataGenerator" Member="DataPattern1" ThisKey="DataPattern" OtherKey="ID" Type="DataPattern" IsForeignKey="true" />
+      <Association Name="DataPoint_DataGenerator" Member="DataPoint1" ThisKey="DataPoint" OtherKey="ID" Type="DataPoint" IsForeignKey="true" />
+      <Association Name="FieldMaster_DataGenerator" Member="FieldMaster" ThisKey="FieldID" OtherKey="FieldID" Type="FieldMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DataPattern" Member="DataPatterns">
+    <Type Name="DataPattern">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DisplayIndexID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Minimum" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Maximum" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Step" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Cycle" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="DataPattern_DataGenerator" Member="DataGenerators" ThisKey="ID" OtherKey="DataPattern" Type="DataGenerator" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DataPoint" Member="DataPoints">
+    <Type Name="DataPoint">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[Current]" Member="Current" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Target" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Adjusting" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="DataPoint_DataGenerator" Member="DataGenerators" ThisKey="ID" OtherKey="DataPoint" Type="DataGenerator" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DeviceState" Member="DeviceStates">
+    <Type Name="DeviceState">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DeviceID" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Start" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="TypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="TypeMaster_DeviceState" Member="TypeMaster" ThisKey="TypeID" OtherKey="TypeID" Type="TypeMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DirectionMaster" Member="DirectionMasters">
+    <Type Name="DirectionMaster">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Direction" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="DirectionMaster_Curve" Member="Curves" ThisKey="ID" OtherKey="OnMaximum" Type="Curve" />
+      <Association Name="DirectionMaster_Curve1" Member="Curves1" ThisKey="ID" OtherKey="OnMinimum" Type="Curve" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FieldMaster" Member="FieldMasters">
+    <Type Name="FieldMaster">
+      <Column Name="FieldID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FieldName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="FieldMaster_DataGenerator" Member="DataGenerators" ThisKey="FieldID" OtherKey="FieldID" Type="DataGenerator" />
+      <Association Name="FieldMaster_SimulationParameter" Member="SimulationParameters" ThisKey="FieldID" OtherKey="FieldID" Type="SimulationParameter" />
+      <Association Name="TypeMaster_FieldMaster" Member="TypeMaster" ThisKey="TypeID" OtherKey="TypeID" Type="TypeMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SimulationParameter" Member="SimulationParameters">
+    <Type Name="SimulationParameter">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FieldID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FieldValue" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="FieldMaster_SimulationParameter" Member="FieldMaster" ThisKey="FieldID" OtherKey="FieldID" Type="FieldMaster" IsForeignKey="true" />
+      <Association Name="TypeMaster_SimulationParameter" Member="TypeMaster" ThisKey="TypeID" OtherKey="TypeID" Type="TypeMaster" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

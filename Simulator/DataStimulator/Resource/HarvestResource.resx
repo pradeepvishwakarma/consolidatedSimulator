@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccelerationFactorDescription" xml:space="preserve">
+    <value>Actual Speed = TractorSpeed * AccelerationFactor</value>
+    <comment>Description for Acceleration Factor</comment>
+  </data>
+  <data name="BrandEridDescription" xml:space="preserve">
+    <value>BrandErid of Crop</value>
+    <comment>Description for BrandErid</comment>
+  </data>
+  <data name="BrandNameDescription" xml:space="preserve">
+    <value>BrandName specifies the brand of the seed for the Crop</value>
+    <comment>Description for BrandName</comment>
+  </data>
+  <data name="ChangeCFFDescription" xml:space="preserve">
+    <value>If you enter n then the simulator will change the field name after every nth Session</value>
+    <comment>Description for ChangeCFFDescription</comment>
+  </data>
+  <data name="ChunksPerSessionDescription" xml:space="preserve">
+    <value>Number of Chunks to be sent in a Session</value>
+    <comment>Description for ChunksPerSession</comment>
+  </data>
+  <data name="ClientDescription" xml:space="preserve">
+    <value>Name of the Client</value>
+    <comment>Description for Client</comment>
+  </data>
+  <data name="ColorDescription" xml:space="preserve">
+    <value>Color Value in Hex</value>
+    <comment>Description for Color</comment>
+  </data>
+  <data name="ColorSpaceDescription" xml:space="preserve">
+    <value>Used for Calculation of color(for the DashBoardItem) along with Color( specified in Color textbox)</value>
+    <comment>Description for ColorSpace</comment>
+  </data>
+  <data name="CropDescription" xml:space="preserve">
+    <value>Name of the Crop</value>
+    <comment>Description for Crop</comment>
+  </data>
+  <data name="CropIDDescription" xml:space="preserve">
+    <value>CropId of the Crop</value>
+    <comment>Description for CropID</comment>
+  </data>
+  <data name="CropNameDescription" xml:space="preserve">
+    <value>Name of the Crop</value>
+    <comment>Description for CropName</comment>
+  </data>
+  <data name="CycleDescription" xml:space="preserve">
+    <value>If Checked and if current value has reached Max then next value will cycle back to Min</value>
+    <comment>Description for CycleDescription</comment>
+  </data>
+  <data name="DataIDDescription" xml:space="preserve">
+    <value>The DataID for which the specified color has to be set for the DashBoardItem.</value>
+    <comment>Description for DataID</comment>
+  </data>
+  <data name="DeactivatedSourcesDescription" xml:space="preserve">
+    <value>Rows of the implement which are deactivated.If more than 1 separate by commas. E.g. 1,2,3</value>
+    <comment>Desription For DeactivatedSources</comment>
+  </data>
+  <data name="DryYieldDescription" xml:space="preserve">
+    <value>Dry Yield in mg/m²</value>
+    <comment>Description for DryYield</comment>
+  </data>
+  <data name="EnablePlottingDescription" xml:space="preserve">
+    <value>If checked then plotting will happen. If unchecked then only tractor will move since implement is lifted up.</value>
+    <comment>Description for EnablePlottingDescription</comment>
+  </data>
+  <data name="EpochsPerChunkDescription" xml:space="preserve">
+    <value>Number of DataEpochs to be sent in a Chunk</value>
+    <comment>Description for EpochsPerChunk</comment>
+  </data>
+  <data name="FarmDescription" xml:space="preserve">
+    <value>Name of the Farm</value>
+    <comment>Description for Farm</comment>
+  </data>
+  <data name="FieldDescription" xml:space="preserve">
+    <value>Name of the Field.</value>
+    <comment>Description for Field</comment>
+  </data>
+  <data name="FieldHeightDescription" xml:space="preserve">
+    <value>Height of the Field in degrees (Latitude)</value>
+    <comment>Description for field height</comment>
+  </data>
+  <data name="FieldWidthDescription" xml:space="preserve">
+    <value>Width of the Field in degrees (Longitude)</value>
+    <comment>Description for field width</comment>
+  </data>
+  <data name="FrequencyDescription" xml:space="preserve">
+    <value>If you specify Frequency as 2 and Num of Epochs as 5 then the color for DashBoardItem will be set for every 5 epochs after leaving 2 epochs.  </value>
+    <comment>Description for Frequency</comment>
+  </data>
+  <data name="MaximumDescription" xml:space="preserve">
+    <value>Maximum Value for a particular parameter</value>
+    <comment>Description for Maximum</comment>
+  </data>
+  <data name="MinimumDescription" xml:space="preserve">
+    <value>Minimum Value for a particular parameter</value>
+    <comment>Description for Minimum</comment>
+  </data>
+  <data name="MoistureDescription" xml:space="preserve">
+    <value>Moisture in %</value>
+    <comment>Description for Moisture</comment>
+  </data>
+  <data name="NoOfSourcesDescription" xml:space="preserve">
+    <value>Number of rows of the implement</value>
+    <comment>Desription for No. of Sources</comment>
+  </data>
+  <data name="NumOfEpochsDescription" xml:space="preserve">
+    <value>If you specify Frequency as 2 and Num of Epochs as 5 then the color for DashBoardItem will be set for every 5 epochs after leaving 2 epochs.</value>
+    <comment>Description for NumOfEpochs</comment>
+  </data>
+  <data name="OperatorDescription" xml:space="preserve">
+    <value>Name of the Operator of the machine</value>
+    <comment>Description for Operator</comment>
+  </data>
+  <data name="OriginXDescription" xml:space="preserve">
+    <value>X Origin Coordinate of the field in degrees (Latitude)</value>
+    <comment>Description for OriginX</comment>
+  </data>
+  <data name="OriginYDescription" xml:space="preserve">
+    <value>Y Origin Coordinate of the field in degrees (Longitude)</value>
+    <comment>Description for OriginY</comment>
+  </data>
+  <data name="RandomizeDescription" xml:space="preserve">
+    <value>If Checked then instead of beginning from the Min value, Simulator starts sending data beginning with a random value(which is between Min and Max).</value>
+    <comment>Description for RandomizeDescription</comment>
+  </data>
+  <data name="RepDomainIDDescription" xml:space="preserve">
+    <value>The specified color will be set for the DashBoardItem for the DataID(specified in DataID) present within this RepDomainID.</value>
+  </data>
+  <data name="ResponsesPerSecondDescription" xml:space="preserve">
+    <value>Number of DataEpochs transmitted from simulator in a second</value>
+    <comment>Description for ResponsesPerSecond</comment>
+  </data>
+  <data name="SkipEndSessionDescription" xml:space="preserve">
+    <value>If you enter n then the simulator will not send SessionContext at the end of every nth Session</value>
+    <comment>Description for SkipEndSessionDescription</comment>
+  </data>
+  <data name="SkipRandomChunksDescription" xml:space="preserve">
+    <value>If you enter n then any random number between 1 - n will be selected (suppose m). The mth Chunk for every Session will not be sent by Simulator</value>
+    <comment>Description for SkipRandomChunksDescription</comment>
+  </data>
+  <data name="SkipRandomEpochsDescription" xml:space="preserve">
+    <value>If you enter n then any random number between 1 - n will be selected (suppose m) for each Chunk. The mth Epoch for every Chunk will not be sent by Simulator</value>
+    <comment>Description for SkipRandomEpochsDescription</comment>
+  </data>
+  <data name="SkipSessionDescription" xml:space="preserve">
+    <value> If you enter n then every nth Session and its DataEpochs will not be sent by Simulator</value>
+    <comment>Description for SkipSessionDescription</comment>
+  </data>
+  <data name="SkipStartSessionDescription" xml:space="preserve">
+    <value>If you enter n then the simulator will not send SessionContext in the beginning of every nth Session</value>
+    <comment>Description for SkipStartSessionDescription</comment>
+  </data>
+  <data name="SpeedDescription" xml:space="preserve">
+    <value>Speed in km/hr</value>
+    <comment>Description for Speed</comment>
+  </data>
+  <data name="StepDescription" xml:space="preserve">
+    <value>It is the step value added to current value to generate next value</value>
+    <comment>Description for StepDescription</comment>
+  </data>
+  <data name="URLDescription" xml:space="preserve">
+    <value>To use this simulator replace your WDSUri with the specified URL</value>
+    <comment>Description for URL</comment>
+  </data>
+  <data name="WetYieldDescription" xml:space="preserve">
+    <value>Wet Yield in mg/m²</value>
+    <comment>Description for WerYield</comment>
+  </data>
+  <data name="YawRateDescription" xml:space="preserve">
+    <value>YawRate in N</value>
+    <comment>Description for YawRate</comment>
+  </data>
+</root>

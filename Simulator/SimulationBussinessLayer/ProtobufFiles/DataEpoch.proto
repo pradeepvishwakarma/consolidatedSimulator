@@ -1,0 +1,130 @@
+/* This file is part of a set of specifications that are shared with multiple systems
+   including Gen4 server, WDS/OBA, My John Deere, EIC/CDF systems.
+   Do not modify these files without approval from the change control team listed
+   at the following link.  Doing so may cause incompatibilities between systems that
+   exchange data using these specifications.  Additionally any changes not commited
+   at the main change control system will be lost as subsequent versions roll out
+   from this group.
+ http://github.deere.com/data/ISG_Shared/wiki
+*/
+
+package com.deere.proto ;
+option java_package = "com.deere.proto.generated";
+
+import "EquipmentModelCommon.proto";
+
+
+//SS = Published To SeedStar
+
+
+
+////////////////////////////////////////////////
+//The following messages are for runtime data. i.e, streaming data.
+///////////////////////////////////////////////////
+
+message ProtoDataSample
+{
+	optional uint32 dataID = 1 ; //SS
+	optional sint64 nativeValue = 2 ; //SS
+    //Usage of nativeValue, scaleFactor and offset:
+    //		actualDoubleValue = (nativeValue * scaleFactor) + offset
+    //		nativeValue = (actualDoubleValue - offset) / scaleFactor
+
+	
+}
+
+
+//Purely for blackbox use.
+message ProtoDataSampleUx  //SS
+{
+	optional uint32 dataID = 1 ;  //SS
+	optional uint32 repDomainID = 2 ;  //SS
+
+	optional uint32 colorSpace = 3 ;  //SS
+	optional uint32 color = 4 ; //SS
+	
+}
+
+message ProtoRankLocationSample
+{
+	optional uint32 rankID = 1 ;
+	optional ProtoGPSPosition dropPoint = 2;
+	optional double implement_heading_arcdeg  = 3 ;
+	optional bool in_reverse = 4;
+	optional double yaw_rate_arcdeg_per_sec = 5 ;
+	optional double delta_distance_mm = 6 ;
+    optional double speed_km_per_hr = 7;
+
+	optional ProtoGPSPosition left = 8 ; 
+	optional ProtoGPSPosition right = 9 ; 
+}
+
+message ProtoGPSSample
+{
+	optional uint32 receiverID = 1 ;
+	optional ProtoGPSPosition gpsPosition = 2 ;
+	optional double GPSHeading = 3 ;
+
+	optional EDifferentialType DifferentialType = 4 ;
+	optional double elevation = 5; 
+	optional bool inReverse = 6; 
+	optional double yawRate = 7 ; 
+	optional double distance = 8 ; 
+    optional double gpsSpeed = 9; //GPS speed
+	
+}
+
+message ProtoGPSSampleExtended //this message is only sent out to those who specifically ask for it. For Starfire app.
+{
+	optional uint32 receiverID = 1 ;
+	optional ProtoGPSPosition gpsPosition = 2 ;
+	optional double Heading = 3 ;
+	optional uint32 AccuracyIndicator = 4;
+	optional double distance = 5 ; 
+    optional double gpsSpeed = 6; 
+	optional double verticalAccuracymm = 7 ;
+	optional EDifferentialType DifferentialType = 8 ;
+
+	/*
+	optional double pdop = 2 ;
+	optional double verticalAccuracymm = 4 ;
+	optional double elevation = 5; 
+	optional bool inReverse = 6; 
+	optional double yawRate = 7 ; 
+	optional double pitch = 8 ;
+	optional double roll = 9 ;
+	*/
+}
+
+
+message ProtoWorkingStateSample //SS
+{
+	optional uint32 consolidatedWorkingStateID = 1 ;  //SS
+	repeated EWorkState workState = 2  ; //SS
+}
+
+
+message ProtoWorkingFunctionDataGroup //SS
+{
+	optional uint32 functionID = 1 ;  //SS
+	repeated ProtoRankLocationSample rankLocation = 2 ; //SS
+	repeated ProtoDataSample workingData = 3 ; //SS
+	repeated ProtoDataSampleUx workingDataUx = 4 ; //SS
+	repeated ProtoWorkingStateSample workState = 5 ; //SS
+
+}
+
+
+message ProtoDataEpoch  //SS
+{
+	optional int64 timestamp = 1 ; //SS
+	required uint32 dataEpochSeq = 2 ; //SS
+	optional EDataEpochReason reason = 3 ; //SS
+	repeated ProtoWorkingFunctionDataGroup wfData = 4 ; //SS
+	repeated ProtoGPSSample gpsSample = 6 ;	
+
+}
+
+
+
+

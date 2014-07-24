@@ -1,0 +1,84 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStimulator", "DataStimulator\DataStimulator.csproj", "{5D5F02B6-24B5-4EA4-9E6B-F7D79DCE3554}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{BE25A55B-5F9E-48DE-94F9-DA033A187ABB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimulationBussinessLayer", "SimulationBussinessLayer\SimulationBussinessLayer.csproj", "{86DCB777-EAF9-484F-BB08-704D81A27DC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimulationDataLayer", "SimulationDataLayer\SimulationDataLayer.csproj", "{2441664B-07A6-4A7C-98D4-ADC77D41A5C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimulationService", "SimulationService\SimulationService.csproj", "{DD423682-03E3-4A6C-86F0-1FA7281E76F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimulationServiceLibrary", "SimulationServiceLibrary\SimulationServiceLibrary.csproj", "{15B3E0D2-6217-493A-A690-158C497F5318}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimulationConsole", "SimulationConsole\SimulationConsole.csproj", "{73012587-34D2-4988-8121-EDB82B4A8F65}"
+EndProject
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "DataStimulator.Azure", "DataStimulator.Azure\DataStimulator.Azure.ccproj", "{D64F48AD-49F1-4A96-955D-CABB6CC0EE67}"
+EndProject
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "SimulationService.Azure1", "SimulationService.Azure1\SimulationService.Azure1.ccproj", "{B53E8B11-7DDD-4118-BCDC-862786C84FD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimulationSocket", "SimulationSocket\SimulationSocket.csproj", "{D31F2B1A-9B37-4710-AE0B-CBBC976B8E7F}"
+EndProject
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "SimulationSocket.Azure", "SimulationSocket.Azure\SimulationSocket.Azure.ccproj", "{1377A03E-4F36-45D8-B188-3F65896D8EFA}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D5F02B6-24B5-4EA4-9E6B-F7D79DCE3554}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D5F02B6-24B5-4EA4-9E6B-F7D79DCE3554}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D5F02B6-24B5-4EA4-9E6B-F7D79DCE3554}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D5F02B6-24B5-4EA4-9E6B-F7D79DCE3554}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE25A55B-5F9E-48DE-94F9-DA033A187ABB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE25A55B-5F9E-48DE-94F9-DA033A187ABB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE25A55B-5F9E-48DE-94F9-DA033A187ABB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE25A55B-5F9E-48DE-94F9-DA033A187ABB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86DCB777-EAF9-484F-BB08-704D81A27DC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86DCB777-EAF9-484F-BB08-704D81A27DC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86DCB777-EAF9-484F-BB08-704D81A27DC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86DCB777-EAF9-484F-BB08-704D81A27DC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2441664B-07A6-4A7C-98D4-ADC77D41A5C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2441664B-07A6-4A7C-98D4-ADC77D41A5C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2441664B-07A6-4A7C-98D4-ADC77D41A5C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2441664B-07A6-4A7C-98D4-ADC77D41A5C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD423682-03E3-4A6C-86F0-1FA7281E76F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD423682-03E3-4A6C-86F0-1FA7281E76F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD423682-03E3-4A6C-86F0-1FA7281E76F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD423682-03E3-4A6C-86F0-1FA7281E76F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73012587-34D2-4988-8121-EDB82B4A8F65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73012587-34D2-4988-8121-EDB82B4A8F65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73012587-34D2-4988-8121-EDB82B4A8F65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73012587-34D2-4988-8121-EDB82B4A8F65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D64F48AD-49F1-4A96-955D-CABB6CC0EE67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D64F48AD-49F1-4A96-955D-CABB6CC0EE67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D64F48AD-49F1-4A96-955D-CABB6CC0EE67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D64F48AD-49F1-4A96-955D-CABB6CC0EE67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B53E8B11-7DDD-4118-BCDC-862786C84FD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B53E8B11-7DDD-4118-BCDC-862786C84FD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B53E8B11-7DDD-4118-BCDC-862786C84FD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B53E8B11-7DDD-4118-BCDC-862786C84FD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D31F2B1A-9B37-4710-AE0B-CBBC976B8E7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D31F2B1A-9B37-4710-AE0B-CBBC976B8E7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D31F2B1A-9B37-4710-AE0B-CBBC976B8E7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D31F2B1A-9B37-4710-AE0B-CBBC976B8E7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1377A03E-4F36-45D8-B188-3F65896D8EFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1377A03E-4F36-45D8-B188-3F65896D8EFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1377A03E-4F36-45D8-B188-3F65896D8EFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1377A03E-4F36-45D8-B188-3F65896D8EFA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

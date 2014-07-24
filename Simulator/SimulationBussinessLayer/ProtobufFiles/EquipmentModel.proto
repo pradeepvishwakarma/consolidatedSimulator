@@ -1,0 +1,246 @@
+/* This file is part of a set of specifications that are shared with multiple systems
+   including Gen4 server, WDS/OBA, My John Deere, EIC/CDF systems.
+   Do not modify these files without approval from the change control team listed
+   at the following link.  Doing so may cause incompatibilities between systems that
+   exchange data using these specifications.  Additionally any changes not commited
+   at the main change control system will be lost as subsequent versions roll out
+   from this group.
+ http://github.deere.com/data/ISG_Shared/wiki
+*/
+
+package com.deere.proto ;
+option java_package = "com.deere.proto.generated";
+
+import "EquipmentModelCommon.proto";
+
+enum EFrameType
+{
+   FT_UNDEFINED = 0;
+   FT_MACHINE = 1;
+   FT_IMPLEMENT = 2;
+}
+
+enum EWorkingFunctionType
+{
+  //iso identifiers used here.
+   WF_UNDEFINED = 0;
+   WF_FERTILIZING = 1 ;
+   WF_PLANTING = 2 ;
+   WF_CROP_PROTECTION = 3 ;
+   WF_TILLAGE = 4 ;
+   WF_BALING = 5 ;
+   WF_MOWING = 6 ;
+   WF_WRAPPING = 7 ;
+   WF_HARVESTING = 8 ;
+   WF_FORAGE_HARVESTING = 9 ;
+   WF_TRANSPORT = 10 ;
+   WF_SWATHING = 11 ;
+}
+
+enum EAxleLocation
+{
+   AL_UNDEFINED = 0;
+   AL_FRONT_AXLE = 1;
+   AL_REAR_AXLE = 2;
+}
+
+enum EEquipmentType 
+{
+   ET_ROW_CROP_TRACTOR = 0;
+   ET_TRACK_TRACTOR = 1;
+   ET_ARTICULATED_TRACTOR = 2;
+   ET_TRACK_TRACTOR_4WD = 3;
+   ET_UNDEFINED_VEHICLE_TYPE = 4;
+   ET_UNDEFINED_EQUIPMENT = 5;
+   ET_TRACTOR = 6;
+   ET_COMBINE = 7;
+   ET_SPRAYER = 8;
+   ET_SPREADER = 9;
+   ET_SEEDER = 10;
+   ET_OTHER = 11;
+   ET_PLANTER = 12;
+}
+
+enum EConnectionPosition
+{
+   CP_UNDEFINED = 0;
+   CP_FRONT = 1;
+   CP_REAR = 2;
+}
+
+enum EConnectionType
+{
+    CT_UNDEFINED = 0;
+    CT_TRACTOR_DRAWBAR = 1; //ISO 6489 3
+    CT_THREE_POINT_HITCH_SEMI_MOUNTED = 2; // ISO 730
+    CT_THREE_POINT_HITCH_MOUNTED = 3; // ISO 730
+    CT_HITCH_HOOK = 4; // ISO 6489 1
+    CT_CLEVIS_COUPLING = 5; // ISO 6489 2
+    CT_PITON_TYPE_COUPLING = 6; // ISO 6489 4
+    CT_CUNA_HITCH = 7; // ISO 6489 5
+    CT_BALL_HITCH = 8; // ISO 24347
+    CT_THREE_POINT_HITCH_MOUNTED_FRONT = 9; // ISO 730
+};
+
+
+////////////////////////
+//The following messages define the metadata. The equipment model structure. This includes the geometry and the structure of the avaialble data items.
+//////////////////////
+
+message ProtoOffset 
+{
+   optional double inlineOffset = 1; 
+   optional double lateralOffset = 2; 
+   optional double height = 3;
+}
+
+message ProtoConnection
+{
+   required uint32 ConnectionID = 1;
+   required ProtoOffset ConnectionOffset = 2;
+   optional EConnectionType ConnectionType = 3 [default = CT_UNDEFINED];
+}
+
+message ProtoConnectionRelationship
+{
+   required uint32 SourceFrameID = 1;
+   optional uint32 SourceConnectionID = 2;
+   optional uint32 TargetFrameID = 3;
+   optional uint32 TargetConnectionID = 4;
+}
+
+
+message ProtoRank 
+{
+   required uint32 RankID = 1;
+   optional double Width = 2;
+   optional ProtoOffset LocalCenter = 3; // Center of the rank relative to the center of rotation.  Center of Rank is computed as Rc = (Rl+Rr/2
+   repeated uint32 ElementID = 4;
+}
+
+message ProtoWorkingElement 
+{
+   required uint32 elementID = 1 ;  
+   optional double width = 2 ;  
+   optional ProtoOffset centerOffset = 3 ; 
+   optional bool sectionLevel = 4 ;  //see also meterLevel below.
+   optional bool rowLevel = 5 ; 
+   optional bool masterLevel = 6 ; 
+   optional uint32 consolidatedWorkingStateID = 7 ; 
+   optional uint32 parentRankID = 8 ; 
+   optional uint32 parentElementID = 9 ; 
+   repeated uint32 dataID = 10 ; 
+   repeated uint32 childElementID = 11 ; 
+   optional bool meterLevel = 12 ; 
+   optional double leftFraction = 13; 
+   optional double rightFraction = 14; 
+   optional double sizeFraction = 15; 
+   optional uint32 stateIndex = 16;
+   repeated uint32 propertyDataID = 17 ; 
+}
+
+message ProtoWorkingData 
+{
+   required uint32 dataID = 1 ;
+   optional uint32 repDomainID = 2 ;
+   optional double offSet = 3 ;
+   optional double scaleFactor = 4 ;
+   optional string uom = 5 ;
+   optional uint32 sampleRate = 6 ; 
+   optional uint32 Ddi = 7; 
+   optional bool Controllable = 8;
+   optional double appliedLatency = 9; // Option to define in PropertyData
+   optional double expectedLatency = 10; // Option to define in PropertyData
+   optional uint32 calibrationDataID = 11; // Option to define PropertyData
+}
+
+message ProtoPropertyData
+{
+   required uint32 dataID = 1;
+   optional uint32 repDomainID = 2 ;
+   optional double offSet = 3 ;
+   optional double scaleFactor = 4 ;
+   optional string uom = 5 ;
+   optional uint32 Ddi = 6; 
+   optional bool Controllable = 7;
+   optional double value = 8; // TODO: uint64 | int64 | double?
+}
+
+message ProtoConsolidatedWorkingState
+{
+  required uint32 consolidatedWorkingStateID = 1 ; 
+  optional bool controllable = 7;
+  optional uint32 numberOfStates = 8;
+}
+
+message ProtoWorkingFunction 
+{
+   required uint32 functionID = 1 ; 
+   optional EWorkingFunctionType workingFunctionType = 2  [ default = WF_UNDEFINED ]; 
+   repeated ProtoRank Ranks = 3 ; 
+   repeated ProtoWorkingElement Elements = 4 ; 
+   repeated ProtoWorkingData Data = 5 ; 
+   repeated ProtoConsolidatedWorkingState consolidatedWorkingStates = 6 ; 
+   optional string Key = 8;
+   optional string Description = 9; 
+   repeated ProtoPropertyData propertyData = 10;
+}
+
+message ProtoFrame 
+{
+	required uint32 frameID = 1 ; 
+	optional EFrameType frameType = 2 [ default = FT_UNDEFINED ] ; 
+	optional EEquipmentType equipmentType = 3 [ default = ET_UNDEFINED_EQUIPMENT ] ; 
+	optional string serialNumber = 4; 
+	optional string model = 5 ; 
+	optional double implementWidth = 6 ; 
+	repeated ProtoWorkingFunction workingFunctions = 7 ; 
+
+   
+	optional string Key = 8;
+	optional string Description = 9;
+	optional string OutOfBoxName = 10;
+	repeated ProtoConnection Connections = 11; 
+
+	optional uint64 ReleaseDate = 20;
+	optional uint64 LastModifiedDate = 21;
+	optional string GPS = 22;
+	optional string ConfigurationGlobalID = 23;
+	optional string Comments = 24;
+	optional ProtoOffset DropPoint = 25;
+	optional uint32 GpsID = 26; //must be unique since it is used as streamID
+	optional ProtoOffset ReceiverOffset = 27; // *ReferenceData (see below)
+	optional double FrontOffset = 28;
+	optional double ImplementLength = 29;
+	optional EAxleLocation NonSteeringAxle = 30 [ default = AL_UNDEFINED ];
+	optional double TurnRadius = 31;
+	optional double TurnSensitivity = 32;
+	optional double PhysicalWidth = 33;
+	optional double PhysicalLength = 34;
+	optional double RowWidth = 36; // *ReferenceData(see below)
+	optional uint32 RowCount = 37; // *ReferenceData(see below)
+	optional bool InRowConfiguration = 38;
+	optional double TrackSpacing = 39;
+	optional double WheelBaseAmount = 40;
+	// *ReferenceData: Items marked as reference data are not to be used by log data readers.  They are intended to be used as reference data when Frames are transfered without
+	// detailed working function, working element and working data breakdowns as hints as part of a Job or Work Order.  This is future implementation.
+}
+
+message ProtoGPS
+{
+   required uint32 ID = 1;
+   optional string Key = 2;
+   optional ProtoOffset GPSOffset = 3;
+   optional uint32 ParentFrameID = 4;
+}
+
+message ProtoEquipmentModel
+{
+   optional sint32 leadFrameID = 1;
+   repeated ProtoFrame frames = 2;
+   repeated ProtoGPS GPSUnits = 3;
+   repeated ProtoConnectionRelationship ConnectionRelationships = 4;
+   optional string Key = 5;
+   optional WorkingStateSource_E WorkingStateSource = 6 [ default = WSS_UNKNOWN ];
+}
+

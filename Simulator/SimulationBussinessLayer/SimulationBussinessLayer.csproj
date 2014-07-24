@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{86DCB777-EAF9-484F-BB08-704D81A27DC4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SimulationBussinessLayer</RootNamespace>
+    <AssemblyName>SimulationBussinessLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="protobuf-net, Version=1.0.0.282, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net.Extensions, Version=1.0.0.282, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\protobuf-net.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ComputePattern.cs" />
+    <Compile Include="Enums\Enums.cs" />
+    <Compile Include="ProtobufFiles\DataEpoch.cs" />
+    <Compile Include="ProtobufFiles\DataEpochTransmitted.cs" />
+    <Compile Include="ProtobufFiles\EpochSetChunk.cs" />
+    <Compile Include="ProtobufFiles\EpochSetChunkAck.cs" />
+    <Compile Include="ProtobufFiles\EquipmentModel.cs" />
+    <Compile Include="ProtobufFiles\EquipmentModelCommon.cs" />
+    <Compile Include="ProtobufFiles\FileFormat.cs" />
+    <Compile Include="ProtobufFiles\InitDataFlows.cs" />
+    <Compile Include="ProtobufFiles\Operation.cs" />
+    <Compile Include="ProtobufFiles\PackedTimeSpaceChunk.cs" />
+    <Compile Include="ProtobufFiles\ProtoMessage.cs" />
+    <Compile Include="ProtobufFiles\ReferenceData.cs" />
+    <Compile Include="ProtobufFiles\SchemaVersion.cs" />
+    <Compile Include="ProtobufFiles\SessionContext.cs" />
+    <Compile Include="ProtobufFiles\SessionContextAck.cs" />
+    <Compile Include="ProtobufFiles\SessionsAvailable.cs" />
+    <Compile Include="ProtobufFiles\wire format proposal.cs" />
+    <Compile Include="SimulationBL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{be25a55b-5f9e-48de-94f9-da033a187abb}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimulationDataLayer\SimulationDataLayer.csproj">
+      <Project>{2441664b-07a6-4a7c-98d4-adc77d41a5c4}</Project>
+      <Name>SimulationDataLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dll\protobuf-net.dll" />
+    <Content Include="dll\protobuf-net.Extensions.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ProtobufFiles\DataEpoch.proto" />
+    <None Include="ProtobufFiles\DataEpochTransmitted.proto" />
+    <None Include="ProtobufFiles\EpochSetChunk.proto" />
+    <None Include="ProtobufFiles\EpochSetChunkAck.proto" />
+    <None Include="ProtobufFiles\EquipmentModel.proto" />
+    <None Include="ProtobufFiles\EquipmentModelCommon.proto" />
+    <None Include="ProtobufFiles\FileFormat.proto" />
+    <None Include="ProtobufFiles\InitDataFlows.proto" />
+    <None Include="ProtobufFiles\Operation.proto" />
+    <None Include="ProtobufFiles\PackedTimeSpaceChunk.proto" />
+    <None Include="ProtobufFiles\ReferenceData.proto" />
+    <None Include="ProtobufFiles\SchemaVersion.proto" />
+    <None Include="ProtobufFiles\SessionContext.proto" />
+    <None Include="ProtobufFiles\SessionContextAck.proto" />
+    <None Include="ProtobufFiles\SessionsAvailable.proto" />
+    <None Include="ProtobufFiles\wire format proposal.proto" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

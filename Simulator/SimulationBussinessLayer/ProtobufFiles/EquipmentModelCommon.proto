@@ -1,0 +1,96 @@
+/* This file is part of a set of specifications that are shared with multiple systems
+   including Gen4 server, WDS/OBA, My John Deere, EIC/CDF systems.
+   Do not modify these files without approval from the change control team listed
+   at the following link.  Doing so may cause incompatibilities between systems that
+   exchange data using these specifications.  Additionally any changes not commited
+   at the main change control system will be lost as subsequent versions roll out
+   from this group.
+ http://github.deere.com/data/ISG_Shared/wiki
+*/
+
+package com.deere.proto ;
+option java_package = "com.deere.proto.generated";
+
+message ProtoGPSPosition
+{
+	optional double latitude_arcdeg = 1 ;
+	optional double longitude_arcdeg = 2 ;
+}
+
+enum WorkingStateSource_E
+{
+  WSS_UNKNOWN = -1;
+  WSS_MANUAL = 0;
+  WSS_AUTO = 1;
+  WSS_SCV1 = 2;
+  WSS_SCV2 = 3;
+  WSS_SCV3 = 4;
+  WSS_SCV4 = 5;
+  WSS_SCV5 = 6;
+  WSS_SCV6 = 7;
+  WSS_SCV7 = 8;
+  WSS_SCV8 = 9;
+  WSS_SCV9 = 10;
+  WSS_SCV10 = 11;
+  WSS_SCV11 = 12;
+  WSS_SCV12 = 13;
+  WSS_SCV13 = 14;
+  WSS_SCV14 = 15;
+  WSS_SCV15 = 16;
+  WSS_SCV16 = 17;
+  WSS_REAR_PTO = 18;
+  WSS_FRONT_PTO = 19;
+  WSS_IMP_SWITCH = 20;
+  WSS_REAR_3PT_HITCH = 21;
+  WSS_FRONT_3PT_HITCH = 22;
+  WSS_ACCUDEPTH = 23;
+};
+
+enum EWorkState //SS
+{
+    WS_OFF = 0;
+    WS_ON = 1;
+    WS_ERROR = 2;
+    WS_UNDEFINED = 3;
+}
+
+enum E_STREAM_TYPE
+{
+	ES_LAT_LON_STREAM = 1 ;
+	ES_RANK_LOCATION_STREAM = 2 ;
+	ES_WORKING_DATA_STREAM = 3 ;
+	ES_WORKSTATE_STREAM = 4 ;
+}
+
+enum BlobType_E
+{
+    COMPRESSED = 1;
+    UN_COMPRESSED = 2;
+};
+
+enum EDataEpochReason
+{
+    DER_NEW_LOCATION = 0 ;
+    DER_INTERPOLATED_FOR_WORKSTATE_CHANGE = 1 ;
+};
+
+enum EDifferentialType
+{
+    DT_UNDEFINED = 0;
+    DT_NO_DIFFERENTIAL = 1;
+    DT_NONJD_DIFFERENTIAL = 2;
+    DT_JD_DIFFERENTIAL = 3;
+    DT_WAAS_EGNOS = 4;
+    DT_SF1 = 5;
+    DT_SF2 = 6;
+    DT_RTK_X = 7;
+    DT_RTK = 8;
+};
+
+message ProtoValueType
+{
+	optional double value = 1;
+	optional uint32 repID = 2;
+	optional string uom = 3;
+	optional uint32 ddi = 4;
+}
