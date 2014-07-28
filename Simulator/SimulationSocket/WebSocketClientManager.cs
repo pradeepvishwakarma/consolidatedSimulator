@@ -5,7 +5,10 @@ using System.Linq;
 using System.Threading;
 using System.Web;
 using Microsoft.ServiceModel.WebSockets;
-
+using SimulationBussinessLayer;
+using SimulationService.SimulationBussinessLayer.Enums;
+using com.deere.proto;
+using ProtoBuf;
 
 namespace SimulationSocket
 {
@@ -15,15 +18,21 @@ namespace SimulationSocket
         private const int LIVE_STREAMING_INTERVAL = 200;
         private const int CATCHUP_STREAMING_INTERVAL = 100;
         private const int APP_MONITORING_INTERVAL = 5000;
-
+        
         private ThreadStart simulationThreadExecutor;
         private ThreadStart clientCatchUpThreadExecutor;
         private ThreadStart appStateThreadExecutor;
+        private ThreadStart appOperationThreadExecutor;
+        
+        private Thread appOperationThread;       
         private Thread simulationThread;
         private Thread clientCatchUpThread;
         private Thread appStateThread;
         private Queue liveStreamingQueue;
-         
+
+        private SessionManager sessionManager;
+
+
 
         /// <WebSocketClientManager Method>
         /// On initialization of WebSocketClientManager, it will call the base constructor to update the initial setup for it. 
@@ -34,31 +43,85 @@ namespace SimulationSocket
             InitiateAppMonitoring();
             InitiateLiveStreaming();
             InitiateCatchUpStreaming();
+            InitiateAppOpeartion();
+            SuspendMonitoring();
+            PauseSimulation();
         }
+
+        private void SuspendMonitoring()
+        {           
+            if (appStateThread.ThreadState == ThreadState.Running)
+            {
+                appStateThread.Suspend();
+            }
+            if (appOperationThread.ThreadState == ThreadState.Running)
+            {
+                appOperationThread.Suspend();
+            }
+        }
+
+        private void ResumeMonitoring()
+        {
+            if (appStateThread.ThreadState == ThreadState.Suspended)
+            {
+                appStateThread.Resume();
+            }
+            if (appOperationThread.ThreadState == ThreadState.Suspended)
+            {
+                appOperationThread.Resume();
+            }
+            
+        }
+
+        private void PauseSimulation()
+        {           
+            if (simulationThread.ThreadState == ThreadState.Running)
+            {
+                simulationThread.Suspend();
+            }
+            if (clientCatchUpThread.ThreadState == ThreadState.Running)
+            {
+                clientCatchUpThread.Suspend();
+            }
+        }
+
+        private void StartSimulation()
+        {
+          
+            if (simulationThread.ThreadState == ThreadState.Suspended)
+            {
+                simulationThread.Resume();
+            }
+            if (clientCatchUpThread.ThreadState == ThreadState.Suspended)
+            {
+                clientCatchUpThread.Resume();
+            }        
+        }
+
         /// <AddSocketClient Method>
         /// This will add a new client connection to base WebSocketCollection .
         /// </AddSocketClient Method>
         public void AddSocketClient(SocketService clientSocket)
         {
             base.Add(clientSocket);
+            if (base.Count == 1)
+            {
+                ResumeMonitoring();
+            }
         }
+
         /// <RemoveSocketClient Method>
         /// This will remove the client connection from base WebSocketCollection.
         /// </RemoveSocketClient Method>
         public void RemoveSocketClient(SocketService clientSocket)
         {
             base.Remove(clientSocket);
-        }      
-        public void AddToStreamLine(SocketService clientSocket)
-        {
-
-        }
-        public void RemoveFromStreamLine(SocketService clientSocket)
-        {
-
-        }
-    
-
+            if (base.Count == 0)
+            {
+                SuspendMonitoring();
+            }
+        } 
+     
         /// <summary>
         /// This will give us total number of websocket connection count from the base collection.
         /// </summary>
@@ -68,6 +131,7 @@ namespace SimulationSocket
             int availableConnectionCount = base.Count;
             return availableConnectionCount;
         }
+
         /// <summary>
         /// This will send the given messageInString to all available connections. 
         /// </summary>
@@ -76,6 +140,7 @@ namespace SimulationSocket
         {
             base.Broadcast(messageInString);
         }
+
         /// <summary>
         /// This will send the given messageInByteArr to all available connections
         /// </summary>
@@ -84,9 +149,8 @@ namespace SimulationSocket
         {
             base.Broadcast(messageInByteArr);
         }
-        /// <summary>
-        /// 
-        /// </summary>
+
+        
         private void InitiateLiveStreaming()
         {
             simulationThreadExecutor = new ThreadStart(StartLiveStreaming);
@@ -94,9 +158,7 @@ namespace SimulationSocket
             simulationThread.IsBackground = true;
             simulationThread.Start();
         }
-        /// <summary>
-        /// 
-        /// </summary>
+        
         private void InitiateCatchUpStreaming()
         {
             clientCatchUpThreadExecutor = new ThreadStart(StartCatchUpStreaming);
@@ -104,9 +166,7 @@ namespace SimulationSocket
             clientCatchUpThread.IsBackground = true;
             clientCatchUpThread.Start();
         }
-        /// <summary>
-        /// 
-        /// </summary>
+        
         private void InitiateAppMonitoring()
         {
             appStateThreadExecutor = new ThreadStart(StartMonitoringAppState);
@@ -114,9 +174,28 @@ namespace SimulationSocket
             appStateThread.IsBackground = true;
             appStateThread.Start();
         }
-        /// <summary>
-        /// 
-        /// </summary>
+        
+        private void InitiateAppOperation()
+        {
+            appStateThreadExecutor = new ThreadStart(StartAppOperation);
+            appOperationThread = new Thread(appOperationThreadExecutor);
+            appOperationThread.IsBackground = true;
+            appOperationThread.Start();
+        }
+
+        private void StartAppOperation()
+        {
+            try
+            {
+               
+            }
+            catch (Exception ex)
+            {
+                InitiateAppOperation();
+            }
+        }
+        
+
         private void StartLiveStreaming()
         {
             try
@@ -136,9 +215,7 @@ namespace SimulationSocket
                 InitiateLiveStreaming();
             }
         }
-        /// <summary>
-        /// 
-        /// </summary>
+                
         private void StartCatchUpStreaming()
         {
             try
@@ -154,9 +231,7 @@ namespace SimulationSocket
                 InitiateCatchUpStreaming();
             }
         }
-        /// <summary>
-        /// 
-        /// </summary>
+        
         private void StartMonitoringAppState()
         {
             try
@@ -172,6 +247,7 @@ namespace SimulationSocket
                 InitiateAppMonitoring();
             }
         }
+
         /// <summary>
         /// This will send the catchup data to all requested for catchup.
         /// </summary>
@@ -184,6 +260,7 @@ namespace SimulationSocket
                 socketHandler.DispatchCatchUpData();
             }
         }
+
         /// <summary>
         /// This will close and remove the connections from the base collection.
         /// </summary>
@@ -195,24 +272,6 @@ namespace SimulationSocket
                 socketHandler.Close();
                 base.Remove(socketHandler);
             }
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        private string GetSimulationSessionGuid()
-        {
-           string sessionGuid = Guid.NewGuid().ToString();
-           return sessionGuid;
-        }
-
-        private void StartSimulation()
-        {
-            string currentSessionGuid = GetSimulationSessionGuid(); 
-
-            // Create start session
-            // Create epoch for the session
-            // Create End session
         }
 
         private void CreateSessionContext(string sessionGuid, bool isEndSession)

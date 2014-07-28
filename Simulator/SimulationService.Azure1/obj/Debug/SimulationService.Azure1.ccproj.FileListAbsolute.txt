@@ -40,3 +40,5 @@ D:\Resume Plotting Simulator\Simulator\SimulationService.Azure1\bin\Debug\Servic
 D:\Resume Plotting Simulator\Simulator\SimulationService.Azure1\bin\Debug\ServiceDefinition.csdef
 D:\JDDataSim\HarvestSim\Harvest Simulator\Simulator\SimulationService.Azure1\bin\Debug\ServiceConfiguration.cscfg
 D:\JDDataSim\HarvestSim\Harvest Simulator\Simulator\SimulationService.Azure1\bin\Debug\ServiceDefinition.csdef
+D:\Cennest\Pradeep\Github\consolidatedSimulator\Simulator\SimulationService.Azure1\bin\Debug\ServiceConfiguration.cscfg
+D:\Cennest\Pradeep\Github\consolidatedSimulator\Simulator\SimulationService.Azure1\bin\Debug\ServiceDefinition.csdef

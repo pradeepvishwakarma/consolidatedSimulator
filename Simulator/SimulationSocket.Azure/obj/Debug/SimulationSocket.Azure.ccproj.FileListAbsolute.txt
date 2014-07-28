@@ -80,3 +80,5 @@ D:\Resume Plotting Simulator\Simulator\SimulationSocket.Azure\bin\Debug\ServiceC
 D:\Resume Plotting Simulator\Simulator\SimulationSocket.Azure\bin\Debug\ServiceDefinition.csdef
 D:\JDDataSim\HarvestSim\Harvest Simulator\Simulator\SimulationSocket.Azure\bin\Debug\ServiceConfiguration.cscfg
 D:\JDDataSim\HarvestSim\Harvest Simulator\Simulator\SimulationSocket.Azure\bin\Debug\ServiceDefinition.csdef
+D:\Cennest\Pradeep\Github\consolidatedSimulator\Simulator\SimulationSocket.Azure\bin\Debug\ServiceConfiguration.cscfg
+D:\Cennest\Pradeep\Github\consolidatedSimulator\Simulator\SimulationSocket.Azure\bin\Debug\ServiceDefinition.csdef
