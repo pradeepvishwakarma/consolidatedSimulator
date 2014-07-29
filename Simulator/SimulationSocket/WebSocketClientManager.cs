@@ -43,7 +43,7 @@ namespace SimulationSocket
             InitiateAppMonitoring();
             InitiateLiveStreaming();
             InitiateCatchUpStreaming();
-            InitiateAppOpeartion();
+            InitiateAppOperation();
             SuspendMonitoring();
             PauseSimulation();
         }
@@ -187,7 +187,32 @@ namespace SimulationSocket
         {
             try
             {
-               
+               while (true)
+               {
+                   while (base.Count != 0)
+                   {
+                       ProtoSessionContext startSessionContext = sessionManager.CreateStartSessionContext();
+                       while(sessionManager.SessionEpochCount != sessionManager.simulationPattern.DataEpochSeqNo)
+                       {
+                           DateTime startTime = DateTime.Now;
+                           sessionManager.simulationPattern.DataEpochSeqNo++;
+                           ProtoDataEpochTransmitted epochTransmitted = sessionManager.CreateEpochTransmitted();
+                           
+                           
+                           //Sleep the thread if the thread is complete the task before the predefined timespan
+                           TimeSpan difference = DateTime.Now.Subtract(startTime);
+                           int responsePerSecond = sessionManager.simulationPattern.ResponsesPerSecond;
+                           if (difference.TotalMilliseconds < 1000 / (responsePerSecond == 0 ? 1 : responsePerSecond))
+                           {
+                               int sleepInterval = responsePerSecond == 0 ? 1000 : (int)(((1000 / responsePerSecond) - (int)difference.TotalMilliseconds));
+                               System.Threading.Thread.Sleep(sleepInterval);
+                           }
+                       }
+                       ProtoSessionContext endSessionContext = sessionManager.CreateEndSessionContext();
+                   }
+                   Thread.Sleep(APP_MONITORING_INTERVAL);
+               }
+
             }
             catch (Exception ex)
             {
@@ -248,9 +273,7 @@ namespace SimulationSocket
             }
         }
 
-        /// <summary>
-        /// This will send the catchup data to all requested for catchup.
-        /// </summary>
+        
         private void BroadcastCatchUpMessagesForAllRequestedConnections()
         {
             IEnumerator<SocketService> connectionEnumerator = base.GetEnumerator();
@@ -261,9 +284,7 @@ namespace SimulationSocket
             }
         }
 
-        /// <summary>
-        /// This will close and remove the connections from the base collection.
-        /// </summary>
+        
         private void StopStreamingForAvailableConnections()
         {
             IEnumerator<SocketService> connectionEnumerator = base.GetEnumerator();
